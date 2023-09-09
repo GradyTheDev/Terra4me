@@ -11,13 +11,23 @@ config_version=5
 [application]
 
 config/name="Godot Wild Jam 61"
-run/main_scene="res://code/test_scene.tscn"
+config/tags=PackedStringArray("in_progress")
+run/main_scene="res://code/main_screen.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]
 
 driver/mix_rate.web=44100
+
+[autoload]
+
+SingletoneScenes="*res://code/globals/singletones/singletone_pop_ups.tscn"
+GlobalSounds="*res://code/globals/singletones/global_sounds.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [filesystem]
 
