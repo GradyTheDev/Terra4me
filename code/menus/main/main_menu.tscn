@@ -1,51 +1,41 @@
 [gd_scene load_steps=4 format=3 uid="uid://crs3nja17fdkg"]
 
-[ext_resource type="Theme" uid="uid://djqxggbyxn27d" path="res://resources/themes/default_menu_theme.tres" id="1_hxagi"]
+[ext_resource type="Texture2D" uid="uid://foy5qncg7r4o" path="res://assets/artwork/mockups/mockup_mainmenu.png" id="1_flqu4"]
 [ext_resource type="Script" path="res://code/menus/main/main_menu.gd" id="2_3lfwf"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/menus/menu_resources/button_sound.tscn" id="3_js0nh"]
 
-[node name="MainMenu" type="Control"]
-process_mode = 3
-clip_contents = true
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 152.0
-offset_top = 83.0
-offset_right = -167.0
-offset_bottom = -99.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme = ExtResource("1_hxagi")
+[node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("2_3lfwf")
 
+[node name="MockupMainmenu" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+scale = Vector2(0.456081, 0.456081)
+texture = ExtResource("1_flqu4")
+centered = false
+
 [node name="Settings" parent="." instance=ExtResource("3_js0nh")]
-layout_mode = 2
-offset_left = 82.0
-offset_top = 2.0
-offset_right = 153.0
-offset_bottom = 33.0
+offset_left = 285.0
+offset_top = 171.0
+offset_right = 355.0
+offset_bottom = 202.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Settings"
 
 [node name="Credits" parent="." instance=ExtResource("3_js0nh")]
-layout_mode = 2
-offset_right = 63.0
-offset_bottom = 31.0
+offset_left = 153.0
+offset_top = 173.0
+offset_right = 216.0
+offset_bottom = 204.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Credits"
 
 [node name="Quit" parent="." instance=ExtResource("3_js0nh")]
-layout_mode = 2
-offset_left = 50.0
-offset_top = 35.0
-offset_right = 87.0
-offset_bottom = 66.0
+offset_left = 218.0
+offset_top = 220.0
+offset_right = 272.0
+offset_bottom = 251.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
