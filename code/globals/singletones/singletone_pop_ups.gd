@@ -14,6 +14,8 @@ var scenes_dict = {
 
 func _init():
 	assert(SCENE.size() == scenes_dict.size(), "PopUp scenes aren't equal")
+	for key in scenes_dict:
+		assert(scenes_dict[key] != null, "Popup Scene failed to load!")
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):

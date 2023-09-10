@@ -47,5 +47,7 @@ offset_right = 284.0
 offset_bottom = 151.0
 text = "3"
 
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Level_3" to="." method="_on_level_3_pressed"]
