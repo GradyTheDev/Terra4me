@@ -7,3 +7,7 @@
 script = ExtResource("1_klpvd")
 
 [node name="MainMenu" parent="." instance=ExtResource("2_oytqk")]
+offset_left = 198.0
+offset_top = 55.0
+offset_right = -212.0
+offset_bottom = -61.0
