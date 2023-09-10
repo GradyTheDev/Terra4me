@@ -40,6 +40,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
 
-[connection signal="button_up" from="Settings" to="." method="_on_settings_button_up"]
-[connection signal="button_up" from="Credits" to="." method="_on_credits_button_up"]
-[connection signal="button_up" from="Quit" to="." method="_on_exit_button_up"]
+[node name="Level_3" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 254.0
+offset_top = 120.0
+offset_right = 284.0
+offset_bottom = 151.0
+text = "3"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Level_3" to="." method="_on_level_3_pressed"]

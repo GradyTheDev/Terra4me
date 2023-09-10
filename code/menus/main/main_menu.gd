@@ -19,3 +19,11 @@ func _on_exit_button_up():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
 		get_tree().quit()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
+
+
+func _on_level_3_pressed():
+	get_tree().change_scene_to_file("res://code/levels/level_3/level_3.tscn")
