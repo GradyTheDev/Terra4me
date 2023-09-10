@@ -4,7 +4,7 @@ extends CanvasLayer
 enum SCENE {SETTINGS, CREDITS, PAUSE}
 var settings_tscn: PackedScene = preload("res://code/menus/settings/settings.tscn")
 var credits_tscn: PackedScene = preload("res://code/menus/credits/credits.tscn")
-var pause_tscn: PackedScene = preload("res://code/menus/pause/pause.tscn")
+var pause_tscn: PackedScene = preload("res://code/menus/pause/pause_menu.tscn")
 
 var scenes_dict = {
 	SCENE.SETTINGS: settings_tscn.instantiate(),
