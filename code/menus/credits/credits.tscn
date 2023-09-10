@@ -32,7 +32,7 @@ theme_override_constants/side_margin = 20
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Authors"]
-custom_minimum_size = Vector2(600, 400)
+custom_minimum_size = Vector2(360, 180)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -56,15 +56,10 @@ text = "[center][b][font_size=30]Great game title[/font_size][/b]
 
 [b]- You can find the game at - [/b][/center]
 "
-scroll_following = true
 selection_enabled = true
 
-[node name="License" type="MarginContainer" parent="TabContainer"]
+[node name="LicenseGUI" parent="TabContainer" instance=ExtResource("3_hosfm")]
 visible = false
-layout_mode = 2
-theme_override_constants/margin_bottom = 40
-
-[node name="LicenseGUI" parent="TabContainer/License" instance=ExtResource("3_hosfm")]
 layout_mode = 2
 load_locations = Array[String](["res://resources/licenses", "res://addons/simplelicense/mod_example/licenses/"])
 

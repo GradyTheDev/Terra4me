@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 
 
@@ -7,11 +7,11 @@ func _on_start_button_up():
 
 
 func _on_settings_button_up():
-	SingletoneScenes.call_scene(SingletoneScenes.SCENE.SETTINGS)
+	GlobalPopUps.call_scene(GlobalPopUps.SCENE.SETTINGS)
 
 
 func _on_credits_button_up():
-	SingletoneScenes.call_scene(SingletoneScenes.SCENE.CREDITS)
+	GlobalPopUps.call_scene(GlobalPopUps.SCENE.CREDITS)
 
 
 func _on_exit_button_up():

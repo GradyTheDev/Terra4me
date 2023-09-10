@@ -1,5 +1,5 @@
 extends CanvasLayer
-#SingletoneScenes
+#GlobalPopUps
 
 enum SCENE {SETTINGS, CREDITS, PAUSE}
 var settings_tscn: PackedScene = preload("res://code/menus/settings/settings.tscn")
@@ -15,6 +15,9 @@ var scenes_dict = {
 func _init():
 	assert(SCENE.size() == scenes_dict.size(), "PopUp scenes aren't equal")
 
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		self.remove_child(self.get_child(-1))
 
 func call_scene(scene: SCENE):
 	var scene_inst = scenes_dict[scene]
