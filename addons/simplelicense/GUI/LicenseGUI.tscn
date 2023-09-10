@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://addons/simplelicense/api/LicenseManager.gd" id="2_cpb2k"]
 
 [node name="LicenseGUI" type="Control"]
-custom_minimum_size = Vector2(256, 256)
+custom_minimum_size = Vector2(256, 128)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,10 +42,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Tree" type="Tree" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00694444
-anchor_top = 0.0462963
-anchor_right = 0.472222
-anchor_bottom = 0.987654
+anchor_left = 0.00625
+anchor_top = 0.114815
+anchor_right = 0.51875
+anchor_bottom = 0.87037
 grow_vertical = 2
 size_flags_horizontal = 2
 hide_root = true
@@ -54,10 +54,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Text" type="TextEdit" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.497396
-anchor_top = 0.0462963
-anchor_right = 0.993056
-anchor_bottom = 0.987654
+anchor_left = 0.5625
+anchor_top = 0.114815
+anchor_right = 0.99375
+anchor_bottom = 0.874074
 offset_left = -8.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -70,10 +70,10 @@ metadata/_edit_use_anchors_ = true
 [node name="btn_open_data_dir" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.585069
+anchor_left = 0.730208
 anchor_top = 0.00308642
-anchor_right = 0.696181
-anchor_bottom = 0.0416667
+anchor_right = 0.996875
+anchor_bottom = 0.095679
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 12
 text = "Open Data Directory"
@@ -82,10 +82,10 @@ metadata/_edit_use_anchors_ = true
 [node name="btn_save_licenses" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.491319
+anchor_left = 0.538454
 anchor_top = 0.00308642
-anchor_right = 0.56684
-anchor_bottom = 0.0416667
+anchor_right = 0.719705
+anchor_bottom = 0.095679
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 12
 text = "Save Licenses"
@@ -94,11 +94,12 @@ metadata/_edit_use_anchors_ = true
 [node name="op_locations" type="OptionButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00694444
-anchor_top = 0.00308642
-anchor_right = 0.172743
-anchor_bottom = 0.0416667
+anchor_left = 0.00625
+anchor_top = 0.0037037
+anchor_right = 0.29375
+anchor_bottom = 0.0962963
 theme_override_font_sizes/font_size = 12
+clip_text = true
 item_count = 2
 popup/item_0/text = "a"
 popup/item_0/id = 0

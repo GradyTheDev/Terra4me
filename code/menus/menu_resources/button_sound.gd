@@ -9,6 +9,7 @@ extends Button
 
 func play_sound(sound: AudioStream):
 	var audio_player = OneShotAudio.new(sound)
+	audio_player.bus = AudioServer.get_bus_name(GlobalEnums.BUS.UI)
 	GlobalSounds.add_child(audio_player)
 
 
