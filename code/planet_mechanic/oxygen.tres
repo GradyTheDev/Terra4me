@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlanetMechanic" load_steps=2 format=3 uid="uid://1kg2b33xkr1r"]
+
+[ext_resource type="Script" path="res://code/planet_mechanic/planet_mechanic.gd" id="1_pgg3w"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_pgg3w")
+display_name = "Oxygen"
+max_value = 100.0
+min_value = 0.0
+value = 0.0

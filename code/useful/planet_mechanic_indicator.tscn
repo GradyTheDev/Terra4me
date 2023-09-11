@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=3 uid="uid://x1lh0re4n6wg"]
+
+[ext_resource type="Script" path="res://code/useful/planet_mechanic_indicator.gd" id="1_g3umh"]
+[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/menus/menu_resources/button_sound.tscn" id="2_1mect"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76scr"]
+
+[node name="IndicatorBar" type="PanelContainer"]
+custom_minimum_size = Vector2(160, 40)
+offset_right = 171.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_76scr")
+script = ExtResource("1_g3umh")
+is_debug = true
+
+[node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(120, 12)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="RedArea" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Color" type="ColorRect" parent="Background/RedArea"]
+layout_mode = 2
+color = Color(0.796078, 0.231373, 0.254902, 1)
+
+[node name="OrangeArea" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Color" type="ColorRect" parent="Background/OrangeArea"]
+layout_mode = 2
+size_flags_horizontal = 0
+color = Color(0.835294, 0.717647, 0.113725, 1)
+
+[node name="GreenArea" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Color" type="ColorRect" parent="Background/GreenArea"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 7.96
+color = Color(0.211765, 0.54902, 0.203922, 1)
+
+[node name="Indicator" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -12.0
+offset_right = 2.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Indicator name"
+
+[node name="Increase" parent="." instance=ExtResource("2_1mect")]
+custom_minimum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "+"
+
+[node name="Decrease" parent="." instance=ExtResource("2_1mect")]
+custom_minimum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "-
+"
+
+[node name="CooldownProgress" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(116.615, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+show_percentage = false
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="button_down" from="Increase" to="." method="_on_increase_button_down"]
+[connection signal="button_down" from="Decrease" to="." method="_on_decrease_button_down"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

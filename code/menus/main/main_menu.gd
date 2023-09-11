@@ -2,10 +2,6 @@ extends CanvasLayer
 
 
 
-func _on_start_button_up():
-	pass # Replace with function body.
-
-
 func _on_quit_pressed():
 	if OS.has_feature("web"):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
