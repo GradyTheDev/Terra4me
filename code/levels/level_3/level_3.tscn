@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsq78wqqfns3d"]
+[gd_scene load_steps=8 format=3 uid="uid://bsq78wqqfns3d"]
 
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_70tus"]
+[ext_resource type="Script" path="res://code/levels/level_3/level_3.gd" id="1_dgxvj"]
+[ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="2_ckmfh"]
+[ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_gknhm"]
+[ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="3_vrqg2"]
+
+[sub_resource type="Resource" id="Resource_lds18"]
+script = ExtResource("2_gknhm")
+color = 2
+range = Vector2(30, 90)
+
+[sub_resource type="Resource" id="Resource_j6eld"]
+script = ExtResource("2_gknhm")
+color = 2
+range = Vector2(1, 50)
 
 [node name="level_3" type="Control"]
 layout_mode = 3
@@ -9,6 +23,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dgxvj")
 
 [node name="Planet" parent="." instance=ExtResource("1_70tus")]
 layout_mode = 1
+atmosphere_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_lds18")])
+oxygen_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_j6eld")])
+
+[node name="DialogueComponent" parent="." instance=ExtResource("2_ckmfh")]
+level_dialogue = ExtResource("3_vrqg2")

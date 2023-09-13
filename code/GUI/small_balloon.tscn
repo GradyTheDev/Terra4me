@@ -34,21 +34,21 @@ content_margin_right = 2.0
 content_margin_bottom = 2.0
 draw_center = false
 
-[node name="SmallBalloon" type="Control" node_paths=PackedStringArray("response_template")]
-layout_mode = 3
+[node name="SmallBalloon" type="CanvasLayer" node_paths=PackedStringArray("response_template")]
+layer = 10
+script = ExtResource("1_7pc5n")
+response_template = NodePath("Balloon/Margin/VBox/ResponseTemplate")
+characters_portraits = Array[Resource("res://resources/dialogues/characters_portraits/portrait_resource.gd")]([ExtResource("2_gjmwu")])
+
+[node name="PauseScreen" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("1_7pc5n")
-response_template = NodePath("Balloon/Margin/VBox/ResponseTemplate")
-characters_portraits = Array[Resource("res://resources/dialogues/characters_portraits/portrait_resource.gd")]([ExtResource("2_gjmwu")])
-metadata/_edit_lock_ = true
+color = Color(0.152941, 0.152941, 0.152941, 0.788235)
 
 [node name="Portrait" type="TextureRect" parent="."]
-layout_mode = 0
 offset_left = 333.0
 offset_top = 134.0
 offset_right = 477.0
@@ -74,11 +74,11 @@ scroll_active = false
 
 [node name="Balloon" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(72.335, 30.165)
-layout_mode = 0
 offset_left = 5.0
 offset_top = 218.0
 offset_right = 474.0
 offset_bottom = 263.0
+mouse_default_cursor_shape = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Margin" type="MarginContainer" parent="Balloon"]

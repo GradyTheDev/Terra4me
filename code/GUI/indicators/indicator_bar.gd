@@ -19,10 +19,14 @@ const DISPLAY_NAME = {
 var planet_mechanic_res: TerraVaribleRes:
 	set(new):
 		planet_mechanic_res = new
-		if not self.is_inside_tree():
-			await(self.ready)
-		$Background.planet_mechanic_res = planet_mechanic_res
+		$Background/WholeRange.planet_mechanic_res = planet_mechanic_res
 		$Title.text = DISPLAY_NAME[planet_mechanic_res.type]
+
+var ranges: Array:
+	set(new):
+		ranges = new
+		for range_res in ranges:
+			$Background/WholeRange.add_range(range_res)
 
 @export var total_value = 30
 @export var duration_sec = 10
@@ -32,20 +36,25 @@ var planet_mechanic_res: TerraVaribleRes:
 @export var orange_range: Vector2:
 	set(new):
 		orange_range = new
-		$Background/OrangeArea.position.x = remap(orange_range.x, 0, 100, 0, $Background.size.x)
-		$Background/OrangeArea.size.x = remap(orange_range.x - orange_range.y, 0, 100, 0, $Background.size.x)
+		if not self.is_inside_tree():
+			await(self.ready)
+		print($Background/WholeRange.size.x)
+		$Background/WholeRange/OrangeArea.position.x = remap(orange_range.x, 0, 100, 0, $Background/WholeRange.size.x)
+		$Background/WholeRange/OrangeArea.size.x = remap(orange_range.y - orange_range.x, 0, 100, 0, $Background/WholeRange.size.x)
 @export var green_range: Vector2:
 	set(new):
 		green_range = new
-		$Background/GreenArea.position.x = remap(green_range.x, 0, 100, 0, $Background.size.x)
-		$Background/GreenArea.size.x = remap(green_range.y - green_range.x, 0, 100, 0, $Background.size.x)
+		if not self.is_inside_tree():
+			await(self.ready)
+		$Background/WholeRange/GreenArea.position.x = remap(green_range.x, 0, 100, 0, $Background/WholeRange.size.x)
+		$Background/WholeRange/GreenArea.size.x = remap(green_range.y - green_range.x, 0, 100, 0, $Background/WholeRange.size.x)
 
 var value_per_sec: float
 
 @onready var cooldown_timer = $Cooldown
 @onready var duration_timer = $Duration
 @onready var cooldown_progress = $CooldownProgress
-@onready var indicator = $Background/Indicator
+@onready var indicator = $Background/WholeRange/Indicator
 
 
 func _ready():
@@ -55,7 +64,7 @@ func _ready():
 	cooldown_progress.max_value = cooldown_sec
 
 
-func _process(delta):
+func _process(_delta):
 	if not cooldown_timer.is_stopped():
 		cooldown_progress.value = cooldown_timer.time_left
 

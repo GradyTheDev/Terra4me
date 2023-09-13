@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://x1lh0re4n6wg"]
 
 [ext_resource type="Script" path="res://code/GUI/indicators/indicator_bar.gd" id="1_qgvuk"]
-[ext_resource type="Script" path="res://code/GUI/indicators/indicator_background.gd" id="2_1hemq"]
+[ext_resource type="Script" path="res://code/GUI/indicators/whole_range.gd" id="2_akgk5"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_qwyys"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76scr"]
@@ -14,64 +14,26 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_76scr")
 script = ExtResource("1_qgvuk")
 
 [node name="Background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(120, 12)
+custom_minimum_size = Vector2(122, 12)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-script = ExtResource("2_1hemq")
 
-[node name="RedArea" type="MarginContainer" parent="Background"]
+[node name="WholeRange" type="Control" parent="Background"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 1
+script = ExtResource("2_akgk5")
 
-[node name="Color" type="ColorRect" parent="Background/RedArea"]
-layout_mode = 2
-color = Color(0.796078, 0.231373, 0.254902, 1)
-
-[node name="OrangeArea" type="MarginContainer" parent="Background"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 1
-
-[node name="Color" type="ColorRect" parent="Background/OrangeArea"]
-layout_mode = 2
-size_flags_horizontal = 0
-color = Color(0.835294, 0.717647, 0.113725, 1)
-
-[node name="GreenArea" type="MarginContainer" parent="Background"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 1
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 1
-
-[node name="Color" type="ColorRect" parent="Background/GreenArea"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_stretch_ratio = 7.96
-color = Color(0.211765, 0.54902, 0.203922, 1)
-
-[node name="Indicator" type="ColorRect" parent="Background"]
+[node name="Indicator" type="ColorRect" parent="Background/WholeRange"]
+z_index = 5
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

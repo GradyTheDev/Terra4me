@@ -4,5 +4,5 @@
 
 [node name="GlobalPopupSpace" type="CanvasLayer"]
 process_mode = 3
-layer = 2
+layer = 20
 script = ExtResource("1_5xqqb")

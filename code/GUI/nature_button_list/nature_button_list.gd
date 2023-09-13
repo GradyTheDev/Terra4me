@@ -1,9 +1,9 @@
 extends PanelContainer
 
-signal natural_action_made(pack_terra_pack: PackTerraPack)
+signal natural_action_made(terra_packs_in_array: Array)
 
+var terra_variables_res: Dictionary
 
-
-func _on_button_up_with_stats(pack_terra_pack):
-	assert(pack_terra_pack, "This pack is empty!")
-	emit_signal("natural_action_made", pack_terra_pack)
+func _on_button_up_with_stats(terra_packs_in_array):
+	assert(terra_packs_in_array, "This pack is empty!")
+	emit_signal("natural_action_made", terra_packs_in_array)

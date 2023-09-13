@@ -205,11 +205,12 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(resource, title, extra_game_states)
 
-func show_dialogue_balloon(resource: DialogueResource, title: String = "0", extra_game_states: Array = []) -> void:
-	var balloon_tscn = load("res://code/useful/small_balloon.tscn")
+func show_dialogue_balloon(resource: DialogueResource, title: String = "0", extra_game_states: Array[GlobalEnums.DialogueExtraState] = []) -> void:
+	var balloon_tscn = load("res://code/GUI/small_balloon.tscn")
 
 	var balloon: Node = balloon_tscn.instantiate()
-	get_tree().current_scene.add_child(balloon)
+	get_tree().get_root().call_deferred("add_child", balloon)
+	await get_tree().process_frame
 	balloon.start(resource, title, extra_game_states)
 
 

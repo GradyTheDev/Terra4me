@@ -5,6 +5,7 @@
 
 [node name="ButtonSound" type="Button"]
 custom_minimum_size = Vector2(30, 10)
+mouse_default_cursor_shape = 2
 text = "Example"
 script = ExtResource("1_06d6b")
 on_click_sound = ExtResource("2_gs8ha")

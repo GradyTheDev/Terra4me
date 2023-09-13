@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
+[ext_resource type="Script" path="res://code/GUI/WinTime.gd" id="5_gn5i8"]
 [ext_resource type="PackedScene" uid="uid://plfmfhlyals5" path="res://code/GUI/indicators/indicators.tscn" id="5_x3k61"]
 [ext_resource type="Texture2D" uid="uid://cegpqnmo5ld4j" path="res://assets/artwork/mockups/mockup_map.png" id="6_8ys2q"]
 [ext_resource type="PackedScene" uid="uid://bvjjonej6wf7y" path="res://code/GUI/nature_button_list/nature_button_list.tscn" id="6_841jt"]
-[ext_resource type="PackedScene" uid="uid://umjw5byvgiwd" path="res://code/GUI/small_balloon.tscn" id="8_br7b4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b84ou"]
 
@@ -51,8 +51,17 @@ size_flags_vertical = 4
 texture = ExtResource("6_8ys2q")
 expand_mode = 1
 
-[node name="SmallBalloon" parent="." instance=ExtResource("8_br7b4")]
+[node name="WinTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="WinTime" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+value = 100.0
+script = ExtResource("5_gn5i8")
 
 [connection signal="spike_action_made" from="Indicators" to="." method="_on_spike_action_made"]
 [connection signal="natural_action_made" from="ButtonList" to="." method="_on_natural_action_made"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]

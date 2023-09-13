@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 
 @export var response_template: Node
@@ -6,6 +6,7 @@ extends Control
 
 #@onready var talk_sound: AudioStreamPlayer = $TalkSound
 @onready var balloon: ColorRect = $Balloon
+@onready var pause_screen: ColorRect = $PauseScreen
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_portrait: TextureRect = $Portrait
 @onready var character_label: RichTextLabel = $Portrait/CharacterLabel
@@ -63,6 +64,7 @@ var dialogue_line: DialogueLine:
 		
 		# Show our balloon if it was previously hidden
 		balloon.show()
+		character_portrait.show()
 		
 		dialogue_label.modulate.a = 1
 		dialogue_label.type_out()
@@ -86,7 +88,9 @@ var dialogue_line: DialogueLine:
 
 func _ready() -> void:
 	response_template.hide()
-	#balloon.hide()
+	balloon.hide()
+	pause_screen.hide()
+	character_portrait.hide()
 	
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -95,9 +99,18 @@ func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
 	get_viewport().set_input_as_handled()
 
+func _exit_tree():
+	for extra_state in temporary_game_states:
+		if extra_state == GlobalEnums.DialogueExtraState.PAUSE_GAME:
+			get_tree().current_scene.process_mode = Node.PROCESS_MODE_INHERIT
+			pause_screen.hide()
 
 ## Start some dialogue
 func start(dialogue_resource: DialogueResource, title: String, extra_game_states: Array = []) -> void:
+	for extra_state in extra_game_states:
+		if extra_state == GlobalEnums.DialogueExtraState.PAUSE_GAME:
+			get_tree().current_scene.process_mode = Node.PROCESS_MODE_DISABLED
+			pause_screen.show()
 	temporary_game_states = extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource

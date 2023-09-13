@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NatureTerraPack" load_steps=2 format=3 uid="uid://jaejalpclhid"]
+
+[ext_resource type="Script" path="res://resources/nature_stats/nature_terra_pack.gd" id="1_ycs3h"]
+
+[resource]
+script = ExtResource("1_ycs3h")
+atmosphere = 10.0
+oxygen = 10.0
+heat = 10.0
+duration_sec = 20.0
+atmosphere_condition = Vector2(0, 100)
+oxygen_condition = Vector2(0, 100)
+heat_condition = Vector2(0, 100)

@@ -18,15 +18,16 @@ func _exit_tree():
 
 func close_window():
 	get_parent().remove_child(self)
+	$Title.text = "Reason"
 	
 
 
 func _on_back_button_up():
 	close_window()
-	$Title.text = "Reason"
 
 func _on_restart_button_up():
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
+	close_window()
 
 
 func _on_settings_button_up():

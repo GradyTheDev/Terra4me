@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvjjonej6wf7y"]
+[gd_scene load_steps=6 format=3 uid="uid://bvjjonej6wf7y"]
 
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button_list.gd" id="1_8jm8o"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_t42bp"]
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button.gd" id="3_l4sol"]
-[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/statistics/bacteria.tres" id="4_n1qd5"]
+[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/bacteria.tres" id="4_truoj"]
+[ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/algea.tres" id="5_p7ehf"]
 
 [node name="NatureButtonList" type="PanelContainer"]
 size_flags_horizontal = 8
@@ -21,13 +22,13 @@ alignment = 1
 layout_mode = 2
 text = "Bacteria"
 script = ExtResource("3_l4sol")
-terra_packs = ExtResource("4_n1qd5")
+nature_terra_pack = ExtResource("4_truoj")
 
 [node name="AlgaeButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Algea"
 script = ExtResource("3_l4sol")
-terra_packs = null
+nature_terra_pack = ExtResource("5_p7ehf")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -37,13 +38,13 @@ alignment = 1
 layout_mode = 2
 text = "Small Plants"
 script = ExtResource("3_l4sol")
-terra_packs = null
+nature_terra_pack = null
 
 [node name="PlantTreesButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Plant Tree"
 script = ExtResource("3_l4sol")
-terra_packs = null
+nature_terra_pack = null
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -54,13 +55,13 @@ layout_mode = 2
 text = "Land Animals
 "
 script = ExtResource("3_l4sol")
-terra_packs = null
+nature_terra_pack = null
 
 [node name="GoopButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Goop"
 script = ExtResource("3_l4sol")
-terra_packs = null
+nature_terra_pack = null
 
 [node name="CooldownProgress" type="ProgressBar" parent="VBoxContainer"]
 layout_mode = 2
