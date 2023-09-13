@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://lhd57g2xicel"]
+
+[ext_resource type="Script" path="res://code/globals/singletones/global_popup_space.gd" id="1_5xqqb"]
+
+[node name="GlobalPopupSpace" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_5xqqb")

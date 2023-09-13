@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bixuvnj0ukhsj"]
 
-[ext_resource type="Script" path="res://code/menus/menu_resources/button_sound.gd" id="1_06d6b"]
+[ext_resource type="Script" path="res://code/code_resources/buttons/button_sound.gd" id="1_06d6b"]
 [ext_resource type="AudioStream" uid="uid://taqgqup8leyd" path="res://assets/sfx/EXAMPLE_sound_UI_select.wav" id="2_gs8ha"]
 
 [node name="ButtonSound" type="Button"]

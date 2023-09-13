@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PlanetMechanic" load_steps=2 format=3 uid="uid://8qaq73y35tt5"]
 
-[ext_resource type="Script" path="res://code/planet_mechanic/planet_mechanic.gd" id="1_21xst"]
+[ext_resource type="Script" path="res://code/code_resources/terra_varible_resources/terra_varible_res.gd" id="1_21xst"]
 
 [resource]
 resource_local_to_scene = true

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="PackTerraPack" load_steps=6 format=3 uid="uid://jaejalpclhid"]
+
+[ext_resource type="Script" path="res://code/code_resources/terra_packed.gd" id="1_8ofi5"]
+[ext_resource type="Script" path="res://resources/statistics/terra_packs.gd" id="1_ycs3h"]
+
+[sub_resource type="Resource" id="Resource_tn6va"]
+script = ExtResource("1_8ofi5")
+type = 0
+total_value = 10.0
+duration_sec = 20.0
+
+[sub_resource type="Resource" id="Resource_j8n0p"]
+script = ExtResource("1_8ofi5")
+type = 1
+total_value = 10.0
+duration_sec = 20.0
+
+[sub_resource type="Resource" id="Resource_s87hx"]
+script = ExtResource("1_8ofi5")
+type = 2
+total_value = 10.0
+duration_sec = 20.0
+
+[resource]
+script = ExtResource("1_ycs3h")
+array = Array[ExtResource("1_8ofi5")]([SubResource("Resource_tn6va"), SubResource("Resource_j8n0p"), SubResource("Resource_s87hx")])

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://plfmfhlyals5"]
+
+[ext_resource type="Script" path="res://code/GUI/indicators/indicators.gd" id="1_bu24p"]
+[ext_resource type="PackedScene" uid="uid://x1lh0re4n6wg" path="res://code/GUI/indicators/indicator_bar.tscn" id="1_iw2oa"]
+
+[node name="Indicators" type="VBoxContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_bu24p")
+
+[node name="Atmo" parent="." instance=ExtResource("1_iw2oa")]
+layout_mode = 2
+is_debug = false
+
+[node name="Oxygen" parent="." instance=ExtResource("1_iw2oa")]
+layout_mode = 2
+is_debug = false
+
+[node name="Heat" parent="." instance=ExtResource("1_iw2oa")]
+layout_mode = 2
+is_debug = false
+
+[connection signal="spike_action_made" from="Atmo" to="." method="_on_spike_action_made"]
+[connection signal="spike_action_made" from="Oxygen" to="." method="_on_spike_action_made"]
+[connection signal="spike_action_made" from="Heat" to="." method="_on_spike_action_made"]

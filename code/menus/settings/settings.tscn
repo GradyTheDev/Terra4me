@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnh4gtildw180"]
 
 [ext_resource type="Script" path="res://code/menus/settings/settings.gd" id="1_jsibp"]
-[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/menus/menu_resources/button_sound.tscn" id="2_01lix"]
+[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_01lix"]
 [ext_resource type="PackedScene" uid="uid://diynpxaehdnno" path="res://code/menus/settings/bus_volume.tscn" id="2_neuk2"]
 
 [node name="Settings" type="PanelContainer"]

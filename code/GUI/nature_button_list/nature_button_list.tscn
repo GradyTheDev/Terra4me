@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvjjonej6wf7y"]
+
+[ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button_list.gd" id="1_8jm8o"]
+[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_t42bp"]
+[ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button.gd" id="3_l4sol"]
+[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/statistics/bacteria.tres" id="4_n1qd5"]
+
+[node name="NatureButtonList" type="PanelContainer"]
+size_flags_horizontal = 8
+size_flags_vertical = 0
+script = ExtResource("1_8jm8o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BacteriaButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Bacteria"
+script = ExtResource("3_l4sol")
+terra_packs = ExtResource("4_n1qd5")
+
+[node name="AlgaeButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Algea"
+script = ExtResource("3_l4sol")
+terra_packs = null
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SmallPlantsButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Small Plants"
+script = ExtResource("3_l4sol")
+terra_packs = null
+
+[node name="PlantTreesButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Plant Tree"
+script = ExtResource("3_l4sol")
+terra_packs = null
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="LandAnimalsButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Land Animals
+"
+script = ExtResource("3_l4sol")
+terra_packs = null
+
+[node name="GoopButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Goop"
+script = ExtResource("3_l4sol")
+terra_packs = null
+
+[node name="CooldownProgress" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+value = 70.0
+show_percentage = false
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer/AlgaeButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer2/SmallPlantsButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer2/PlantTreesButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer3/LandAnimalsButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer3/GoopButton" to="." method="_on_button_up_with_stats"]

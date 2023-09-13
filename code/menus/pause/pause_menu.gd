@@ -30,7 +30,7 @@ func _on_restart_button_up():
 
 
 func _on_settings_button_up():
-	GlobalPopUps.call_scene(GlobalPopUps.SCENE.SETTINGS)
+	GlobalPopupSpace.call_scene(GlobalEnums.POP_UP.SETTINGS)
 
 
 func _on_main_menu_button_up():

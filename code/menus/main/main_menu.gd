@@ -14,8 +14,8 @@ func _on_level_3_pressed():
 
 
 func _on_credits_pressed():
-	GlobalPopUps.call_scene(GlobalPopUps.SCENE.CREDITS)
+	GlobalPopupSpace.call_scene(GlobalEnums.POP_UP.CREDITS)
 
 
 func _on_settings_pressed():
-	GlobalPopUps.call_scene(GlobalPopUps.SCENE.SETTINGS)
+	GlobalPopupSpace.call_scene(GlobalEnums.POP_UP.SETTINGS)

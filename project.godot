@@ -22,7 +22,7 @@ driver/mix_rate.web=44100
 
 [autoload]
 
-GlobalPopUps="*res://code/globals/singletones/singletone_pop_ups.tscn"
+GlobalPopupSpace="*res://code/globals/singletones/global_popup_space.tscn"
 GlobalSounds="*res://code/globals/singletones/global_sounds.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 

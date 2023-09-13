@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://umjw5byvgiwd"]
 
-[ext_resource type="Script" path="res://code/useful/small_balloon.gd" id="1_7pc5n"]
+[ext_resource type="Script" path="res://code/GUI/small_balloon.gd" id="1_7pc5n"]
 [ext_resource type="Resource" uid="uid://esykr53lp1kb" path="res://resources/dialogues/characters_portraits/test_portrait.tres" id="2_gjmwu"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_ll42p"]
 
@@ -34,13 +34,21 @@ content_margin_right = 2.0
 content_margin_bottom = 2.0
 draw_center = false
 
-[node name="SmallBalloon" type="CanvasLayer" node_paths=PackedStringArray("response_template")]
-layer = 100
+[node name="SmallBalloon" type="Control" node_paths=PackedStringArray("response_template")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_7pc5n")
 response_template = NodePath("Balloon/Margin/VBox/ResponseTemplate")
 characters_portraits = Array[Resource("res://resources/dialogues/characters_portraits/portrait_resource.gd")]([ExtResource("2_gjmwu")])
+metadata/_edit_lock_ = true
 
 [node name="Portrait" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 333.0
 offset_top = 134.0
 offset_right = 477.0
@@ -66,6 +74,7 @@ scroll_active = false
 
 [node name="Balloon" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(72.335, 30.165)
+layout_mode = 0
 offset_left = 5.0
 offset_top = 218.0
 offset_right = 474.0

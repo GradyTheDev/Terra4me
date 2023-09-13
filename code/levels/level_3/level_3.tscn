@@ -1,31 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsq78wqqfns3d"]
+[gd_scene load_steps=2 format=3 uid="uid://bsq78wqqfns3d"]
 
-[ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/useful/planet.tscn" id="1_70tus"]
-[ext_resource type="Script" path="res://code/planet_mechanic/planet_mechanic.gd" id="2_r36p4"]
-
-[sub_resource type="Resource" id="Resource_64uv5"]
-resource_local_to_scene = true
-script = ExtResource("2_r36p4")
-display_name = "Atmosphere"
-max_value = 100.0
-min_value = 0.0
-value = 50.0
-
-[sub_resource type="Resource" id="Resource_6kxww"]
-resource_local_to_scene = true
-script = ExtResource("2_r36p4")
-display_name = "Oxygen"
-max_value = 100.0
-min_value = 0.0
-value = 0.0
-
-[sub_resource type="Resource" id="Resource_tcdda"]
-resource_local_to_scene = true
-script = ExtResource("2_r36p4")
-display_name = "Heat"
-max_value = 100.0
-min_value = 0.0
-value = 0.0
+[ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_70tus"]
 
 [node name="level_3" type="Control"]
 layout_mode = 3
@@ -37,6 +12,3 @@ grow_vertical = 2
 
 [node name="Planet" parent="." instance=ExtResource("1_70tus")]
 layout_mode = 1
-atmosphere = SubResource("Resource_64uv5")
-oxygen = SubResource("Resource_6kxww")
-heat = SubResource("Resource_tcdda")

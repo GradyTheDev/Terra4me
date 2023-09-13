@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0b0sqv3v3p2q"]
+
+[ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
+[ext_resource type="PackedScene" uid="uid://plfmfhlyals5" path="res://code/GUI/indicators/indicators.tscn" id="5_x3k61"]
+[ext_resource type="Texture2D" uid="uid://cegpqnmo5ld4j" path="res://assets/artwork/mockups/mockup_map.png" id="6_8ys2q"]
+[ext_resource type="PackedScene" uid="uid://bvjjonej6wf7y" path="res://code/GUI/nature_button_list/nature_button_list.tscn" id="6_841jt"]
+[ext_resource type="PackedScene" uid="uid://umjw5byvgiwd" path="res://code/GUI/small_balloon.tscn" id="8_br7b4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b84ou"]
+
+[node name="Planet" type="PanelContainer"]
+custom_minimum_size = Vector2(480, 270)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b84ou")
+script = ExtResource("1_qdf4b")
+
+[node name="Indicators" parent="." instance=ExtResource("5_x3k61")]
+layout_mode = 2
+is_debug = false
+
+[node name="TopInformation" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Title" type="Label" parent="TopInformation"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Title"
+
+[node name="Task" type="Label" parent="TopInformation"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "TaskDescription"
+
+[node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
+layout_mode = 2
+
+[node name="Map" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_8ys2q")
+expand_mode = 1
+
+[node name="SmallBalloon" parent="." instance=ExtResource("8_br7b4")]
+layout_mode = 2
+
+[connection signal="spike_action_made" from="Indicators" to="." method="_on_spike_action_made"]
+[connection signal="natural_action_made" from="ButtonList" to="." method="_on_natural_action_made"]
