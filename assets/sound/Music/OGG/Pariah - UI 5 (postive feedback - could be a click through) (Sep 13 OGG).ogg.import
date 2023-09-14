@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtpfea5jpy3w2"
+path="res://.godot/imported/Pariah - UI 5 (postive feedback - could be a click through) (Sep 13 OGG).ogg-72e8c413b774c86bff0955f9786c8ff2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Music/OGG/Pariah - UI 5 (postive feedback - could be a click through) (Sep 13 OGG).ogg"
+dest_files=["res://.godot/imported/Pariah - UI 5 (postive feedback - could be a click through) (Sep 13 OGG).ogg-72e8c413b774c86bff0955f9786c8ff2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

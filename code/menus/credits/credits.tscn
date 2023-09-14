@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqaxx0vlmj3lc"]
+[gd_scene load_steps=7 format=3 uid="uid://cqaxx0vlmj3lc"]
 
 [ext_resource type="Script" path="res://code/menus/credits/credits.gd" id="2_5xfmh"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_2q331"]
 [ext_resource type="PackedScene" uid="uid://bap5x6kis6j2a" path="res://addons/simplelicense/GUI/LicenseGUI.tscn" id="3_hosfm"]
+[ext_resource type="AudioStream" uid="uid://2018juhjf0r0" path="res://assets/sound/Music/OGG/Pariah - UI 1 (Sep 13 OGG).ogg" id="4_my7kc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dp4e"]
 
@@ -69,5 +70,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Back"
+on_click_sound = ExtResource("4_my7kc")
 
 [connection signal="button_up" from="Back" to="." method="_on_back_button_up"]

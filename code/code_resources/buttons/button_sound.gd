@@ -17,4 +17,5 @@ func _on_pressed():
 	play_sound(on_click_sound)
 
 func _on_mouse_entered():
-	play_sound(on_hover_sound)
+	if not self.disabled:
+		play_sound(on_hover_sound)

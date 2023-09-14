@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bixuvnj0ukhsj"]
+[gd_scene load_steps=4 format=3 uid="uid://bixuvnj0ukhsj"]
 
 [ext_resource type="Script" path="res://code/code_resources/buttons/button_sound.gd" id="1_06d6b"]
-[ext_resource type="AudioStream" uid="uid://taqgqup8leyd" path="res://assets/sfx/EXAMPLE_sound_UI_select.wav" id="2_gs8ha"]
+[ext_resource type="AudioStream" uid="uid://cctb8kjl0tj5j" path="res://assets/sound/Music/OGG/Pariah - UI 2 (click) (Sep 13 OGG).ogg" id="2_6mcly"]
+[ext_resource type="AudioStream" uid="uid://c75l6sby5jyjm" path="res://assets/sound/Music/OGG/Pariah - UI 4 (Sep 13 OGG).ogg" id="3_h4h0c"]
 
 [node name="ButtonSound" type="Button"]
 custom_minimum_size = Vector2(30, 10)
 mouse_default_cursor_shape = 2
 text = "Example"
 script = ExtResource("1_06d6b")
-on_click_sound = ExtResource("2_gs8ha")
+on_click_sound = ExtResource("2_6mcly")
+on_hover_sound = ExtResource("3_h4h0c")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

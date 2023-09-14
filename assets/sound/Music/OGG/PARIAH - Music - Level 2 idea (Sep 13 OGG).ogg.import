@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mr4r7nlswqa"
+path="res://.godot/imported/PARIAH - Music - Level 2 idea (Sep 13 OGG).ogg-fad70ecf52d5b22d1c74500f3cf7b8e8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 idea (Sep 13 OGG).ogg"
+dest_files=["res://.godot/imported/PARIAH - Music - Level 2 idea (Sep 13 OGG).ogg-fad70ecf52d5b22d1c74500f3cf7b8e8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
