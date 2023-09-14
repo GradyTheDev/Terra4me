@@ -2,9 +2,9 @@ extends CanvasLayer
 
 const POP_UP = GlobalEnums.POP_UP
 
-const SETTINGS_TSCN: PackedScene = preload("res://code/menus/settings/settings.tscn")
-const CREDITS_TSCN: PackedScene = preload("res://code/menus/credits/credits.tscn")
-const PAUSE_TSCN: PackedScene = preload("res://code/menus/pause/pause_menu.tscn")
+var SETTINGS_TSCN: PackedScene = load("res://code/menus/settings/settings.tscn")
+var CREDITS_TSCN: PackedScene = load("res://code/menus/credits/credits.tscn")
+var PAUSE_TSCN: PackedScene = load("res://code/menus/pause/pause_menu.tscn")
 
 var scenes_dict = {
 	POP_UP.SETTINGS: SETTINGS_TSCN.instantiate(),
