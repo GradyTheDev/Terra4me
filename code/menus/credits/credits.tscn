@@ -70,7 +70,8 @@ selection_enabled = true
 [node name="Licenses" parent="TabContainer" instance=ExtResource("3_hosfm")]
 visible = false
 layout_mode = 2
-load_locations = Array[String](["res://resources/licenses", "res://addons/simplelicense/mod_example/licenses/"])
+load_locations = Array[String](["res://resources/licenses"])
+export_locations = Array[String](["user://licenses/game/"])
 
 [node name="Back" parent="." instance=ExtResource("3_2q331")]
 layout_mode = 2
