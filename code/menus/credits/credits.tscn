@@ -40,29 +40,36 @@ focus_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxFlat_6dp4e")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vmmq5")
 bbcode_enabled = true
-text = "[center][b][font_size=30]Great game title[/font_size][/b]
+text = "[center][b][font_size=30]Terra4Me[/font_size][/b]
 [b]
 - Project Leads - [/b]
+Grady
+Brandon
 
 [b]- Art - [/b]
+Vulkaara - lead
+Alm4nditte
 
 [b]- Sound - [/b]
+Rausch
+ClairdeLou
 
 [b]- Programming -[/b]
+Wovri
+Grady - lead
 
 [b]- Writer -[/b]
-
-[b]- Misc -[/b]
+Brandon
 
 [b]- You can find the game at - [/b][/center]
+[url=https://gradythedev.itch.io/godot-wild-jam-61]gradythedev.itch.io/godot-wild-jam-61[/url]
 "
 selection_enabled = true
 
-[node name="LicenseGUI" parent="TabContainer" instance=ExtResource("3_hosfm")]
+[node name="Licenses" parent="TabContainer" instance=ExtResource("3_hosfm")]
 visible = false
 layout_mode = 2
-load_locations = Array[String](["res://resources/licenses"])
-export_locations = Array[String](["user://licenses/game/"])
+load_locations = Array[String](["res://resources/licenses", "res://addons/simplelicense/mod_example/licenses/"])
 
 [node name="Back" parent="." instance=ExtResource("3_2q331")]
 layout_mode = 2
@@ -70,4 +77,5 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Back"
 
+[connection signal="meta_clicked" from="TabContainer/Authors/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
 [connection signal="button_up" from="Back" to="." method="_on_back_button_up"]
