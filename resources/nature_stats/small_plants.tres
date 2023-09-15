@@ -5,9 +5,10 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_wbct2")
-atmosphere_per_sec = 0.5
-oxygen_per_sec = 0.5
-heat_per_sec = 0.5
-atmosphere_condition = Vector2(0, 100)
-oxygen_condition = Vector2(0, 100)
-heat_condition = Vector2(0, 100)
+atmosphere_per_sec = -0.6
+oxygen_per_sec = 0.6
+heat_per_sec = 0.0
+extinction_sec = 10.0
+atmosphere_condition = Vector2(10, 90)
+oxygen_condition = Vector2(10, 90)
+heat_condition = Vector2(10, 90)

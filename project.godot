@@ -25,6 +25,7 @@ driver/mix_rate.web=44100
 GlobalPopupSpace="*res://code/globals/singletones/global_popup_space.tscn"
 GlobalSounds="*res://code/globals/singletones/global_sounds.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+LevelUnlocker="*res://code/globals/singletones/level_unlocker.tscn"
 
 [display]
 

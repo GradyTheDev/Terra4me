@@ -1,6 +1,8 @@
 class_name Planet
 extends PanelContainer
 
+signal planet_compleated()
+
 @export var atmosphere_ranges: Array[RangeResource]
 @export var oxygen_ranges: Array[RangeResource]
 @export var heat_ranges: Array[RangeResource]
@@ -113,4 +115,5 @@ func _on_natural_action_made(nature_terra_pack: NatureTerraPack):
 
 
 func _on_win_timer_timeout():
-	print("You win!")
+	emit_signal("planet_compleated")
+	self.process_mode = Node.PROCESS_MODE_DISABLED

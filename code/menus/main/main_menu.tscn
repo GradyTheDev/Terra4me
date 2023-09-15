@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://foy5qncg7r4o" path="res://assets/artwork/mockups/mockup_mainmenu.png" id="1_flqu4"]
 [ext_resource type="Script" path="res://code/menus/main/main_menu.gd" id="2_3lfwf"]
-[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/menus/menu_resources/button_sound.tscn" id="3_js0nh"]
+[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_js0nh"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("2_3lfwf")
@@ -40,6 +40,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
 
+[node name="Level_1" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 110.0
+offset_top = 128.0
+offset_right = 140.0
+offset_bottom = 159.0
+text = "1"
+
+[node name="Level_2" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 182.0
+offset_top = 68.0
+offset_right = 212.0
+offset_bottom = 99.0
+text = "2"
+
 [node name="Level_3" parent="." instance=ExtResource("3_js0nh")]
 offset_left = 254.0
 offset_top = 120.0
@@ -47,7 +61,17 @@ offset_right = 284.0
 offset_bottom = 151.0
 text = "3"
 
+[node name="Level_4" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 327.0
+offset_top = 59.0
+offset_right = 358.0
+offset_bottom = 90.0
+text = "4"
+
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="button_up" from="Level_1" to="." method="_on_level_1_button_up"]
+[connection signal="button_up" from="Level_2" to="." method="_on_level_2_button_up"]
 [connection signal="pressed" from="Level_3" to="." method="_on_level_3_pressed"]
+[connection signal="button_up" from="Level_4" to="." method="_on_level_4_button_up"]

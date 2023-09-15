@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://drxqv7u4fhtpr"]
+[gd_scene load_steps=3 format=3 uid="uid://cku2ad4isfr42"]
 
-[ext_resource type="Script" path="res://code/menus/pause/pause_menu.gd" id="2_s4poh"]
-[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_h7pul"]
+[ext_resource type="Script" path="res://code/menus/win/win_menu.gd" id="1_bysj4"]
+[ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_13con"]
 
-[node name="Pause" type="PanelContainer"]
+[node name="Win" type="PanelContainer"]
 process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,15 +14,15 @@ offset_right = -142.0
 offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_s4poh")
+script = ExtResource("1_bysj4")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "Game Paused"
+text = "You win!"
 
-[node name="Back" parent="." instance=ExtResource("3_h7pul")]
+[node name="Back" parent="." instance=ExtResource("2_13con")]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
@@ -32,25 +32,25 @@ text = "Back"
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Restart" parent="VBoxContainer" instance=ExtResource("3_h7pul")]
+[node name="Next" parent="VBoxContainer" instance=ExtResource("2_13con")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Restart"
+text = "Next level"
 
-[node name="Settings" parent="VBoxContainer" instance=ExtResource("3_h7pul")]
+[node name="Settings" parent="VBoxContainer" instance=ExtResource("2_13con")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Settings"
 
-[node name="MainMenu" parent="VBoxContainer" instance=ExtResource("3_h7pul")]
+[node name="MainMenu" parent="VBoxContainer" instance=ExtResource("2_13con")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Menu"
 
 [connection signal="button_up" from="Back" to="." method="_on_back_button_up"]
-[connection signal="button_up" from="VBoxContainer/Restart" to="." method="_on_restart_button_up"]
+[connection signal="button_up" from="VBoxContainer/Next" to="." method="_on_next_button_up"]
 [connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
 [connection signal="button_up" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_button_up"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=13 format=3 uid="uid://c0k0c51g2ushw"]
+
+[ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
+[ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
+[ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_ckuxu"]
+[ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="3_ugbg6"]
+[ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="4_arfx5"]
+[ext_resource type="Script" path="res://code/levels/level_4/Camera2D.gd" id="5_rbb28"]
+
+[sub_resource type="Resource" id="Resource_6c0da"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(50, 60)
+
+[sub_resource type="Resource" id="Resource_e5dmm"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(60, 90)
+
+[sub_resource type="Resource" id="Resource_ahdhf"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(30, 50)
+
+[sub_resource type="Resource" id="Resource_4ionb"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(20, 40)
+
+[sub_resource type="Resource" id="Resource_wu2av"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(10, 30)
+
+[sub_resource type="Resource" id="Resource_1ipjl"]
+script = ExtResource("2_ckuxu")
+color = 2
+range = Vector2(60, 70)
+
+[node name="level_4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bru5o")
+number_of_planets_to_win = 2
+
+[node name="Planet" parent="." instance=ExtResource("1_fprcg")]
+layout_mode = 1
+atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")])
+oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
+heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
+sec_to_win = 30.0
+
+[node name="Planet2" parent="." instance=ExtResource("1_fprcg")]
+layout_mode = 1
+offset_left = 480.0
+offset_right = 480.0
+atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_4ionb")])
+oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
+heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
+sec_to_win = 30.0
+
+[node name="DialogueComponent" parent="." instance=ExtResource("3_ugbg6")]
+level_dialogue = ExtResource("4_arfx5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+script = ExtResource("5_rbb28")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://b853fcpfq0l4"]
+
+[ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_b1xxe"]
+[ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_co3ya"]
+[ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="3_ipvg4"]
+[ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="4_mn0tv"]
+[ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="5_0r5v6"]
+
+[sub_resource type="Resource" id="Resource_lds18"]
+script = ExtResource("3_ipvg4")
+color = 2
+range = Vector2(30, 70)
+
+[node name="level_1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1xxe")
+
+[node name="Planet" parent="." instance=ExtResource("2_co3ya")]
+layout_mode = 1
+atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")])
+sec_to_win = 30.0
+
+[node name="DialogueComponent" parent="." instance=ExtResource("4_mn0tv")]
+level_dialogue = ExtResource("5_0r5v6")
+
+[connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]

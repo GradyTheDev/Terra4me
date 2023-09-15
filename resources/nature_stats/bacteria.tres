@@ -8,6 +8,7 @@ script = ExtResource("1_ycs3h")
 atmosphere_per_sec = 0.5
 oxygen_per_sec = 0.5
 heat_per_sec = 0.5
+extinction_sec = 0.0
 atmosphere_condition = Vector2(0, 100)
 oxygen_condition = Vector2(0, 100)
 heat_condition = Vector2(0, 100)

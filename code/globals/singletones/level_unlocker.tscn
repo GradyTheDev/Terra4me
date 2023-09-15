@@ -1,0 +1,11 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtuf2qwxplfbv"]
+
+[ext_resource type="Script" path="res://code/globals/singletones/level_unlocker.gd" id="1_qmjvt"]
+[ext_resource type="PackedScene" uid="uid://b853fcpfq0l4" path="res://code/levels/level_1/level_1.tscn" id="2_ddgky"]
+[ext_resource type="PackedScene" uid="uid://bq2ru6c7ppj8y" path="res://code/levels/level_2/level_2.tscn" id="3_u2hh7"]
+[ext_resource type="PackedScene" uid="uid://bsq78wqqfns3d" path="res://code/levels/level_3/level_3.tscn" id="4_y4oig"]
+[ext_resource type="PackedScene" uid="uid://c0k0c51g2ushw" path="res://code/levels/level_4/level_4.tscn" id="5_uvo45"]
+
+[node name="LevelUnlocker" type="Node"]
+script = ExtResource("1_qmjvt")
+levels = Array[PackedScene]([ExtResource("2_ddgky"), ExtResource("3_u2hh7"), ExtResource("4_y4oig"), ExtResource("5_uvo45")])

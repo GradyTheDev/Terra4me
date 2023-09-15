@@ -5,9 +5,10 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_vbuvo")
-atmosphere_per_sec = 0.0
-oxygen_per_sec = 0.0
-heat_per_sec = 0.0
-atmosphere_condition = Vector2(5, 95)
-oxygen_condition = Vector2(5, 95)
-heat_condition = Vector2(5, 95)
+atmosphere_per_sec = 1.053
+oxygen_per_sec = -0.632
+heat_per_sec = -0.368
+extinction_sec = 13.0
+atmosphere_condition = Vector2(30, 70)
+oxygen_condition = Vector2(30, 70)
+heat_condition = Vector2(30, 70)
