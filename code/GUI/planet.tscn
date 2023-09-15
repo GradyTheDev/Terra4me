@@ -59,7 +59,6 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-value = 100.0
 script = ExtResource("5_gn5i8")
 
 [connection signal="spike_action_made" from="Indicators" to="." method="_on_spike_action_made"]
