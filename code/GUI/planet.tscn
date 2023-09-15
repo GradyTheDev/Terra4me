@@ -40,6 +40,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "TaskDescription"
 
+[node name="WinTime" type="ProgressBar" parent="TopInformation"]
+custom_minimum_size = Vector2(126, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+show_percentage = false
+script = ExtResource("5_gn5i8")
+
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
 
@@ -53,13 +61,6 @@ expand_mode = 1
 
 [node name="WinTimer" type="Timer" parent="."]
 one_shot = true
-
-[node name="WinTime" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-script = ExtResource("5_gn5i8")
 
 [connection signal="spike_action_made" from="Indicators" to="." method="_on_spike_action_made"]
 [connection signal="natural_action_made" from="ButtonList" to="." method="_on_natural_action_made"]

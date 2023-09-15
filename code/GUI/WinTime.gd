@@ -1,6 +1,6 @@
 extends ProgressBar
 
-@onready var win_timer = $"../WinTimer"
+@onready var win_timer = $"../../WinTimer"
 
 func _process(_delta):
 	if win_timer.is_stopped():
