@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://djqxggbyxn27d"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://djqxggbyxn27d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyext"]
 bg_color = Color(0.243137, 0.243137, 0.243137, 0.25098)
@@ -8,7 +8,15 @@ bg_color = Color(0.243137, 0.243137, 0.243137, 0.25098)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_susaj"]
 bg_color = Color(0.513726, 0.490196, 0.454902, 1)
 
+[sub_resource type="SystemFont" id="SystemFont_loiet"]
+font_names = PackedStringArray("Serif")
+multichannel_signed_distance_field = true
+
+[sub_resource type="FontVariation" id="FontVariation_jalcb"]
+base_font = SubResource("SystemFont_loiet")
+
 [resource]
+default_font = SubResource("FontVariation_jalcb")
 Button/styles/normal = SubResource("StyleBoxFlat_wyext")
 PanelContainer/styles/panel = SubResource("StyleBoxEmpty_lw21e")
 TabContainer/styles/panel = SubResource("StyleBoxFlat_susaj")
