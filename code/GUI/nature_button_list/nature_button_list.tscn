@@ -57,11 +57,6 @@ text = "Goop"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("9_q4loo")
 
-[node name="CooldownProgress" type="ProgressBar" parent="VBoxContainer"]
-layout_mode = 2
-value = 70.0
-show_percentage = false
-
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
 
