@@ -13,6 +13,8 @@
 [node name="NatureButtonList" type="PanelContainer"]
 size_flags_horizontal = 8
 size_flags_vertical = 0
+tooltip_text = "Nature Actions
+Slow, no cooldowns, and don't stop."
 script = ExtResource("1_8jm8o")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

@@ -6,6 +6,8 @@
 [node name="Indicators" type="VBoxContainer"]
 size_flags_horizontal = 0
 size_flags_vertical = 0
+tooltip_text = "Spike actions
+Fast but have long cooldowns"
 script = ExtResource("1_bu24p")
 
 [node name="Atmo" parent="." instance=ExtResource("1_iw2oa")]
