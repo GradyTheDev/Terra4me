@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2018juhjf0r0"
+path="res://.godot/imported/Pariah - UI 1 (Sep 13 OGG).ogg-5c597160f0d6d96414a00ee7a984421a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Music/OGG/Pariah - UI 1 (Sep 13 OGG).ogg"
+dest_files=["res://.godot/imported/Pariah - UI 1 (Sep 13 OGG).ogg-5c597160f0d6d96414a00ee7a984421a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

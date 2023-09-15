@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c0k0c51g2ushw"]
+[gd_scene load_steps=15 format=3 uid="uid://c0k0c51g2ushw"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
+[ext_resource type="AudioStream" uid="uid://x6md7q7gosqj" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 4 Ambience (Sep 13 OGG).ogg" id="2_0ov3q"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_ckuxu"]
+[ext_resource type="AudioStream" uid="uid://doi5qdjdye2q8" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 4 idea (Sep 13 OGG).ogg" id="3_i31hf"]
 [ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="3_ugbg6"]
 [ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="4_arfx5"]
 [ext_resource type="Script" path="res://code/levels/level_4/Camera2D.gd" id="5_rbb28"]
@@ -46,6 +48,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bru5o")
 number_of_planets_to_win = 2
+ambient_music = ExtResource("2_0ov3q")
+win_sound = ExtResource("3_i31hf")
 
 [node name="Planet" parent="." instance=ExtResource("1_fprcg")]
 layout_mode = 1

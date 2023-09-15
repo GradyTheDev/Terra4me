@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3da1n8itbrqk"]
+
+[ext_resource type="Script" path="res://code/menus/main/main_menu_background.gd" id="1_ms2xy"]
+[ext_resource type="Texture2D" uid="uid://bftfggkhtaagu" path="res://assets/artwork/layered main menu/background.png" id="1_scvii"]
+[ext_resource type="Texture2D" uid="uid://cgno7cgfqtnu4" path="res://assets/artwork/layered main menu/sun.png" id="2_4u4ig"]
+[ext_resource type="Texture2D" uid="uid://f8nhoil8afrb" path="res://assets/artwork/layered main menu/stars.png" id="3_vnls0"]
+[ext_resource type="Texture2D" uid="uid://d1nq5gngth336" path="res://assets/artwork/layered main menu/decoration.png" id="4_iw6o6"]
+[ext_resource type="Texture2D" uid="uid://bu4sowqo4pkk1" path="res://assets/artwork/layered main menu/orbits.png" id="5_mleqm"]
+[ext_resource type="Texture2D" uid="uid://c7o05avkfsany" path="res://assets/artwork/layered main menu/planet1.png" id="6_01tf1"]
+[ext_resource type="Texture2D" uid="uid://myw4rks6c3yn" path="res://assets/artwork/layered main menu/planet2.png" id="7_ao1vh"]
+[ext_resource type="Texture2D" uid="uid://chygslmxll48o" path="res://assets/artwork/layered main menu/planet3.png" id="8_vukd7"]
+[ext_resource type="Texture2D" uid="uid://2kbphetn8fn0" path="res://assets/artwork/layered main menu/planet4_1.png" id="9_lbsj1"]
+[ext_resource type="Texture2D" uid="uid://177iffi3grsa" path="res://assets/artwork/layered main menu/planet4_2.png" id="10_mfk36"]
+
+[node name="MainMenuBackground" type="Node2D"]
+script = ExtResource("1_ms2xy")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_scvii")
+centered = false
+
+[node name="Sun" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_4u4ig")
+centered = false
+
+[node name="Background2" type="Sprite2D" parent="."]
+texture = ExtResource("3_vnls0")
+centered = false
+
+[node name="Decoration" type="Sprite2D" parent="."]
+texture = ExtResource("4_iw6o6")
+centered = false
+
+[node name="Orbits" type="Sprite2D" parent="."]
+texture = ExtResource("5_mleqm")
+centered = false
+
+[node name="CenterPlanet0" type="Node2D" parent="Orbits"]
+position = Vector2(154, 160)
+
+[node name="Planet1" type="Sprite2D" parent="Orbits/CenterPlanet0"]
+position = Vector2(-154, -160)
+texture = ExtResource("6_01tf1")
+centered = false
+
+[node name="CenterPlanet1" type="Node2D" parent="Orbits"]
+position = Vector2(214, 132)
+
+[node name="Planet2" type="Sprite2D" parent="Orbits/CenterPlanet1"]
+position = Vector2(-214, -132)
+texture = ExtResource("7_ao1vh")
+centered = false
+
+[node name="CenterPlanet2" type="Node2D" parent="Orbits"]
+position = Vector2(279, 160)
+
+[node name="Planet3" type="Sprite2D" parent="Orbits/CenterPlanet2"]
+position = Vector2(-279, -160)
+texture = ExtResource("8_vukd7")
+centered = false
+
+[node name="CenterPlanet3_1" type="Node2D" parent="Orbits"]
+position = Vector2(345, 140)
+
+[node name="Planet4_1" type="Sprite2D" parent="Orbits/CenterPlanet3_1"]
+position = Vector2(-345, -140)
+texture = ExtResource("9_lbsj1")
+centered = false
+
+[node name="CenterPlanet3_2" type="Node2D" parent="Orbits"]
+position = Vector2(414, 169)
+
+[node name="Planet4_2" type="Sprite2D" parent="Orbits/CenterPlanet3_2"]
+position = Vector2(-414, -169)
+texture = ExtResource("10_mfk36")
+centered = false

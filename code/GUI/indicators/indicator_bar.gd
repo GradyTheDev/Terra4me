@@ -91,10 +91,9 @@ func _on_cooldown_timeout():
 	$Increase.disabled = false
 	$Decrease.disabled = false
 
-
-func _on_increase_button_down():
-	create_terraforming_varibles(true)
-
-
-func _on_decrease_button_down():
+func _on_decrease_button_up():
 	create_terraforming_varibles(false)
+
+
+func _on_increase_button_up():
+	create_terraforming_varibles(true)

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPortraitResource" load_steps=3 format=3 uid="uid://dxg2mpmm0og5l"]
+
+[ext_resource type="Script" path="res://resources/dialogues/characters_portraits/portrait_resource.gd" id="1_q2c1v"]
+[ext_resource type="Texture2D" uid="uid://0h0bdcdtkty8" path="res://assets/artwork/crew/news_anchor.png" id="2_2n8k0"]
+
+[resource]
+script = ExtResource("1_q2c1v")
+dialogue_name = "news_anchor"
+texture = ExtResource("2_2n8k0")

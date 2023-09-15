@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://x1lh0re4n6wg"]
+[gd_scene load_steps=6 format=3 uid="uid://x1lh0re4n6wg"]
 
 [ext_resource type="Script" path="res://code/GUI/indicators/indicator_bar.gd" id="1_qgvuk"]
 [ext_resource type="Script" path="res://code/GUI/indicators/whole_range.gd" id="2_akgk5"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_qwyys"]
+[ext_resource type="AudioStream" uid="uid://chusyonnyf6xk" path="res://assets/sound/Music/OGG/Pariah - UI 8 (Sep 13 OGG).ogg" id="4_bw5me"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76scr"]
 
@@ -59,6 +60,7 @@ custom_minimum_size = Vector2(20, 10)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "+"
+on_click_sound = ExtResource("4_bw5me")
 
 [node name="Decrease" parent="." instance=ExtResource("2_qwyys")]
 custom_minimum_size = Vector2(20, 10)
@@ -66,6 +68,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 text = "-
 "
+on_click_sound = ExtResource("4_bw5me")
 
 [node name="CooldownProgress" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(116.615, 0)
@@ -79,6 +82,6 @@ one_shot = true
 [node name="Duration" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="button_down" from="Increase" to="." method="_on_increase_button_down"]
-[connection signal="button_down" from="Decrease" to="." method="_on_decrease_button_down"]
+[connection signal="button_up" from="Increase" to="." method="_on_increase_button_up"]
+[connection signal="button_up" from="Decrease" to="." method="_on_decrease_button_up"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

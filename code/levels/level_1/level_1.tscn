@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b853fcpfq0l4"]
+[gd_scene load_steps=9 format=3 uid="uid://b853fcpfq0l4"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_b1xxe"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_co3ya"]
+[ext_resource type="AudioStream" uid="uid://cs62gq6ayqqjd" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 1 Ambience (Sep 13 OGG).ogg" id="2_x50ow"]
+[ext_resource type="AudioStream" uid="uid://cbrj1xacenlxd" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 1 Idea (Sep 13 OGG).ogg" id="3_cexbn"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="3_ipvg4"]
 [ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="4_mn0tv"]
 [ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="5_0r5v6"]
@@ -19,6 +21,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b1xxe")
+ambient_music = ExtResource("2_x50ow")
+win_sound = ExtResource("3_cexbn")
 
 [node name="Planet" parent="." instance=ExtResource("2_co3ya")]
 layout_mode = 1

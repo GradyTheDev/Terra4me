@@ -9,8 +9,6 @@ func _on_quit_pressed():
 		get_tree().quit()
 
 
-func _on_level_3_pressed():
-	get_tree().change_scene_to_file("res://code/levels/level_3/level_3.tscn")
 
 
 func _on_credits_pressed():
@@ -24,10 +22,12 @@ func _on_settings_pressed():
 func _on_level_1_button_up():
 	get_tree().change_scene_to_file("res://code/levels/level_1/level_1.tscn")
 
-
 func _on_level_2_button_up():
 	get_tree().change_scene_to_file("res://code/levels/level_2/level_2.tscn")
 
+func _on_level_3_pressed():
+	get_tree().change_scene_to_file("res://code/levels/level_3/level_3.tscn")
 
 func _on_level_4_button_up():
 	get_tree().change_scene_to_file("res://code/levels/level_4/level_4.tscn")
+

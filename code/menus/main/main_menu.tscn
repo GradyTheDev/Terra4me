@@ -1,77 +1,127 @@
-[gd_scene load_steps=4 format=3 uid="uid://crs3nja17fdkg"]
+[gd_scene load_steps=10 format=3 uid="uid://crs3nja17fdkg"]
 
-[ext_resource type="Texture2D" uid="uid://foy5qncg7r4o" path="res://assets/artwork/mockups/mockup_mainmenu.png" id="1_flqu4"]
 [ext_resource type="Script" path="res://code/menus/main/main_menu.gd" id="2_3lfwf"]
+[ext_resource type="PackedScene" uid="uid://c3da1n8itbrqk" path="res://code/menus/main/main_menu_background.tscn" id="2_gr7oh"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_js0nh"]
+[ext_resource type="AudioStream" uid="uid://bvyshpqxrppdw" path="res://assets/sound/Music/menu_music.ogg" id="4_17mex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id5h0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgbk3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7lkpu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5bgb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7aqgv"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("2_3lfwf")
 
-[node name="MockupMainmenu" type="Sprite2D" parent="."]
-position = Vector2(32, 0)
-scale = Vector2(0.456081, 0.456081)
-texture = ExtResource("1_flqu4")
-centered = false
+[node name="MainMenuBackground" parent="." instance=ExtResource("2_gr7oh")]
 
 [node name="Settings" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 285.0
-offset_top = 171.0
-offset_right = 355.0
-offset_bottom = 202.0
+offset_left = 261.0
+offset_top = 238.0
+offset_right = 331.0
+offset_bottom = 269.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Settings"
 
 [node name="Credits" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 153.0
-offset_top = 173.0
-offset_right = 216.0
-offset_bottom = 204.0
+offset_left = 95.0
+offset_top = 237.0
+offset_right = 158.0
+offset_bottom = 268.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Credits"
 
 [node name="Quit" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 218.0
-offset_top = 220.0
-offset_right = 272.0
-offset_bottom = 251.0
+offset_left = 188.0
+offset_top = 237.0
+offset_right = 242.0
+offset_bottom = 268.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
 
 [node name="Level_1" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 110.0
-offset_top = 128.0
-offset_right = 140.0
-offset_bottom = 159.0
-text = "1"
+offset_left = 139.0
+offset_top = 143.0
+offset_right = 169.0
+offset_bottom = 174.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_id5h0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgbk3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7lkpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5bgb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7aqgv")
+text = ""
 
 [node name="Level_2" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 182.0
-offset_top = 68.0
-offset_right = 212.0
-offset_bottom = 99.0
-text = "2"
+offset_left = 198.0
+offset_top = 116.0
+offset_right = 228.0
+offset_bottom = 147.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_id5h0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgbk3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7lkpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5bgb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7aqgv")
+text = ""
 
 [node name="Level_3" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 254.0
-offset_top = 120.0
-offset_right = 284.0
-offset_bottom = 151.0
-text = "3"
+offset_left = 264.0
+offset_top = 143.0
+offset_right = 294.0
+offset_bottom = 174.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_id5h0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgbk3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7lkpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5bgb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7aqgv")
+text = ""
 
-[node name="Level_4" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 327.0
-offset_top = 59.0
-offset_right = 358.0
-offset_bottom = 90.0
-text = "4"
+[node name="Level_4_1" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 330.0
+offset_top = 123.0
+offset_right = 361.0
+offset_bottom = 154.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_id5h0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgbk3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7lkpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5bgb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7aqgv")
+text = ""
+
+[node name="Level_4_2" parent="." instance=ExtResource("3_js0nh")]
+offset_left = 400.0
+offset_top = 152.0
+offset_right = 431.0
+offset_bottom = 183.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_id5h0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgbk3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7lkpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m5bgb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7aqgv")
+text = ""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_17mex")
+volume_db = -12.0
+autoplay = true
 
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="button_up" from="Level_1" to="." method="_on_level_1_button_up"]
+[connection signal="hover_changed" from="Level_1" to="MainMenuBackground" method="_on_select_animation" binds= [0]]
 [connection signal="button_up" from="Level_2" to="." method="_on_level_2_button_up"]
+[connection signal="hover_changed" from="Level_2" to="MainMenuBackground" method="_on_select_animation" binds= [1]]
+[connection signal="hover_changed" from="Level_3" to="MainMenuBackground" method="_on_select_animation" binds= [2]]
 [connection signal="pressed" from="Level_3" to="." method="_on_level_3_pressed"]
-[connection signal="button_up" from="Level_4" to="." method="_on_level_4_button_up"]
+[connection signal="button_up" from="Level_4_1" to="." method="_on_level_4_button_up"]
+[connection signal="hover_changed" from="Level_4_1" to="MainMenuBackground" method="_on_select_animation" binds= [3]]
+[connection signal="button_up" from="Level_4_2" to="." method="_on_level_4_button_up"]
+[connection signal="hover_changed" from="Level_4_2" to="MainMenuBackground" method="_on_select_animation" binds= [3]]

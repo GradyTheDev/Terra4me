@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://x6md7q7gosqj"
+path="res://.godot/imported/PARIAH - Music - Level 4 Ambience (Sep 13 OGG).ogg-67443199da86aaf0e31294ba32312ea2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Music/OGG/PARIAH - Music - Level 4 Ambience (Sep 13 OGG).ogg"
+dest_files=["res://.godot/imported/PARIAH - Music - Level 4 Ambience (Sep 13 OGG).ogg-67443199da86aaf0e31294ba32312ea2.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

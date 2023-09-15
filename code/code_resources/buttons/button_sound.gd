@@ -1,6 +1,8 @@
 class_name ButtonSound
 extends Button
 
+signal hover_changed(is_hoverd: bool)
+
 @export_group("Sounds")
 @export var on_click_sound: AudioStream
 @export var on_hover_sound: AudioStream
@@ -17,4 +19,10 @@ func _on_pressed():
 	play_sound(on_click_sound)
 
 func _on_mouse_entered():
-	play_sound(on_hover_sound)
+	if not self.disabled:
+		play_sound(on_hover_sound)
+		emit_signal("hover_changed", true)
+
+
+func _on_mouse_exited():
+	emit_signal("hover_changed", false)
