@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterPortraitResource" load_steps=3 format=3 uid="uid://do36bt2uk2ndr"]
+
+[ext_resource type="Script" path="res://resources/dialogues/characters_portraits/portrait_resource.gd" id="1_u547j"]
+[ext_resource type="Texture2D" uid="uid://cyn60nwne2xg5" path="res://assets/artwork/crew/boss.png" id="2_hkrm1"]
+
+[resource]
+script = ExtResource("1_u547j")
+dialogue_name = "boss"
+texture = ExtResource("2_hkrm1")
