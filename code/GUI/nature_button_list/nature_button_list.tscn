@@ -18,50 +18,38 @@ script = ExtResource("1_8jm8o")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="BacteriaButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_t42bp")]
+[node name="BacteriaButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Bacteria"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("4_truoj")
 
-[node name="AlgaeButton" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_t42bp")]
+[node name="AlgaeButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Algea"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("5_p7ehf")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="SmallPlantsButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
+[node name="SmallPlantsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Small Plants"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("6_042uv")
 
-[node name="PlantTreesButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
+[node name="PlantTreesButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Plant Tree"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("7_057c3")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="LandAnimalsButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
+[node name="LandAnimalsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Land Animals
 "
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("8_l43ct")
 
-[node name="GoopButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
+[node name="GoopButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Goop"
 script = ExtResource("3_l4sol")
@@ -75,9 +63,9 @@ show_percentage = false
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer/AlgaeButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer2/SmallPlantsButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer2/PlantTreesButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer3/LandAnimalsButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer3/GoopButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/AlgaeButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/SmallPlantsButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/PlantTreesButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/LandAnimalsButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/GoopButton" to="." method="_on_button_up_with_stats"]
