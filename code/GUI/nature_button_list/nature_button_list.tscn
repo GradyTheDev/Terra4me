@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvjjonej6wf7y"]
+[gd_scene load_steps=10 format=3 uid="uid://bvjjonej6wf7y"]
 
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button_list.gd" id="1_8jm8o"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_t42bp"]
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button.gd" id="3_l4sol"]
 [ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/bacteria.tres" id="4_truoj"]
 [ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/algea.tres" id="5_p7ehf"]
+[ext_resource type="Resource" uid="uid://juqk768d1sr" path="res://resources/nature_stats/small_plants.tres" id="6_042uv"]
+[ext_resource type="Resource" uid="uid://cx2vdannmixaw" path="res://resources/nature_stats/plant_trees.tres" id="7_057c3"]
+[ext_resource type="Resource" uid="uid://7qvodomdobqb" path="res://resources/nature_stats/land_animals.tres" id="8_l43ct"]
+[ext_resource type="Resource" uid="uid://ch1umujallf6t" path="res://resources/nature_stats/goop.tres" id="9_q4loo"]
 
 [node name="NatureButtonList" type="PanelContainer"]
 size_flags_horizontal = 8
@@ -38,13 +42,13 @@ alignment = 1
 layout_mode = 2
 text = "Small Plants"
 script = ExtResource("3_l4sol")
-nature_terra_pack = null
+nature_terra_pack = ExtResource("6_042uv")
 
 [node name="PlantTreesButton" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Plant Tree"
 script = ExtResource("3_l4sol")
-nature_terra_pack = null
+nature_terra_pack = ExtResource("7_057c3")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -55,13 +59,13 @@ layout_mode = 2
 text = "Land Animals
 "
 script = ExtResource("3_l4sol")
-nature_terra_pack = null
+nature_terra_pack = ExtResource("8_l43ct")
 
 [node name="GoopButton" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Goop"
 script = ExtResource("3_l4sol")
-nature_terra_pack = null
+nature_terra_pack = ExtResource("9_q4loo")
 
 [node name="CooldownProgress" type="ProgressBar" parent="VBoxContainer"]
 layout_mode = 2
@@ -69,9 +73,6 @@ value = 70.0
 show_percentage = false
 
 [node name="Cooldown" type="Timer" parent="."]
-one_shot = true
-
-[node name="Duration" type="Timer" parent="."]
 one_shot = true
 
 [connection signal="button_up_with_stats" from="VBoxContainer/HBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]

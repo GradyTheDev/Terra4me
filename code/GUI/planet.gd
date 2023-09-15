@@ -10,6 +10,7 @@ var atmosphere = preload("res://code/code_resources/terra_varible_resources/atmo
 var oxygen = preload("res://code/code_resources/terra_varible_resources/oxygen.tres").duplicate(true)
 var heat = preload("res://code/code_resources/terra_varible_resources/heat.tres").duplicate(true)
 var terraform_processes: Array
+var pack_of_nature: Array[NatureTerraPack]
 var win_ranges: Dictionary 
 
 @onready var terra_varible_res = {
@@ -59,11 +60,15 @@ func _input(event):
 
 func do_constant_processes(delta):
 	heat.value += remap(atmosphere.value, 0, 100, -10, 10) * delta
-	
 	if atmosphere.value < 10:
 		oxygen.value -= 5 * delta
-	
 	atmosphere.value -= 3 * delta
+	if pack_of_nature:
+		for nature_terra_pack in pack_of_nature:
+			var nature_per_sec_dict = nature_terra_pack.get_nature_pack()
+			for key in nature_per_sec_dict:
+				var total_terra_var_per_sec = nature_per_sec_dict[key] * nature_terra_pack.number_of_species
+				terra_varible_res[key].value += total_terra_var_per_sec * delta
 
 
 func do_terraform_processes(delta):
@@ -103,9 +108,8 @@ func _on_spike_action_made(terra_pack: TerraPack):
 	terraform_processes.append(terra_pack.duplicate(true))
 
 
-func _on_natural_action_made(terra_packs_in_array: Array):
-	for terra_pack in terra_packs_in_array:
-		terraform_processes.append(terra_pack.duplicate(true))
+func _on_natural_action_made(nature_terra_pack: NatureTerraPack):
+	pack_of_nature.append(nature_terra_pack)
 
 
 func _on_win_timer_timeout():

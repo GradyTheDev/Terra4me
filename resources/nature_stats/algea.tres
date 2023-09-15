@@ -3,11 +3,12 @@
 [ext_resource type="Script" path="res://resources/nature_stats/nature_terra_pack.gd" id="1_4yrug"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_4yrug")
-atmosphere = -5.0
-oxygen = 7.0
-heat = 0.0
-duration_sec = 5.0
+atmosphere_per_sec = -1.0
+oxygen_per_sec = 1.4
+heat_per_sec = 0.0
+extinction_sec = 7.0
 atmosphere_condition = Vector2(5, 95)
 oxygen_condition = Vector2(5, 95)
 heat_condition = Vector2(5, 95)

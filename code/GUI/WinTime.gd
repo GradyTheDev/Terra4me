@@ -2,7 +2,7 @@ extends ProgressBar
 
 @onready var win_timer = $"../WinTimer"
 
-func _process(delta):
+func _process(_delta):
 	if win_timer.is_stopped():
 		self.value = 100
 	else:
