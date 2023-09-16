@@ -1,12 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://c0b0sqv3v3p2q"]
+[gd_scene load_steps=19 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_0233i"]
 [ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="3_4l5pq"]
+[ext_resource type="Texture2D" uid="uid://bftfggkhtaagu" path="res://assets/artwork/layered main menu/background.png" id="4_0jh4c"]
 [ext_resource type="Script" path="res://code/GUI/WinTime.gd" id="5_gn5i8"]
+[ext_resource type="Texture2D" uid="uid://cgno7cgfqtnu4" path="res://assets/artwork/layered main menu/sun.png" id="5_v2fmp"]
 [ext_resource type="PackedScene" uid="uid://plfmfhlyals5" path="res://code/GUI/indicators/indicators.tscn" id="5_x3k61"]
 [ext_resource type="Texture2D" uid="uid://cegpqnmo5ld4j" path="res://assets/artwork/mockups/mockup_map.png" id="6_8ys2q"]
 [ext_resource type="PackedScene" uid="uid://bvjjonej6wf7y" path="res://code/GUI/nature_button_list/nature_button_list.tscn" id="6_841jt"]
+[ext_resource type="Texture2D" uid="uid://f8nhoil8afrb" path="res://assets/artwork/layered main menu/stars.png" id="6_puk47"]
+[ext_resource type="Texture2D" uid="uid://d1nq5gngth336" path="res://assets/artwork/layered main menu/decoration.png" id="7_2hf24"]
 [ext_resource type="Script" path="res://code/dialog_system/dialog_system.gd" id="8_cfkd0"]
 [ext_resource type="AudioStream" uid="uid://tcs7h7gtdsb0" path="res://assets/sound/SFX/Pariah-Radio-Static-5.ogg" id="9_2w7yu"]
 [ext_resource type="AudioStream" uid="uid://cve5gjwipff6r" path="res://assets/sound/SFX/radio-transmission.ogg" id="10_457os"]
@@ -35,6 +39,42 @@ dialog_system = NodePath("DialogSystem")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("2_0233i"), ExtResource("3_4l5pq")])
 rnd_min = 5.0
 rnd_max = 15.0
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0jh4c")
+
+[node name="sun" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_v2fmp")
+
+[node name="stars" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_puk47")
+
+[node name="decorations" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_2hf24")
 
 [node name="Indicators" parent="." instance=ExtResource("5_x3k61")]
 layout_mode = 2
