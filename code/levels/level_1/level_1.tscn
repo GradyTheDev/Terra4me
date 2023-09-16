@@ -28,16 +28,10 @@ win_sound = ExtResource("3_cexbn")
 
 [node name="Planet" parent="." instance=ExtResource("2_co3ya")]
 layout_mode = 1
+planet_name = "Annex I"
+job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")])
 dialog_intro = ExtResource("6_yctvv")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_65xg5"), ExtResource("8_s171v"), ExtResource("9_uh4gr")])
 
-[node name="Title" parent="Planet/TopInformation" index="0"]
-text = "Annex I"
-
-[node name="Task" parent="Planet/TopInformation" index="1"]
-text = "Terraform"
-
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
-
-[editable path="Planet"]
