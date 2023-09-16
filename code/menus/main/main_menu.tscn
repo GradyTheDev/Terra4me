@@ -19,6 +19,7 @@
 script = ExtResource("2_3lfwf")
 
 [node name="MainMenuBackground" parent="." instance=ExtResource("2_gr7oh")]
+texture_filter = 1
 
 [node name="Settings" parent="." instance=ExtResource("3_js0nh")]
 offset_left = 261.0

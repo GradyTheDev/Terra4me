@@ -114,7 +114,7 @@ script = ExtResource("5_gn5i8")
 
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
-offset_left = 373.0
+offset_left = 327.0
 offset_right = 480.0
 offset_bottom = 158.0
 
@@ -166,11 +166,12 @@ volume_db = -18.0
 stream = ExtResource("11_cos1j")
 
 [node name="Portrait" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 333.0
-offset_top = 134.0
-offset_right = 477.0
-offset_bottom = 206.0
+offset_left = 366.0
+offset_top = 136.0
+offset_right = 468.0
+offset_bottom = 222.0
 texture = SubResource("GradientTexture1D_njvlu")
 expand_mode = 1
 
