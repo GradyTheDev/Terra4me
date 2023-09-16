@@ -26,6 +26,12 @@ text = "Bacteria"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("4_truoj")
 
+[node name="GoopButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
+layout_mode = 2
+text = "Goop"
+script = ExtResource("3_l4sol")
+nature_terra_pack = ExtResource("9_q4loo")
+
 [node name="AlgaeButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
 text = "Algea"
@@ -51,18 +57,12 @@ text = "Land Animals
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("8_l43ct")
 
-[node name="GoopButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-text = "Goop"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("9_q4loo")
-
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
 
 [connection signal="button_up_with_stats" from="VBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/GoopButton" to="." method="_on_button_up_with_stats"]
 [connection signal="button_up_with_stats" from="VBoxContainer/AlgaeButton" to="." method="_on_button_up_with_stats"]
 [connection signal="button_up_with_stats" from="VBoxContainer/SmallPlantsButton" to="." method="_on_button_up_with_stats"]
 [connection signal="button_up_with_stats" from="VBoxContainer/PlantTreesButton" to="." method="_on_button_up_with_stats"]
 [connection signal="button_up_with_stats" from="VBoxContainer/LandAnimalsButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/GoopButton" to="." method="_on_button_up_with_stats"]
