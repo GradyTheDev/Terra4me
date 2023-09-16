@@ -168,10 +168,10 @@ stream = ExtResource("11_cos1j")
 [node name="Portrait" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 366.0
-offset_top = 136.0
-offset_right = 468.0
-offset_bottom = 222.0
+offset_left = 372.0
+offset_top = 126.0
+offset_right = 474.0
+offset_bottom = 212.0
 texture = SubResource("GradientTexture1D_njvlu")
 expand_mode = 1
 

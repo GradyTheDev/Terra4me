@@ -22,36 +22,42 @@ layout_mode = 2
 
 [node name="BacteriaButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Bacteria"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("4_truoj")
 
 [node name="GoopButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Goop"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("9_q4loo")
 
 [node name="AlgaeButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Algea"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("5_p7ehf")
 
 [node name="SmallPlantsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Small Plants"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("6_042uv")
 
 [node name="PlantTreesButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Plant Tree"
 script = ExtResource("3_l4sol")
 nature_terra_pack = ExtResource("7_057c3")
 
 [node name="LandAnimalsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
 text = "Land Animals
 "
 script = ExtResource("3_l4sol")
