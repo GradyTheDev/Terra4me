@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://177iffi3grsa" path="res://assets/artwork/layered main menu/planet4_2.png" id="10_mfk36"]
 
 [node name="MainMenuBackground" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_ms2xy")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -36,6 +37,7 @@ texture = ExtResource("5_mleqm")
 centered = false
 
 [node name="CenterPlanet0" type="Node2D" parent="Orbits"]
+modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(154, 160)
 
 [node name="Planet1" type="Sprite2D" parent="Orbits/CenterPlanet0"]
@@ -44,6 +46,7 @@ texture = ExtResource("6_01tf1")
 centered = false
 
 [node name="CenterPlanet1" type="Node2D" parent="Orbits"]
+modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(214, 132)
 
 [node name="Planet2" type="Sprite2D" parent="Orbits/CenterPlanet1"]
@@ -52,6 +55,7 @@ texture = ExtResource("7_ao1vh")
 centered = false
 
 [node name="CenterPlanet2" type="Node2D" parent="Orbits"]
+modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(279, 160)
 
 [node name="Planet3" type="Sprite2D" parent="Orbits/CenterPlanet2"]
@@ -60,6 +64,7 @@ texture = ExtResource("8_vukd7")
 centered = false
 
 [node name="CenterPlanet3_1" type="Node2D" parent="Orbits"]
+modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(345, 140)
 
 [node name="Planet4_1" type="Sprite2D" parent="Orbits/CenterPlanet3_1"]
@@ -68,6 +73,7 @@ texture = ExtResource("9_lbsj1")
 centered = false
 
 [node name="CenterPlanet3_2" type="Node2D" parent="Orbits"]
+modulate = Color(0.305882, 0.305882, 0.305882, 1)
 position = Vector2(414, 169)
 
 [node name="Planet4_2" type="Sprite2D" parent="Orbits/CenterPlanet3_2"]

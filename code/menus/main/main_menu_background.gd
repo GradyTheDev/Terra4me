@@ -10,10 +10,11 @@ var tween_planet_pair: Dictionary
 var tween_array: Array
 
 func _ready():
-	for planet_arr in planet_indexes.values():
-		for planet in planet_arr:
+	for unlocked_index in range(0, LevelUnlocker.levels_unlocked + 1):
+		for planet in planet_indexes[unlocked_index]:
 			var tween: Tween = get_tree().create_tween().set_loops()
 			tween.bind_node(planet)
+			planet.modulate = Color.WHITE
 			start_animation(planet, tween)
 	
 
@@ -29,8 +30,3 @@ func start_animation(planet: Node2D, tween: Tween):
 	tween.tween_property(planet, "rotation", 0.25, 0.5)
 	tween.tween_property(planet, "rotation", -0.25, 1)
 	tween.tween_property(planet, "rotation", 0, 0.5)
-
-
-
-func _on_level_3_hover_changed(is_hoverd, extra_arg_0):
-	pass # Replace with function body.
