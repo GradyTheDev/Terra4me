@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bflchcng3n4yo"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_d6e07"]
+
+[resource]
+script = ExtResource("1_d6e07")
+portrait = 3
+message = "Use the Left and Right arrow keys to switch planets"

@@ -27,6 +27,9 @@ var _clear_next: bool
 var _pause_chars := ".,!?".split()
 
 func _process(delta: float):
+	if process_mode == PROCESS_MODE_DISABLED:
+		return
+
 	if _current_msg == null:
 		sound_static.stop()
 		return
@@ -78,7 +81,12 @@ func _process(delta: float):
 
 
 func play_dialog(msg: Dialog):
+	if process_mode == Node.PROCESS_MODE_DISABLED:
+		return
+	
 	if msg == null:
+		if _current_msg != null:
+			message_over.emit(_current_msg)
 		_current_msg = null
 		character_label_node.text = ""
 		dialog_node.text = ""
@@ -93,3 +101,10 @@ func play_dialog(msg: Dialog):
 	portrait_node.texture = msg.get_portrait_image()
 	if not sound_msg_start_node.playing:
 		sound_msg_start_node.play()
+
+
+func _input(event):
+	if event is InputEventKey:
+		if not event.is_pressed():
+			if event.keycode == KEY_ENTER or event.keycode == KEY_SPACE:
+				play_dialog(null)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
-[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_xi4rv"]
-[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="3_kw7gw"]
+[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_0233i"]
+[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="3_4l5pq"]
 [ext_resource type="Script" path="res://code/GUI/WinTime.gd" id="5_gn5i8"]
 [ext_resource type="PackedScene" uid="uid://plfmfhlyals5" path="res://code/GUI/indicators/indicators.tscn" id="5_x3k61"]
 [ext_resource type="Texture2D" uid="uid://cegpqnmo5ld4j" path="res://assets/artwork/mockups/mockup_map.png" id="6_8ys2q"]
 [ext_resource type="PackedScene" uid="uid://bvjjonej6wf7y" path="res://code/GUI/nature_button_list/nature_button_list.tscn" id="6_841jt"]
-[ext_resource type="Script" path="res://code/dialog_system/dialog_system.gd" id="6_olsp2"]
+[ext_resource type="Script" path="res://code/dialog_system/dialog_system.gd" id="8_cfkd0"]
 [ext_resource type="AudioStream" uid="uid://tcs7h7gtdsb0" path="res://assets/sound/SFX/Pariah-Radio-Static-5.ogg" id="9_2w7yu"]
 [ext_resource type="AudioStream" uid="uid://cve5gjwipff6r" path="res://assets/sound/SFX/radio-transmission.ogg" id="10_457os"]
 [ext_resource type="AudioStream" uid="uid://dcf5dd1mheced" path="res://assets/sound/SFX/Pariah-Light-static-for-transmisssions.ogg" id="11_cos1j"]
@@ -32,7 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qdf4b")
 dialog_system = NodePath("DialogSystem")
-dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("2_xi4rv"), ExtResource("3_kw7gw")])
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("2_0233i"), ExtResource("3_4l5pq")])
 rnd_min = 5.0
 rnd_max = 15.0
 
@@ -96,7 +96,7 @@ one_shot = true
 
 [node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("portrait_node", "dialog_node", "character_label_node", "sound_msg_start_node", "sound_msg_end_node", "sound_type_node", "sound_static")]
 process_mode = 3
-script = ExtResource("6_olsp2")
+script = ExtResource("8_cfkd0")
 char_delay = 0.05
 pause_delay = 0.4
 new_line_delay = 0.8
