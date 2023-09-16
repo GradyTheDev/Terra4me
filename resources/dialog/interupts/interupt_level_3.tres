@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://ddixu35jnceh5"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_v3hut"]
+
+[resource]
+script = ExtResource("1_v3hut")
+portrait = 3
+message = "When I was in my teens, there weren't very many stars on the television.
+When you were in your teens, there weren't many stars on the flag."

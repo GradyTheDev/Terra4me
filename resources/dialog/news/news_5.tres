@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://vpfwvryofhk8"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_hfsnd"]
+
+[resource]
+script = ExtResource("1_hfsnd")
+portrait = 4
+message = "Robots traveling the universe for planetary domination? More on this when the Tall Spark has been found."

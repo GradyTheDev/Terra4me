@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://1g3w8g3objnf"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_vkqky"]
+
+[resource]
+script = ExtResource("1_vkqky")
+portrait = 4
+message = "Philosophers continue their quest to find a planet that makes sense, the closest was a small planet named \"Earth\" of which they reported, \"It was great, and then we landed.\" They are also reportedly not a fan of a song Earthlings call, Axel F."

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://tcexq3m2yn0l"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_15ots"]
+
+[resource]
+script = ExtResource("1_15ots")
+portrait = 4
+message = "While it is still illegal in most systems to pick up hitchhikers, it is recommended you do so if they're carrying a towel."

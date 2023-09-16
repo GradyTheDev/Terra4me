@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bin86k5c0of3f"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_2dqy5"]
+
+[resource]
+script = ExtResource("1_2dqy5")
+portrait = 4
+message = "Man who was set to run across the universe has died today, forgetting his space suit as he left the ship."

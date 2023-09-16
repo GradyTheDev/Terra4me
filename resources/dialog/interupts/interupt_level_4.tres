@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://3fbotwofn3o"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_0rtdf"]
+
+[resource]
+script = ExtResource("1_0rtdf")
+portrait = 3
+message = "~back to ninety two point two, and today we're wondering what happened to theatre etiquette?
+I'm not much for scary movies, I'd much rather relax and watch my true crime."

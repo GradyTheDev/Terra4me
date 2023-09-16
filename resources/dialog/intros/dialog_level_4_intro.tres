@@ -5,4 +5,6 @@
 [resource]
 script = ExtResource("1_5b7cq")
 portrait = 1
-message = "You know the drill, use the drill and if you're stuck between a rock and a hard place, just get rid of both of them."
+message = "'m sure you've heard about the budget cuts... You haven't? Huh, should have used the messanger before firing him...
+I know you're prepared to do one planet, but we'll need you to terraform both Castor AND Polux... At the same time...
+Budget cuts, what a thing. Don't worry, you'll be properly rewarded when you succeed... Thanks."

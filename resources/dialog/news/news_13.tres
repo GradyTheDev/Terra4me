@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bqwiq2cu4h8sc"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_u68bm"]
+
+[resource]
+script = ExtResource("1_u68bm")
+portrait = 4
+message = "With immortality solved, more and more people are asking the same question, is there a need for spiders?"

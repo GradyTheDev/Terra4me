@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://b55k823xlo1el"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_daxuc"]
+
+[resource]
+script = ExtResource("1_daxuc")
+portrait = 4
+message = "Breaking News! The edge of the universe has been found. The captain of the ship \"Nietzsche was Lame\" has this to say... \"Eh, it's alright."

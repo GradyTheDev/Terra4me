@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bb5jtjrer5mgk"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_j717s"]
+
+[resource]
+script = ExtResource("1_j717s")
+portrait = 4
+message = "Coming up, an interview with a little robot that makes garbage into blocks... Really? That's all we could get?"

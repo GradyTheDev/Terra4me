@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://chbpu0eeup6uw"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_0thxu"]
+
+[resource]
+script = ExtResource("1_0thxu")
+portrait = 1
+message = "The only way out of debt is by putting more people in it. Keep this up and you might have a chance."
