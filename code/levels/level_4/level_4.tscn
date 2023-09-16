@@ -60,6 +60,12 @@ heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
 sec_to_win = 30.0
 dialog_intro = ExtResource("6_lj0j3")
 
+[node name="Title" parent="Planet/TopInformation" index="0"]
+text = "Castor"
+
+[node name="Task" parent="Planet/TopInformation" index="1"]
+text = "Terraform"
+
 [node name="Planet2" parent="." instance=ExtResource("1_fprcg")]
 layout_mode = 1
 offset_left = 480.0
@@ -69,6 +75,12 @@ oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
 sec_to_win = 30.0
 
+[node name="Title" parent="Planet2/TopInformation" index="0"]
+text = "Pollux"
+
+[node name="Task" parent="Planet2/TopInformation" index="1"]
+text = "Terraform!"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 script = ExtResource("5_rbb28")
@@ -76,3 +88,6 @@ script = ExtResource("5_rbb28")
 [node name="explain" type="Node" parent="."]
 script = ExtResource("7_xwd5q")
 dialog_explain = ExtResource("8_cj5o4")
+
+[editable path="Planet"]
+[editable path="Planet2"]

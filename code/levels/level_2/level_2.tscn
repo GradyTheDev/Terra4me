@@ -32,3 +32,11 @@ layout_mode = 1
 atmosphere_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_lds18")])
 heat_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_derel")])
 sec_to_win = 30.0
+
+[node name="Title" parent="Planet/TopInformation" index="0"]
+text = "Heracles"
+
+[node name="Task" parent="Planet/TopInformation" index="1"]
+text = "Terraform"
+
+[editable path="Planet"]
