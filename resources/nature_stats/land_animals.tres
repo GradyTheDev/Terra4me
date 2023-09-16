@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NatureTerraPack" load_steps=2 format=3 uid="uid://7qvodomdobqb"]
 
-[ext_resource type="Script" path="res://resources/nature_stats/nature_terra_pack.gd" id="1_p5gtj"]
+[ext_resource type="Script" path="res://code/code_resources/nature_terra_pack.gd" id="1_p5gtj"]
 
 [resource]
 resource_local_to_scene = true

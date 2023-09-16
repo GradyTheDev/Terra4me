@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterPortraitResource" load_steps=3 format=3 uid="uid://esykr53lp1kb"]
-
-[ext_resource type="Texture2D" uid="uid://ci6ds8oqsa31u" path="res://assets/artwork/mockups/mockup_character_sprite.png" id="1_c3lti"]
-[ext_resource type="Script" path="res://resources/dialogues/characters_portraits/portrait_resource.gd" id="1_f5noo"]
-
-[resource]
-script = ExtResource("1_f5noo")
-dialogue_name = "test_name"
-texture = ExtResource("1_c3lti")

@@ -1,19 +1,35 @@
 class_name Planet
-extends PanelContainer
+extends Control
 
 signal planet_compleated()
 
+@export_group('victory conditions')
 @export var atmosphere_ranges: Array[RangeResource]
 @export var oxygen_ranges: Array[RangeResource]
 @export var heat_ranges: Array[RangeResource]
 @export var sec_to_win: float = 10
 
-var atmosphere = preload("res://code/code_resources/terra_varible_resources/atmosphere.tres").duplicate(true)
-var oxygen = preload("res://code/code_resources/terra_varible_resources/oxygen.tres").duplicate(true)
-var heat = preload("res://code/code_resources/terra_varible_resources/heat.tres").duplicate(true)
+@export_group("nodes")
+@export var dialog_system: DialogSystem
+
+@export_group("dialog")
+@export var dialog_intro: Dialog
+@export var dialog_win: Dialog
+@export var dialog_lose: Dialog
+@export var dialog_random: Array[Dialog]
+
+
+var atmosphere = preload("res://resources/terra_varible_resources/atmosphere.tres").duplicate(true)
+var oxygen = preload("res://resources/terra_varible_resources/oxygen.tres").duplicate(true)
+var heat = preload("res://resources/terra_varible_resources/heat.tres").duplicate(true)
 var terraform_processes: Array
 var pack_of_nature: Array[NatureTerraPack]
 var win_ranges: Dictionary 
+
+@export_group("Random")
+@export var rnd_min: float
+@export var rnd_max: float
+var _rnd_timer: float = 15
 
 @onready var terra_varible_res = {
 	GlobalEnums.TERRA_VARIBLE_TYPE.ATMOSPHERE: atmosphere,
@@ -38,7 +54,17 @@ func _ready():
 	$ButtonList.terra_variables_res = terra_varible_res
 	add_ranges_to_win_ranges()
 
+	dialog_system.play_dialog(dialog_intro)
+
 func _process(delta):
+	if dialog_system._current_msg == null and len(dialog_random) > 0:
+		_rnd_timer -= delta
+
+		if _rnd_timer <= 0:
+			_rnd_timer = randf_range(rnd_min, rnd_max)
+			dialog_system.play_dialog(dialog_random[randi_range(0, len(dialog_random)-1)])
+
+
 	do_constant_processes(delta)
 	if terraform_processes:
 		do_terraform_processes(delta)
@@ -115,5 +141,6 @@ func _on_natural_action_made(nature_terra_pack: NatureTerraPack):
 
 
 func _on_win_timer_timeout():
+	dialog_system.play_dialog(dialog_lose)
 	emit_signal("planet_compleated")
 	self.process_mode = Node.PROCESS_MODE_DISABLED

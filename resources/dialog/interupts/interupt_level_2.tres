@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bcyr5abywasmn"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_bgljt"]
+
+[resource]
+script = ExtResource("1_bgljt")
+portrait = 3
+message = "Ich kündige die Eröffnung der Spiele in Berlin an und feiere die elfte Olympiade nach dem neuen Kalender.
+What do you mean Zrek got left behind? He has the samples!"

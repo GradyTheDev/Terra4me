@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://sgv0b7pphiri"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_2slps"]
+
+[resource]
+script = ExtResource("1_2slps")
+portrait = 3
+message = "Can you hear me?
+No, can you speak louder?"

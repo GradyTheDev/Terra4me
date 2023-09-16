@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://buhfpgmp0fivg"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_5oivy"]
+
+[resource]
+script = ExtResource("1_5oivy")
+portrait = 1
+message = "Congratulations team, we've managed to stay in business. And as promised, we've given you all a .2% raise, make sure you saw the decimal. Now back to work, inflation is at an all time high of 3% and you've got some work to do."

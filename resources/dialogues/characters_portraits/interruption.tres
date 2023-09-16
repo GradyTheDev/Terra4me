@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterPortraitResource" load_steps=3 format=3 uid="uid://dpi7djukfww1v"]
-
-[ext_resource type="Script" path="res://resources/dialogues/characters_portraits/portrait_resource.gd" id="1_vutkl"]
-[ext_resource type="Texture2D" uid="uid://cvdyysshfj30q" path="res://assets/artwork/crew/interrupted_radio_singal.png" id="2_d8ji5"]
-
-[resource]
-script = ExtResource("1_vutkl")
-dialogue_name = "interruption"
-texture = ExtResource("2_d8ji5")

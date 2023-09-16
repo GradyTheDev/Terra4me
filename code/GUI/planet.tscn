@@ -1,29 +1,52 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0b0sqv3v3p2q"]
+[gd_scene load_steps=15 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
+[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_xi4rv"]
+[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="3_kw7gw"]
 [ext_resource type="Script" path="res://code/GUI/WinTime.gd" id="5_gn5i8"]
 [ext_resource type="PackedScene" uid="uid://plfmfhlyals5" path="res://code/GUI/indicators/indicators.tscn" id="5_x3k61"]
 [ext_resource type="Texture2D" uid="uid://cegpqnmo5ld4j" path="res://assets/artwork/mockups/mockup_map.png" id="6_8ys2q"]
 [ext_resource type="PackedScene" uid="uid://bvjjonej6wf7y" path="res://code/GUI/nature_button_list/nature_button_list.tscn" id="6_841jt"]
+[ext_resource type="Script" path="res://code/dialog_system/dialog_system.gd" id="6_olsp2"]
+[ext_resource type="AudioStream" uid="uid://tcs7h7gtdsb0" path="res://assets/sound/SFX/Pariah-Radio-Static-5.ogg" id="9_2w7yu"]
+[ext_resource type="AudioStream" uid="uid://cve5gjwipff6r" path="res://assets/sound/SFX/radio-transmission.ogg" id="10_457os"]
+[ext_resource type="AudioStream" uid="uid://dcf5dd1mheced" path="res://assets/sound/SFX/Pariah-Light-static-for-transmisssions.ogg" id="11_cos1j"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b84ou"]
+[sub_resource type="Gradient" id="Gradient_s52t5"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
 
-[node name="Planet" type="PanelContainer"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_njvlu"]
+gradient = SubResource("Gradient_s52t5")
+
+[sub_resource type="Theme" id="Theme_d0mfn"]
+default_font_size = 9
+
+[node name="Planet" type="Control" node_paths=PackedStringArray("dialog_system")]
 custom_minimum_size = Vector2(480, 270)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_b84ou")
 script = ExtResource("1_qdf4b")
+dialog_system = NodePath("DialogSystem")
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("2_xi4rv"), ExtResource("3_kw7gw")])
+rnd_min = 5.0
+rnd_max = 15.0
 
 [node name="Indicators" parent="." instance=ExtResource("5_x3k61")]
 layout_mode = 2
+offset_right = 160.0
+offset_bottom = 128.0
 is_debug = false
 
 [node name="TopInformation" type="VBoxContainer" parent="."]
 layout_mode = 2
+offset_left = 177.0
+offset_right = 303.0
+offset_bottom = 64.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 alignment = 1
@@ -51,10 +74,17 @@ script = ExtResource("5_gn5i8")
 
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
+offset_left = 373.0
+offset_right = 480.0
+offset_bottom = 158.0
 
 [node name="Map" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
+offset_left = 180.0
+offset_top = 75.0
+offset_right = 300.0
+offset_bottom = 195.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 tooltip_text = "Planet"
@@ -63,6 +93,81 @@ expand_mode = 1
 
 [node name="WinTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("portrait_node", "dialog_node", "character_label_node", "sound_msg_start_node", "sound_msg_end_node", "sound_type_node", "sound_static")]
+process_mode = 3
+script = ExtResource("6_olsp2")
+char_delay = 0.05
+pause_delay = 0.4
+new_line_delay = 0.8
+msg_end_wait_to_clear = 0.8
+max_chars = 50
+portrait_node = NodePath("../Portrait")
+dialog_node = NodePath("../DialogBox/Dialog")
+character_label_node = NodePath("../Portrait/CharacterLabel")
+sound_msg_start_node = NodePath("msg_start")
+sound_msg_end_node = NodePath("msg_end")
+sound_type_node = NodePath("msg_type")
+sound_static = NodePath("static")
+
+[node name="msg_start" type="AudioStreamPlayer" parent="DialogSystem"]
+stream = ExtResource("9_2w7yu")
+volume_db = -10.0
+
+[node name="msg_end" type="AudioStreamPlayer" parent="DialogSystem"]
+stream = ExtResource("9_2w7yu")
+volume_db = -10.0
+
+[node name="msg_type" type="AudioStreamPlayer" parent="DialogSystem"]
+stream = ExtResource("10_457os")
+volume_db = -18.0
+
+[node name="static" type="AudioStreamPlayer" parent="DialogSystem"]
+stream = ExtResource("11_cos1j")
+
+[node name="Portrait" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 134.0
+offset_right = 477.0
+offset_bottom = 206.0
+texture = SubResource("GradientTexture1D_njvlu")
+expand_mode = 1
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Portrait"]
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -13.0
+offset_right = 48.0
+grow_vertical = 0
+mouse_filter = 1
+theme = SubResource("Theme_d0mfn")
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogBox" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(72.335, 30.165)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 218.0
+offset_right = 474.0
+offset_bottom = 263.0
+mouse_default_cursor_shape = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Dialog" type="RichTextLabel" parent="DialogBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
 
 [connection signal="spike_action_made" from="Indicators" to="." method="_on_spike_action_made"]
 [connection signal="natural_action_made" from="ButtonList" to="." method="_on_natural_action_made"]

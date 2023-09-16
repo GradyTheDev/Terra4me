@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://ujhhqgqqrfix"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_vdolx"]
+
+[resource]
+script = ExtResource("1_vdolx")
+portrait = 4
+message = "Planetary Engineering Mega-Company \"TerraForMe\" might not be so mega after all, more after this croissant."

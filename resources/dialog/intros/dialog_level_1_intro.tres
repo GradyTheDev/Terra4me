@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dgwvivk8e3m0m"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_yn7vy"]
+
+[resource]
+script = ExtResource("1_yn7vy")
+portrait = 1
+message = "You know the drill, use the drill and if you're stuck between a rock and a hard place, just get rid of both of them."

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterPortraitResource" load_steps=3 format=3 uid="uid://dh15fug7wowt4"]
-
-[ext_resource type="Script" path="res://resources/dialogues/characters_portraits/portrait_resource.gd" id="1_gilfp"]
-[ext_resource type="Texture2D" uid="uid://b2ee7q3087obb" path="res://assets/artwork/crew/captain.png" id="2_7qvqm"]
-
-[resource]
-script = ExtResource("1_gilfp")
-dialogue_name = "captain"
-texture = ExtResource("2_7qvqm")

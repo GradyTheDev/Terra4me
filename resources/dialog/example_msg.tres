@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://b4yeyiulxq375"]
+
+[ext_resource type="Script" path="res://code/dialog_system/dialog.gd" id="1_1y326"]
+
+[resource]
+script = ExtResource("1_1y326")
+portrait = 0
+message = "line 1
+line 2
+line 3, paused there. paused longer!
+line 4"

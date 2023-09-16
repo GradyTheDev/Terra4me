@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b853fcpfq0l4"]
+[gd_scene load_steps=11 format=3 uid="uid://b853fcpfq0l4"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_b1xxe"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_co3ya"]
 [ext_resource type="AudioStream" uid="uid://cs62gq6ayqqjd" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 1 Ambience (Sep 13 OGG).ogg" id="2_x50ow"]
 [ext_resource type="AudioStream" uid="uid://cbrj1xacenlxd" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 1 Idea (Sep 13 OGG).ogg" id="3_cexbn"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="3_ipvg4"]
-[ext_resource type="PackedScene" uid="uid://c1crsyn62u2dr" path="res://code/code_resources/dialogue_component.tscn" id="4_mn0tv"]
-[ext_resource type="Resource" uid="uid://7v5a8st2yqqo" path="res://resources/dialogues/dialogue_example.dialogue" id="5_0r5v6"]
+[ext_resource type="Resource" uid="uid://dgwvivk8e3m0m" path="res://resources/dialog/intros/dialog_level_1_intro.tres" id="6_yctvv"]
+[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_65xg5"]
+[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_s171v"]
+[ext_resource type="Resource" uid="uid://sgv0b7pphiri" path="res://resources/dialog/interupts/interupt_level_1.tres" id="9_uh4gr"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("3_ipvg4")
@@ -27,9 +29,7 @@ win_sound = ExtResource("3_cexbn")
 [node name="Planet" parent="." instance=ExtResource("2_co3ya")]
 layout_mode = 1
 atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")])
-sec_to_win = 30.0
-
-[node name="DialogueComponent" parent="." instance=ExtResource("4_mn0tv")]
-level_dialogue = ExtResource("5_0r5v6")
+dialog_intro = ExtResource("6_yctvv")
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_65xg5"), ExtResource("8_s171v"), ExtResource("9_uh4gr")])
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
