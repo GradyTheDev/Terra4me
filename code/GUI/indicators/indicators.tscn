@@ -4,23 +4,34 @@
 [ext_resource type="PackedScene" uid="uid://x1lh0re4n6wg" path="res://code/GUI/indicators/indicator_bar.tscn" id="1_iw2oa"]
 
 [node name="Indicators" type="VBoxContainer"]
+offset_left = 24.0
+offset_top = 80.0
+offset_right = 132.0
+offset_bottom = 208.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 tooltip_text = "Spike actions
 Fast but have long cooldowns"
+theme_override_constants/separation = 32
 script = ExtResource("1_bu24p")
 
 [node name="Atmo" parent="." instance=ExtResource("1_iw2oa")]
 layout_mode = 2
 is_debug = false
+total_value = 25
+duration_sec = 1
 
 [node name="Oxygen" parent="." instance=ExtResource("1_iw2oa")]
 layout_mode = 2
 is_debug = false
+total_value = 25
+duration_sec = 1
 
 [node name="Heat" parent="." instance=ExtResource("1_iw2oa")]
 layout_mode = 2
 is_debug = false
+total_value = 25
+duration_sec = 1
 
 [connection signal="spike_action_made" from="Atmo" to="." method="_on_spike_action_made"]
 [connection signal="spike_action_made" from="Oxygen" to="." method="_on_spike_action_made"]

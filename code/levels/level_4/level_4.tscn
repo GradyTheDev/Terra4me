@@ -71,7 +71,6 @@ win_sound = ExtResource("3_i31hf")
 [node name="Planet" parent="." instance=ExtResource("1_fprcg")]
 layout_mode = 1
 planet_name = "Castor"
-job_text = "Terraform"
 map = ExtResource("5_xjao1")
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
@@ -84,14 +83,13 @@ layout_mode = 1
 offset_left = 480.0
 offset_right = 480.0
 planet_name = "Pollux"
-job_text = "Terraform"
 map = ExtResource("22_uth32")
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_4ionb")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([])
 
-[node name="CanvasLayer" parent="Planet2" index="10"]
+[node name="CanvasLayer" parent="Planet2" index="12"]
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]

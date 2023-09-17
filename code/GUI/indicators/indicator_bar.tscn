@@ -1,22 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://x1lh0re4n6wg"]
+[gd_scene load_steps=8 format=3 uid="uid://x1lh0re4n6wg"]
 
 [ext_resource type="Script" path="res://code/GUI/indicators/indicator_bar.gd" id="1_qgvuk"]
 [ext_resource type="Script" path="res://code/GUI/indicators/whole_range.gd" id="2_akgk5"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_qwyys"]
+[ext_resource type="Theme" uid="uid://b72gb0gp72qn7" path="res://code/GUI/indicators/buttons.tres" id="4_3oerh"]
 [ext_resource type="AudioStream" uid="uid://chusyonnyf6xk" path="res://assets/sound/Music/OGG/Pariah - UI 8 (Sep 13 OGG).ogg" id="4_bw5me"]
+[ext_resource type="Texture2D" uid="uid://hhcyoo77deja" path="res://assets/artwork/gameui.png" id="5_4o2rv"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76scr"]
+[sub_resource type="LabelSettings" id="LabelSettings_jkawg"]
+font_size = 11
 
-[node name="IndicatorBar" type="PanelContainer"]
-custom_minimum_size = Vector2(160, 40)
-offset_right = 171.0
-offset_bottom = 40.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_76scr")
+[node name="IndicatorBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 24.0
+offset_top = 80.0
+offset_right = 125.0
+offset_bottom = 112.0
 script = ExtResource("1_qgvuk")
 
 [node name="Background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(122, 12)
 layout_mode = 2
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 32.0
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
@@ -41,9 +49,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.0
+offset_left = -1.0
 offset_top = -12.0
-offset_right = 2.0
+offset_right = 1.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -51,28 +59,53 @@ color = Color(0, 0, 0, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
+offset_left = 11.0
+offset_right = 92.0
+offset_bottom = 19.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Indicator name"
+label_settings = SubResource("LabelSettings_jkawg")
 
 [node name="Increase" parent="." instance=ExtResource("2_qwyys")]
-custom_minimum_size = Vector2(20, 10)
-layout_mode = 2
+modulate = Color(0, 0.584314, 0.239216, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
+offset_left = 82.0
+offset_top = 18.0
+offset_right = 94.0
+offset_bottom = 30.0
 size_flags_horizontal = 8
-text = "+"
+theme = ExtResource("4_3oerh")
+text = ""
+text_overrun_behavior = 1
+clip_text = true
+expand_icon = true
 on_click_sound = ExtResource("4_bw5me")
 
 [node name="Decrease" parent="." instance=ExtResource("2_qwyys")]
-custom_minimum_size = Vector2(20, 10)
-layout_mode = 2
+modulate = Color(0.603922, 0, 0.00784314, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 14.0
+offset_bottom = 30.0
 size_flags_horizontal = 0
-text = "-
-"
+theme = ExtResource("4_3oerh")
+text = ""
+text_overrun_behavior = 1
+clip_text = true
+expand_icon = true
 on_click_sound = ExtResource("4_bw5me")
 
 [node name="CooldownProgress" type="ProgressBar" parent="."]
-custom_minimum_size = Vector2(116.615, 0)
 layout_mode = 2
+offset_left = -3.0
+offset_right = 101.0
+offset_bottom = 4.0
 size_flags_horizontal = 4
 show_percentage = false
 
@@ -81,6 +114,15 @@ one_shot = true
 
 [node name="Duration" type="Timer" parent="."]
 one_shot = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Node"]
+visible = false
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_4o2rv")
 
 [connection signal="button_up" from="Increase" to="." method="_on_increase_button_up"]
 [connection signal="button_up" from="Decrease" to="." method="_on_decrease_button_up"]

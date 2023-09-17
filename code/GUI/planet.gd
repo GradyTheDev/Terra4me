@@ -4,7 +4,7 @@ extends Control
 signal planet_compleated()
 
 @export var planet_name: String
-@export var job_text: String
+#@export var job_text: String
 @export var map: Texture
 
 @export_group('victory conditions')
@@ -62,8 +62,8 @@ func _ready():
 
 	dialog_system.play_dialog(dialog_intro)
 
-	$TopInformation/Title.text = planet_name
-	$TopInformation/Task.text = job_text
+	$Title.text = planet_name
+	#$TopInformation/Task.text = job_text
 
 func _process(delta):
 	if dialog_system._current_msg == null and len(dialog_random) > 0:

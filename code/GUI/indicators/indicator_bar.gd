@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 signal spike_action_made(terra_packed)
 
