@@ -165,9 +165,9 @@ pause_delay = 0.4
 new_line_delay = 0.8
 msg_end_wait_to_clear = 0.8
 max_chars = 50
-portrait_node = NodePath("../Portrait")
-dialog_node = NodePath("../DialogBox/Dialog")
-character_label_node = NodePath("../Portrait/CharacterLabel")
+portrait_node = NodePath("../CanvasLayer/Portrait")
+dialog_node = NodePath("../CanvasLayer/DialogBox/Dialog")
+character_label_node = NodePath("../CanvasLayer/Portrait/CharacterLabel")
 sound_msg_start_node = NodePath("msg_start")
 sound_msg_end_node = NodePath("msg_end")
 sound_type_node = NodePath("msg_type")
@@ -189,9 +189,10 @@ volume_db = -18.0
 stream = ExtResource("11_cos1j")
 volume_db = -20.0
 
-[node name="Portrait" type="TextureRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Portrait" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-layout_mode = 0
 offset_left = 372.0
 offset_top = 126.0
 offset_right = 474.0
@@ -199,7 +200,7 @@ offset_bottom = 212.0
 texture = SubResource("GradientTexture1D_njvlu")
 expand_mode = 1
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Portrait"]
+[node name="CharacterLabel" type="RichTextLabel" parent="CanvasLayer/Portrait"]
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 1
 anchors_preset = 2
@@ -215,9 +216,8 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogBox" type="ColorRect" parent="."]
+[node name="DialogBox" type="ColorRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(72.335, 30.165)
-layout_mode = 0
 offset_left = 5.0
 offset_top = 218.0
 offset_right = 474.0
@@ -225,7 +225,7 @@ offset_bottom = 263.0
 mouse_default_cursor_shape = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Dialog" type="RichTextLabel" parent="DialogBox"]
+[node name="Dialog" type="RichTextLabel" parent="CanvasLayer/DialogBox"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

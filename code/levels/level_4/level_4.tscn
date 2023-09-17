@@ -89,6 +89,10 @@ map = ExtResource("22_uth32")
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_4ionb")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([])
+
+[node name="CanvasLayer" parent="Planet2" index="10"]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -96,9 +100,9 @@ script = ExtResource("5_rbb28")
 
 [node name="Label" type="Label" parent="Camera2D"]
 offset_left = 113.0
-offset_top = 198.0
+offset_top = 193.0
 offset_right = 344.0
-offset_bottom = 224.0
+offset_bottom = 219.0
 text = "Pres left/right arrow to switch"
 
 [node name="explain" type="Node" parent="."]
@@ -113,3 +117,5 @@ bus = &"Music"
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
 [connection signal="planet_compleated" from="Planet2" to="." method="_on_planet_planet_compleated"]
+
+[editable path="Planet2"]
