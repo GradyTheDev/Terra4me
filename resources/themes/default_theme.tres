@@ -1,9 +1,21 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://djqxggbyxn27d"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://djqxggbyxn27d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyext"]
-bg_color = Color(0.243137, 0.243137, 0.243137, 0.25098)
+[ext_resource type="Texture2D" uid="uid://chcvq4hxvhr7a" path="res://assets/artwork/buttons/longButtons.png" id="1_qtc80"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lw21e"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f04wr"]
+texture = ExtResource("1_qtc80")
+region_rect = Rect2(0, 40, 104, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qnu4m"]
+texture = ExtResource("1_qtc80")
+region_rect = Rect2(0, 20, 104, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iatr2"]
+texture = ExtResource("1_qtc80")
+region_rect = Rect2(0, 0, 104, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqjdh"]
+bg_color = Color(0.6, 0.6, 0.6, 0.313726)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_susaj"]
 bg_color = Color(0.513726, 0.490196, 0.454902, 1)
@@ -20,8 +32,11 @@ cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0.831373)
 
 [resource]
-Button/styles/normal = SubResource("StyleBoxFlat_wyext")
-PanelContainer/styles/panel = SubResource("StyleBoxEmpty_lw21e")
+Button/styles/disabled = SubResource("StyleBoxTexture_f04wr")
+Button/styles/hover = SubResource("StyleBoxTexture_qnu4m")
+Button/styles/normal = SubResource("StyleBoxTexture_iatr2")
+Button/styles/pressed = SubResource("StyleBoxTexture_f04wr")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_aqjdh")
 TabContainer/styles/panel = SubResource("StyleBoxFlat_susaj")
 TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 0)
 TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)

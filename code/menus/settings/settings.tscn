@@ -21,7 +21,7 @@ script = ExtResource("1_jsibp")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "Settings (Audio only xd)"
+text = "Settings"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

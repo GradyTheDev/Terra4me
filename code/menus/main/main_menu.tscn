@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://crs3nja17fdkg"]
+[gd_scene load_steps=15 format=3 uid="uid://crs3nja17fdkg"]
 
 [ext_resource type="Script" path="res://code/menus/main/main_menu.gd" id="2_3lfwf"]
 [ext_resource type="PackedScene" uid="uid://c3da1n8itbrqk" path="res://code/menus/main/main_menu_background.tscn" id="2_gr7oh"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_js0nh"]
 [ext_resource type="AudioStream" uid="uid://bvyshpqxrppdw" path="res://assets/sound/Music/menu_music.ogg" id="4_17mex"]
+[ext_resource type="Theme" uid="uid://cvpmb0we0j7v8" path="res://resources/themes/main_menu_buttons_theme.tres" id="4_ae3bs"]
 [ext_resource type="Texture2D" uid="uid://c76f5ihm18hi5" path="res://assets/artwork/game title.png" id="5_linn1"]
+[ext_resource type="Texture2D" uid="uid://dabka5mpkhlp8" path="res://assets/artwork/texts/credits_text.png" id="5_u0h5g"]
+[ext_resource type="Texture2D" uid="uid://n8eul3g7f3x5" path="res://assets/artwork/texts/settings_text.png" id="6_175q5"]
+[ext_resource type="Texture2D" uid="uid://dbf6yv2rgtv4u" path="res://assets/artwork/texts/quit_text.png" id="7_nut37"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id5h0"]
 
@@ -92,31 +96,40 @@ disabled = true
 text = ""
 
 [node name="Credits" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 95.0
-offset_top = 237.0
-offset_right = 158.0
-offset_bottom = 268.0
+texture_filter = 1
+offset_left = 21.0
+offset_top = 242.0
+offset_right = 117.0
+offset_bottom = 267.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Credits"
+theme = ExtResource("4_ae3bs")
+text = ""
+icon = ExtResource("5_u0h5g")
 
 [node name="Settings" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 261.0
-offset_top = 238.0
-offset_right = 331.0
-offset_bottom = 269.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Settings"
-
-[node name="Quit" parent="." instance=ExtResource("3_js0nh")]
-offset_left = 188.0
-offset_top = 237.0
-offset_right = 242.0
+texture_filter = 1
+offset_left = 209.0
+offset_top = 243.0
+offset_right = 319.0
 offset_bottom = 268.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Quit"
+theme = ExtResource("4_ae3bs")
+text = ""
+icon = ExtResource("6_175q5")
+
+[node name="Quit" parent="." instance=ExtResource("3_js0nh")]
+texture_filter = 1
+offset_left = 136.0
+offset_top = 242.0
+offset_right = 192.0
+offset_bottom = 267.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_ae3bs")
+text = ""
+icon = ExtResource("7_nut37")
 
 [node name="Ambient" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_17mex")
@@ -130,8 +143,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -92.0
+offset_top = 9.0
 offset_right = 92.0
-offset_bottom = 85.0
+offset_bottom = 94.0
 grow_horizontal = 2
 texture = ExtResource("5_linn1")
 

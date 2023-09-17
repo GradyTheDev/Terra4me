@@ -26,12 +26,6 @@ text = "You win!"
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Next" parent="VBoxContainer" instance=ExtResource("2_13con")]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Next level"
-
 [node name="Settings" parent="VBoxContainer" instance=ExtResource("2_13con")]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -44,6 +38,5 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Menu"
 
-[connection signal="button_up" from="VBoxContainer/Next" to="." method="_on_next_button_up"]
 [connection signal="button_up" from="VBoxContainer/Settings" to="." method="_on_settings_button_up"]
 [connection signal="button_up" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_button_up"]
