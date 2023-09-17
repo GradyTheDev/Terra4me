@@ -16,8 +16,5 @@ func move_camera_to(direction: Direction):
 	if tween:
 		return
 #		tween.kill()
-	tween = self.create_tween()
 	var target_position = self.position.x + distance_between_planets * direction
-	tween.tween_property(self, "position:x", target_position, sec_to_travel_whole_distance)
-	await tween.finished
-	tween = null
+	position.x = target_position

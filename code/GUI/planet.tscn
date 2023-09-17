@@ -121,6 +121,7 @@ script = ExtResource("5_gn5i8")
 
 [node name="ButtonListBackground" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(72.335, 30.165)
+layout_mode = 0
 offset_left = 344.0
 offset_top = 12.0
 offset_right = 470.0
@@ -171,9 +172,9 @@ pause_delay = 0.4
 new_line_delay = 0.8
 msg_end_wait_to_clear = 5.0
 max_chars = 20
-portrait_node = NodePath("../CanvasLayer/Portrait")
-dialog_node = NodePath("../CanvasLayer/DialogBox/Dialog")
-character_label_node = NodePath("../CanvasLayer/Portrait/CharacterLabel")
+portrait_node = NodePath("../Portrait")
+dialog_node = NodePath("../DialogBox/Dialog")
+character_label_node = NodePath("../Portrait/CharacterLabel")
 sound_msg_start_node = NodePath("msg_start")
 sound_msg_end_node = NodePath("msg_end")
 sound_type_node = NodePath("msg_type")
@@ -196,18 +197,17 @@ volume_db = -18.0
 stream = ExtResource("11_cos1j")
 volume_db = -20.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DialogBox" type="TextureRect" parent="CanvasLayer"]
+[node name="DialogBox" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(72.335, 30.165)
+layout_mode = 0
 offset_left = 15.0
 offset_top = 193.0
 offset_right = 335.0
-offset_bottom = 256.0
+offset_bottom = 257.0
 mouse_default_cursor_shape = 2
 texture = ExtResource("29_pvd5a")
 
-[node name="Dialog" type="RichTextLabel" parent="CanvasLayer/DialogBox"]
+[node name="Dialog" type="RichTextLabel" parent="DialogBox"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -222,8 +222,9 @@ scale = Vector2(0.8, 0.8)
 bbcode_enabled = true
 scroll_following = true
 
-[node name="Portrait" type="TextureRect" parent="CanvasLayer"]
+[node name="Portrait" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_left = 352.0
 offset_top = 160.0
 offset_right = 464.0
@@ -231,7 +232,7 @@ offset_bottom = 256.0
 texture = ExtResource("29_pvd5a")
 expand_mode = 1
 
-[node name="CharacterLabel" type="RichTextLabel" parent="CanvasLayer/Portrait"]
+[node name="CharacterLabel" type="RichTextLabel" parent="Portrait"]
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 1
 anchors_preset = 2
@@ -249,16 +250,18 @@ text = "Character"
 fit_content = true
 scroll_following = true
 
-[node name="UI" type="TextureRect" parent="CanvasLayer"]
+[node name="UI" type="TextureRect" parent="."]
 z_index = 5
 texture_filter = 1
+layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
 texture = ExtResource("29_rfhsc")
 metadata/_edit_lock_ = true
 
-[node name="OverlayLines" type="TextureRect" parent="CanvasLayer"]
+[node name="OverlayLines" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

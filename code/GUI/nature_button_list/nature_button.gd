@@ -33,9 +33,9 @@ func _process(_delta):
 
 func set_hint():
 	self.tooltip_text = """
-	Atmosphere: %d
-	Oxygen: %d
-	Heat: %d
+	Atmosphere: %s
+	Oxygen: %s
+	Heat: %s
 	""" % [nature_terra_pack.atmosphere_per_sec, 
 			nature_terra_pack.oxygen_per_sec, 
 			nature_terra_pack.heat_per_sec,]
