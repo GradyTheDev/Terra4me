@@ -20,6 +20,7 @@ func _ready():
 	self.add_child(extinciton_timer)
 	emit_signal("button_up_with_stats", nature_terra_pack)
 	existing_species = 0
+	set_hint()
 
 func _process(_delta):
 	if owner == null:
@@ -28,6 +29,14 @@ func _process(_delta):
 	if terra_variables_res and nature_terra_pack:
 		check_conditions(terra_variables_res)
 
+func set_hint():
+	self.tooltip_text = """
+	Atmosphere: %d
+	Oxygen: %d
+	Heat: %d
+	""" % [nature_terra_pack.atmosphere_per_sec, 
+			nature_terra_pack.oxygen_per_sec, 
+			nature_terra_pack.heat_per_sec,]
 
 func check_conditions(terra_variables_res):
 	var are_conditions_fulfilled = true

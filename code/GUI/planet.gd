@@ -96,10 +96,6 @@ func _input(event):
 				_on_win_timer_timeout()
 
 func do_constant_processes(delta):
-	# heat.value += remap(atmosphere.value, 0, 100, -10, 10) * delta
-	# if atmosphere.value < 10:
-	# 	oxygen.value -= 5 * delta
-	# atmosphere.value -= 3 * delta
 	if pack_of_nature:
 		for nature_terra_pack in pack_of_nature:
 			var nature_per_sec_dict = nature_terra_pack.get_nature_pack()
