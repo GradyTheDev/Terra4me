@@ -47,7 +47,7 @@ atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")
 dialog_intro = ExtResource("6_yctvv")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_65xg5"), ExtResource("8_s171v"), ExtResource("9_gc6mf"), ExtResource("10_in4su"), ExtResource("11_uvs3n"), ExtResource("12_dyc5h"), ExtResource("13_b6q75"), ExtResource("14_x7aqs"), ExtResource("15_e58bq"), ExtResource("16_6wogr"), ExtResource("17_a8r2d"), ExtResource("18_k04ef"), ExtResource("19_3dd6g"), ExtResource("9_uh4gr")])
 
-[node name="ButtonList" parent="Planet" index="7"]
+[node name="ButtonList" parent="Planet" index="8"]
 nature_actions = Array[Resource("res://code/code_resources/nature_terra_pack.gd")]([ExtResource("21_jsb42"), ExtResource("22_nsb07")])
 
 [node name="music" type="AudioStreamPlayer" parent="."]
