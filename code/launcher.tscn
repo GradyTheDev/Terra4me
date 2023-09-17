@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://8sdpivu3e1ap"]
+[gd_scene load_steps=6 format=3 uid="uid://8sdpivu3e1ap"]
 
 [ext_resource type="Script" path="res://code/launcher.gd" id="1_654an"]
+[ext_resource type="Texture2D" uid="uid://csbpxtwuq54iq" path="res://assets/artwork/main_menu.png" id="2_vwv3r"]
+[ext_resource type="Texture2D" uid="uid://dqt262e23yjbe" path="res://assets/artwork/jam/diplomatic_card.png" id="3_1ykku"]
+[ext_resource type="Texture2D" uid="uid://dm6ksj5wwdell" path="res://assets/artwork/jam/naturalist_card.png" id="4_781ox"]
+[ext_resource type="Texture2D" uid="uid://dfknqbhohpfk0" path="res://assets/artwork/texts/game title.png" id="5_8bcse"]
 
 [node name="Launcher" type="CanvasLayer"]
 script = ExtResource("1_654an")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(240, 135)
+texture = ExtResource("2_vwv3r")
+
+[node name="DiplomaticCard" type="Sprite2D" parent="."]
+position = Vector2(269, 202)
+texture = ExtResource("3_1ykku")
+
+[node name="NaturalistCard" type="Sprite2D" parent="."]
+position = Vector2(164, 203)
+texture = ExtResource("4_781ox")
+
+[node name="GameTitle" type="Sprite2D" parent="."]
+position = Vector2(222, 64)
+texture = ExtResource("5_8bcse")

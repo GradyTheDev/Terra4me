@@ -40,6 +40,6 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_aqjdh")
 TabContainer/styles/panel = SubResource("StyleBoxFlat_susaj")
 TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 0)
 TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
-TooltipLabel/font_sizes/font_size = 32
+TooltipLabel/font_sizes/font_size = 16
 TooltipLabel/fonts/font = SubResource("FontFile_k5hsr")
 TooltipPanel/styles/panel = SubResource("StyleBoxFlat_3aems")
