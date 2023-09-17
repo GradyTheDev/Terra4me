@@ -10,6 +10,6 @@ func _ready():
 
 	$"../Planet2/DialogSystem".process_mode = Node.PROCESS_MODE_DISABLED
 
-func run(a):
+func run(_a):
 	dialog_system.play_dialog(dialog_explain)
 	queue_free()

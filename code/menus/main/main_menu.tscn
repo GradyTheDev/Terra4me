@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://crs3nja17fdkg"]
+[gd_scene load_steps=10 format=3 uid="uid://crs3nja17fdkg"]
 
 [ext_resource type="Script" path="res://code/menus/main/main_menu.gd" id="2_3lfwf"]
 [ext_resource type="PackedScene" uid="uid://c3da1n8itbrqk" path="res://code/menus/main/main_menu_background.tscn" id="2_gr7oh"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_js0nh"]
 [ext_resource type="AudioStream" uid="uid://bvyshpqxrppdw" path="res://assets/sound/Music/menu_music.ogg" id="4_17mex"]
-[ext_resource type="Script" path="res://code/menus/main/loop.gd" id="5_uaq8f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id5h0"]
 
@@ -118,12 +117,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Quit"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_17mex")
 volume_db = -12.0
 autoplay = true
 bus = &"Music"
-script = ExtResource("5_uaq8f")
 
 [connection signal="button_up" from="Level_1" to="." method="_on_level_1_button_up"]
 [connection signal="hover_changed" from="Level_1" to="MainMenuBackground" method="_on_select_animation" binds= [0]]

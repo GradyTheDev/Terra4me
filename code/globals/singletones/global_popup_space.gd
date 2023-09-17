@@ -23,6 +23,7 @@ func on_node_added(node: Node) -> void:
 	var pp := node as PopupPanel
 	if pp and pp.theme_type_variation == "TooltipPanel":
 		pp.transparent_bg = true
+		#pp.canvas_transform = pp.canvas_transform.scaled(Vector2(0.1, 0.1))
 
 
 

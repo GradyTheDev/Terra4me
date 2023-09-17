@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://c0k0c51g2ushw"]
+[gd_scene load_steps=30 format=3 uid="uid://c0k0c51g2ushw"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
@@ -13,7 +13,6 @@
 [ext_resource type="Resource" uid="uid://bflchcng3n4yo" path="res://resources/dialog/level_4_explain.tres" id="8_cj5o4"]
 [ext_resource type="Resource" uid="uid://c42dymvlr1tlk" path="res://resources/dialog/news/news_3.tres" id="9_8qmvf"]
 [ext_resource type="Resource" uid="uid://bb5jtjrer5mgk" path="res://resources/dialog/news/news_4.tres" id="10_7p4x8"]
-[ext_resource type="Script" path="res://code/menus/main/loop.gd" id="10_swcpu"]
 [ext_resource type="Resource" uid="uid://vpfwvryofhk8" path="res://resources/dialog/news/news_5.tres" id="11_nkr88"]
 [ext_resource type="Resource" uid="uid://b55k823xlo1el" path="res://resources/dialog/news/news_6.tres" id="12_5l2b5"]
 [ext_resource type="Resource" uid="uid://bin86k5c0of3f" path="res://resources/dialog/news/news_7.tres" id="13_tnnyq"]
@@ -104,8 +103,9 @@ dialog_explain = ExtResource("8_cj5o4")
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_0ov3q")
+volume_db = -10.0
+autoplay = true
 bus = &"Music"
-script = ExtResource("10_swcpu")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
 [connection signal="planet_compleated" from="Planet2" to="." method="_on_planet_planet_compleated"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bsq78wqqfns3d"]
+[gd_scene load_steps=24 format=3 uid="uid://bsq78wqqfns3d"]
 
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_70tus"]
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_ss33w"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_gknhm"]
 [ext_resource type="AudioStream" uid="uid://vtvvs1l51j7h" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 3 idea (Sep 13 OGG).ogg" id="3_ha62o"]
 [ext_resource type="Resource" uid="uid://chbpu0eeup6uw" path="res://resources/dialog/intros/dialog_level_3_intro.tres" id="6_0lgsm"]
-[ext_resource type="Script" path="res://code/menus/main/loop.gd" id="6_b2du3"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_mk30t"]
 [ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_3n14w"]
 [ext_resource type="Resource" uid="uid://c42dymvlr1tlk" path="res://resources/dialog/news/news_3.tres" id="9_uk1a0"]
@@ -60,7 +59,8 @@ dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResour
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_4ijod")
+volume_db = -10.0
+autoplay = true
 bus = &"Music"
-script = ExtResource("6_b2du3")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
