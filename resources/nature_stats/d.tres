@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_3hi8m")
-name = "Dodo"
+name = "Mold"
 atmosphere_per_sec = 0.3
 oxygen_per_sec = -2.0
 heat_per_sec = 0.0

@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_ctyl6")
-name = "Bacteria"
+name = "Pollute"
 atmosphere_per_sec = -2.0
 oxygen_per_sec = 0.2
 heat_per_sec = 0.0

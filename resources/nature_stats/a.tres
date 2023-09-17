@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_1oj6w")
-name = "Axolotl"
+name = "Bacteria"
 atmosphere_per_sec = 1.0
 oxygen_per_sec = 0.0
 heat_per_sec = 0.05

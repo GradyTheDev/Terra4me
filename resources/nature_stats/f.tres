@@ -5,7 +5,7 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_25evt")
-name = "Dodo"
+name = "Snow Flower"
 atmosphere_per_sec = -0.1
 oxygen_per_sec = 0.0
 heat_per_sec = -1.0
