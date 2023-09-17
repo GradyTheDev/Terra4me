@@ -176,6 +176,7 @@ volume_db = -18.0
 
 [node name="static" type="AudioStreamPlayer" parent="DialogSystem"]
 stream = ExtResource("11_cos1j")
+volume_db = -20.0
 
 [node name="Portrait" type="TextureRect" parent="."]
 texture_filter = 1
