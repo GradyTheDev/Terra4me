@@ -20,13 +20,8 @@ bg_color = Color(0.6, 0.6, 0.6, 0.313726)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_susaj"]
 bg_color = Color(0.513726, 0.490196, 0.454902, 1)
 
-[sub_resource type="FontFile" id="FontFile_k5hsr"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+[sub_resource type="SystemFont" id="SystemFont_wegxl"]
+font_names = PackedStringArray("Sans-Serif")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aems"]
 bg_color = Color(0.6, 0.6, 0.6, 0.831373)
@@ -41,5 +36,5 @@ TabContainer/styles/panel = SubResource("StyleBoxFlat_susaj")
 TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 0)
 TooltipLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
 TooltipLabel/font_sizes/font_size = 16
-TooltipLabel/fonts/font = SubResource("FontFile_k5hsr")
+TooltipLabel/fonts/font = SubResource("SystemFont_wegxl")
 TooltipPanel/styles/panel = SubResource("StyleBoxFlat_3aems")
