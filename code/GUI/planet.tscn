@@ -126,9 +126,10 @@ script = ExtResource("5_gn5i8")
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
 anchors_preset = 0
-offset_left = 327.0
-offset_right = -153.0
-offset_bottom = -270.0
+offset_left = 373.0
+offset_top = 3.1475
+offset_right = -7.0
+offset_bottom = -146.853
 
 [node name="Map" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(120, 120)

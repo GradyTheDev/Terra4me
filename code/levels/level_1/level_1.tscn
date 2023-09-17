@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b853fcpfq0l4"]
+[gd_scene load_steps=25 format=3 uid="uid://b853fcpfq0l4"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_b1xxe"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_co3ya"]
@@ -21,6 +21,8 @@
 [ext_resource type="Resource" uid="uid://dpyjnjwejttnl" path="res://resources/dialog/news/news_11.tres" id="17_a8r2d"]
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_k04ef"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_3dd6g"]
+[ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/a.tres" id="21_jsb42"]
+[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/b.tres" id="22_nsb07"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("3_ipvg4")
@@ -46,9 +48,14 @@ atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")
 dialog_intro = ExtResource("6_yctvv")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_65xg5"), ExtResource("8_s171v"), ExtResource("9_gc6mf"), ExtResource("10_in4su"), ExtResource("11_uvs3n"), ExtResource("12_dyc5h"), ExtResource("13_b6q75"), ExtResource("14_x7aqs"), ExtResource("15_e58bq"), ExtResource("16_6wogr"), ExtResource("17_a8r2d"), ExtResource("18_k04ef"), ExtResource("19_3dd6g"), ExtResource("9_uh4gr")])
 
+[node name="ButtonList" parent="Planet" index="6"]
+nature_actions = Array[Resource("res://code/code_resources/nature_terra_pack.gd")]([ExtResource("21_jsb42"), ExtResource("22_nsb07")])
+
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_x50ow")
 bus = &"Music"
 script = ExtResource("10_w1xim")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
+
+[editable path="Planet"]

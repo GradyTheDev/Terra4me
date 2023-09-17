@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bq2ru6c7ppj8y"]
+[gd_scene load_steps=28 format=3 uid="uid://bq2ru6c7ppj8y"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_iu5hk"]
 [ext_resource type="AudioStream" uid="uid://c58pjp1q6ueve" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 Ambience (Sep 13 OGG).ogg" id="2_cwahv"]
@@ -20,7 +20,11 @@
 [ext_resource type="Resource" uid="uid://dpyjnjwejttnl" path="res://resources/dialog/news/news_11.tres" id="17_jmnxc"]
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_7afcr"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_jjaag"]
+[ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/a.tres" id="20_7guk3"]
 [ext_resource type="Resource" uid="uid://bcyr5abywasmn" path="res://resources/dialog/interupts/interupt_level_2.tres" id="20_a3rsp"]
+[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/b.tres" id="21_6d63h"]
+[ext_resource type="Resource" uid="uid://cx2vdannmixaw" path="res://resources/nature_stats/e.tres" id="22_laqut"]
+[ext_resource type="Resource" uid="uid://juqk768d1sr" path="res://resources/nature_stats/f.tres" id="23_m3gld"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("3_p7wkb")
@@ -40,7 +44,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iu5hk")
-ambient_music = ExtResource("2_cwahv")
 win_sound = ExtResource("3_1h4t6")
 
 [node name="Planet" parent="." instance=ExtResource("2_sarro")]
@@ -52,9 +55,15 @@ heat_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_derel")])
 dialog_intro = ExtResource("6_0fhsx")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_ucesk"), ExtResource("8_xcdu2"), ExtResource("9_hw14m"), ExtResource("10_8b1t6"), ExtResource("11_ge5mv"), ExtResource("12_saikw"), ExtResource("13_d5xyb"), ExtResource("14_g1dua"), ExtResource("15_wacmg"), ExtResource("16_rka45"), ExtResource("17_jmnxc"), ExtResource("18_7afcr"), ExtResource("19_jjaag"), ExtResource("20_a3rsp")])
 
+[node name="ButtonList" parent="Planet" index="6"]
+nature_actions = Array[Resource("res://code/code_resources/nature_terra_pack.gd")]([ExtResource("20_7guk3"), ExtResource("21_6d63h"), ExtResource("22_laqut"), ExtResource("23_m3gld")])
+
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_cwahv")
+autoplay = true
 bus = &"Music"
 script = ExtResource("6_yjfwp")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
+
+[editable path="Planet"]
