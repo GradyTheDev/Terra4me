@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6sg262sw7hmq"
-path="res://.godot/imported/overlaylines.png-89bb2b3e10786c208dee92deb9167f54.ctex"
+uid="uid://chcvq4hxvhr7a"
+path="res://.godot/imported/longButtons.png-62347a2d0da43c07bcfd5a062da0652b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/artwork/overlaylines.png"
-dest_files=["res://.godot/imported/overlaylines.png-89bb2b3e10786c208dee92deb9167f54.ctex"]
+source_file="res://assets/artwork/buttons/longButtons.png"
+dest_files=["res://.godot/imported/longButtons.png-62347a2d0da43c07bcfd5a062da0652b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6sg262sw7hmq"
-path="res://.godot/imported/overlaylines.png-89bb2b3e10786c208dee92deb9167f54.ctex"
+uid="uid://dbdc67sivvsnw"
+path="res://.godot/imported/textBackground.png-2ed3d7b23b814a6943537a853763adf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/artwork/overlaylines.png"
-dest_files=["res://.godot/imported/overlaylines.png-89bb2b3e10786c208dee92deb9167f54.ctex"]
+source_file="res://assets/artwork/buttons/textBackground.png"
+dest_files=["res://.godot/imported/textBackground.png-2ed3d7b23b814a6943537a853763adf7.ctex"]
 
 [params]
 

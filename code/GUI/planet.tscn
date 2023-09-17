@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c0b0sqv3v3p2q"]
+[gd_scene load_steps=34 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_0233i"]
@@ -28,18 +28,12 @@
 [ext_resource type="Script" path="res://code/GUI/Map.gd" id="23_mayg5"]
 [ext_resource type="AudioStream" uid="uid://c2jk7ayil8mc8" path="res://assets/sound/typing/Typing-1-_Sep-17_.ogg" id="26_kc2a6"]
 [ext_resource type="AudioStream" uid="uid://bbgen5pxmg56u" path="res://assets/sound/typing/Typing-2-_Sep-17_.ogg" id="26_waddx"]
-[ext_resource type="Texture2D" uid="uid://dut540hkbrtys" path="res://assets/artwork/overlaylines.png" id="28_rf00x"]
-[ext_resource type="Texture2D" uid="uid://hhcyoo77deja" path="res://assets/artwork/gameui.png" id="29_we6hp"]
+[ext_resource type="Texture2D" uid="uid://6sg262sw7hmq" path="res://assets/artwork/overlaylines.png" id="28_rf00x"]
+[ext_resource type="Texture2D" uid="uid://dbdc67sivvsnw" path="res://assets/artwork/buttons/textBackground.png" id="29_pvd5a"]
+[ext_resource type="Texture2D" uid="uid://3bgsqqyoi2n2" path="res://assets/artwork/gameui_v2.png" id="29_rfhsc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pj5kd"]
 font_size = 10
-
-[sub_resource type="Gradient" id="Gradient_s52t5"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_njvlu"]
-gradient = SubResource("Gradient_s52t5")
 
 [sub_resource type="Theme" id="Theme_d0mfn"]
 default_font_size = 9
@@ -194,14 +188,14 @@ volume_db = -20.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogBox" type="ColorRect" parent="CanvasLayer"]
+[node name="DialogBox" type="TextureRect" parent="CanvasLayer"]
 custom_minimum_size = Vector2(72.335, 30.165)
 offset_left = 15.0
 offset_top = 193.0
 offset_right = 335.0
 offset_bottom = 256.0
 mouse_default_cursor_shape = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("29_pvd5a")
 
 [node name="Dialog" type="RichTextLabel" parent="CanvasLayer/DialogBox"]
 layout_mode = 1
@@ -224,7 +218,7 @@ offset_left = 352.0
 offset_top = 160.0
 offset_right = 464.0
 offset_bottom = 256.0
-texture = SubResource("GradientTexture1D_njvlu")
+texture = ExtResource("29_pvd5a")
 expand_mode = 1
 
 [node name="CharacterLabel" type="RichTextLabel" parent="CanvasLayer/Portrait"]
@@ -251,7 +245,7 @@ texture_filter = 1
 offset_right = 480.0
 offset_bottom = 270.0
 mouse_filter = 2
-texture = ExtResource("29_we6hp")
+texture = ExtResource("29_rfhsc")
 metadata/_edit_lock_ = true
 
 [node name="OverlayLines" type="TextureRect" parent="CanvasLayer"]

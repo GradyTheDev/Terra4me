@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cca5ti6331nei"]
+
+[ext_resource type="Texture2D" uid="uid://co613krufpkif" path="res://assets/artwork/buttons/smallButtons.png" id="1_c2m5p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ochs2"]
+resource_local_to_scene = true
+texture = ExtResource("1_c2m5p")
+region_rect = Rect2(0, 24, 12, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_067wa"]
+texture = ExtResource("1_c2m5p")
+region_rect = Rect2(0, 12, 12, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqhbx"]
+texture = ExtResource("1_c2m5p")
+region_rect = Rect2(0, 0, 12, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ht5aw"]
+texture = ExtResource("1_c2m5p")
+region_rect = Rect2(0, 24, 12, 12)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_ochs2")
+Button/styles/hover = SubResource("StyleBoxTexture_067wa")
+Button/styles/normal = SubResource("StyleBoxTexture_cqhbx")
+Button/styles/pressed = SubResource("StyleBoxTexture_ht5aw")

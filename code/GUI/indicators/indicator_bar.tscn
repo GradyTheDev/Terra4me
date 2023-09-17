@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://code/GUI/indicators/indicator_bar.gd" id="1_qgvuk"]
 [ext_resource type="Script" path="res://code/GUI/indicators/whole_range.gd" id="2_akgk5"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_qwyys"]
-[ext_resource type="Theme" uid="uid://b72gb0gp72qn7" path="res://code/GUI/indicators/buttons.tres" id="4_3oerh"]
+[ext_resource type="Theme" uid="uid://b72gb0gp72qn7" path="res://code/GUI/indicators/button_+.tres" id="4_0w5bv"]
 [ext_resource type="AudioStream" uid="uid://chusyonnyf6xk" path="res://assets/sound/Music/OGG/Pariah - UI 8 (Sep 13 OGG).ogg" id="4_bw5me"]
-[ext_resource type="Texture2D" uid="uid://hhcyoo77deja" path="res://assets/artwork/gameui.png" id="5_4o2rv"]
+[ext_resource type="Theme" uid="uid://cca5ti6331nei" path="res://code/GUI/indicators/button_-.tres" id="6_antc8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jkawg"]
 font_size = 11
@@ -68,7 +68,6 @@ text = "Indicator name"
 label_settings = SubResource("LabelSettings_jkawg")
 
 [node name="Increase" parent="." instance=ExtResource("2_qwyys")]
-modulate = Color(0, 0.584314, 0.239216, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 0
@@ -77,7 +76,7 @@ offset_top = 18.0
 offset_right = 94.0
 offset_bottom = 30.0
 size_flags_horizontal = 8
-theme = ExtResource("4_3oerh")
+theme = ExtResource("4_0w5bv")
 text = ""
 text_overrun_behavior = 1
 clip_text = true
@@ -85,7 +84,6 @@ expand_icon = true
 on_click_sound = ExtResource("4_bw5me")
 
 [node name="Decrease" parent="." instance=ExtResource("2_qwyys")]
-modulate = Color(0.603922, 0, 0.00784314, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(0, 0)
 layout_mode = 0
@@ -94,7 +92,7 @@ offset_top = 18.0
 offset_right = 14.0
 offset_bottom = 30.0
 size_flags_horizontal = 0
-theme = ExtResource("4_3oerh")
+theme = ExtResource("6_antc8")
 text = ""
 text_overrun_behavior = 1
 clip_text = true
@@ -114,15 +112,6 @@ one_shot = true
 
 [node name="Duration" type="Timer" parent="."]
 one_shot = true
-
-[node name="Node" type="Node" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="Node"]
-visible = false
-z_index = -1
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("5_4o2rv")
 
 [connection signal="button_up" from="Increase" to="." method="_on_increase_button_up"]
 [connection signal="button_up" from="Decrease" to="." method="_on_decrease_button_up"]
