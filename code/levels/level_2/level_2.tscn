@@ -1,11 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://bq2ru6c7ppj8y"]
+[gd_scene load_steps=24 format=3 uid="uid://bq2ru6c7ppj8y"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_iu5hk"]
 [ext_resource type="AudioStream" uid="uid://c58pjp1q6ueve" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 Ambience (Sep 13 OGG).ogg" id="2_cwahv"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_sarro"]
 [ext_resource type="AudioStream" uid="uid://mr4r7nlswqa" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 idea (Sep 13 OGG).ogg" id="3_1h4t6"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="3_p7wkb"]
+[ext_resource type="Resource" uid="uid://cdte4nvfdtnni" path="res://resources/dialog/intros/dialog_level_2_intro.tres" id="6_0fhsx"]
 [ext_resource type="Script" path="res://code/menus/main/loop.gd" id="6_yjfwp"]
+[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_ucesk"]
+[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_xcdu2"]
+[ext_resource type="Resource" uid="uid://c42dymvlr1tlk" path="res://resources/dialog/news/news_3.tres" id="9_hw14m"]
+[ext_resource type="Resource" uid="uid://bb5jtjrer5mgk" path="res://resources/dialog/news/news_4.tres" id="10_8b1t6"]
+[ext_resource type="Resource" uid="uid://vpfwvryofhk8" path="res://resources/dialog/news/news_5.tres" id="11_ge5mv"]
+[ext_resource type="Resource" uid="uid://b55k823xlo1el" path="res://resources/dialog/news/news_6.tres" id="12_saikw"]
+[ext_resource type="Resource" uid="uid://bin86k5c0of3f" path="res://resources/dialog/news/news_7.tres" id="13_d5xyb"]
+[ext_resource type="Resource" uid="uid://1g3w8g3objnf" path="res://resources/dialog/news/news_8.tres" id="14_g1dua"]
+[ext_resource type="Resource" uid="uid://blu6qyi5mm55f" path="res://resources/dialog/news/news_9.tres" id="15_wacmg"]
+[ext_resource type="Resource" uid="uid://tcexq3m2yn0l" path="res://resources/dialog/news/news_10.tres" id="16_rka45"]
+[ext_resource type="Resource" uid="uid://dpyjnjwejttnl" path="res://resources/dialog/news/news_11.tres" id="17_jmnxc"]
+[ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_7afcr"]
+[ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_jjaag"]
+[ext_resource type="Resource" uid="uid://bcyr5abywasmn" path="res://resources/dialog/interupts/interupt_level_2.tres" id="20_a3rsp"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("3_p7wkb")
@@ -34,6 +49,8 @@ planet_name = "Heracles"
 job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_lds18")])
 heat_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_derel")])
+dialog_intro = ExtResource("6_0fhsx")
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_ucesk"), ExtResource("8_xcdu2"), ExtResource("9_hw14m"), ExtResource("10_8b1t6"), ExtResource("11_ge5mv"), ExtResource("12_saikw"), ExtResource("13_d5xyb"), ExtResource("14_g1dua"), ExtResource("15_wacmg"), ExtResource("16_rka45"), ExtResource("17_jmnxc"), ExtResource("18_7afcr"), ExtResource("19_jjaag"), ExtResource("20_a3rsp")])
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_cwahv")

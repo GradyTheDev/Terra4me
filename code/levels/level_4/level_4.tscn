@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c0k0c51g2ushw"]
+[gd_scene load_steps=31 format=3 uid="uid://c0k0c51g2ushw"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
@@ -7,9 +7,23 @@
 [ext_resource type="AudioStream" uid="uid://doi5qdjdye2q8" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 4 idea (Sep 13 OGG).ogg" id="3_i31hf"]
 [ext_resource type="Script" path="res://code/levels/level_4/Camera2D.gd" id="5_rbb28"]
 [ext_resource type="Resource" uid="uid://bysuf6gnoul7d" path="res://resources/dialog/intros/dialog_level_4_intro.tres" id="6_lj0j3"]
+[ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_cyj0m"]
 [ext_resource type="Script" path="res://code/levels/level_4/explain.gd" id="7_xwd5q"]
+[ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_4t6wv"]
 [ext_resource type="Resource" uid="uid://bflchcng3n4yo" path="res://resources/dialog/level_4_explain.tres" id="8_cj5o4"]
+[ext_resource type="Resource" uid="uid://c42dymvlr1tlk" path="res://resources/dialog/news/news_3.tres" id="9_8qmvf"]
+[ext_resource type="Resource" uid="uid://bb5jtjrer5mgk" path="res://resources/dialog/news/news_4.tres" id="10_7p4x8"]
 [ext_resource type="Script" path="res://code/menus/main/loop.gd" id="10_swcpu"]
+[ext_resource type="Resource" uid="uid://vpfwvryofhk8" path="res://resources/dialog/news/news_5.tres" id="11_nkr88"]
+[ext_resource type="Resource" uid="uid://b55k823xlo1el" path="res://resources/dialog/news/news_6.tres" id="12_5l2b5"]
+[ext_resource type="Resource" uid="uid://bin86k5c0of3f" path="res://resources/dialog/news/news_7.tres" id="13_tnnyq"]
+[ext_resource type="Resource" uid="uid://1g3w8g3objnf" path="res://resources/dialog/news/news_8.tres" id="14_pxt4p"]
+[ext_resource type="Resource" uid="uid://blu6qyi5mm55f" path="res://resources/dialog/news/news_9.tres" id="15_lgtrt"]
+[ext_resource type="Resource" uid="uid://tcexq3m2yn0l" path="res://resources/dialog/news/news_10.tres" id="16_lpdcv"]
+[ext_resource type="Resource" uid="uid://dpyjnjwejttnl" path="res://resources/dialog/news/news_11.tres" id="17_sshie"]
+[ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_tk707"]
+[ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_0h6vr"]
+[ext_resource type="Resource" uid="uid://3fbotwofn3o" path="res://resources/dialog/interupts/interupt_level_4.tres" id="20_t5fqu"]
 
 [sub_resource type="Resource" id="Resource_6c0da"]
 script = ExtResource("2_ckuxu")
@@ -61,6 +75,7 @@ atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
 dialog_intro = ExtResource("6_lj0j3")
+dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_cyj0m"), ExtResource("8_4t6wv"), ExtResource("9_8qmvf"), ExtResource("10_7p4x8"), ExtResource("11_nkr88"), ExtResource("12_5l2b5"), ExtResource("13_tnnyq"), ExtResource("14_pxt4p"), ExtResource("15_lgtrt"), ExtResource("16_lpdcv"), ExtResource("17_sshie"), ExtResource("18_tk707"), ExtResource("19_0h6vr"), ExtResource("20_t5fqu")])
 
 [node name="Planet2" parent="." instance=ExtResource("1_fprcg")]
 layout_mode = 1
