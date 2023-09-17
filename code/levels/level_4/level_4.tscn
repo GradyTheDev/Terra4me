@@ -104,6 +104,7 @@ dialog_explain = ExtResource("8_cj5o4")
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_0ov3q")
+bus = &"Music"
 script = ExtResource("10_swcpu")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]

@@ -60,6 +60,7 @@ dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResour
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_4ijod")
+bus = &"Music"
 script = ExtResource("6_b2du3")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
