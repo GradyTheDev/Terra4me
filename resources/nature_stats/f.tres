@@ -5,8 +5,8 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_25evt")
-name = "Firebush"
-atmosphere_per_sec = 0.0
+name = "Dodo"
+atmosphere_per_sec = -0.1
 oxygen_per_sec = 0.0
 heat_per_sec = -1.0
 extinction_sec = 0.0
