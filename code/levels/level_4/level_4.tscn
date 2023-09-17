@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c0k0c51g2ushw"]
+[gd_scene load_steps=34 format=3 uid="uid://c0k0c51g2ushw"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://code/levels/level_4/Camera2D.gd" id="5_rbb28"]
 [ext_resource type="Resource" uid="uid://bysuf6gnoul7d" path="res://resources/dialog/intros/dialog_level_4_intro.tres" id="6_lj0j3"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_cyj0m"]
+[ext_resource type="Resource" uid="uid://buhfpgmp0fivg" path="res://resources/dialog/win_level_4.tres" id="7_mad5l"]
 [ext_resource type="Script" path="res://code/levels/level_4/explain.gd" id="7_xwd5q"]
 [ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_4t6wv"]
 [ext_resource type="Resource" uid="uid://bflchcng3n4yo" path="res://resources/dialog/level_4_explain.tres" id="8_cj5o4"]
@@ -76,6 +77,7 @@ atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
 dialog_intro = ExtResource("6_lj0j3")
+dialog_win = ExtResource("7_mad5l")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_cyj0m"), ExtResource("8_4t6wv"), ExtResource("9_8qmvf"), ExtResource("10_7p4x8"), ExtResource("11_nkr88"), ExtResource("12_5l2b5"), ExtResource("13_tnnyq"), ExtResource("14_pxt4p"), ExtResource("15_lgtrt"), ExtResource("16_lpdcv"), ExtResource("17_sshie"), ExtResource("18_tk707"), ExtResource("19_0h6vr"), ExtResource("20_t5fqu")])
 
 [node name="Planet2" parent="." instance=ExtResource("1_fprcg")]
