@@ -17,6 +17,7 @@ signal message_over(message: Dialog)
 @export var sound_msg_start_node: AudioStreamPlayer
 @export var sound_msg_end_node: AudioStreamPlayer
 @export var sound_type_node: AudioStreamPlayer
+@export var sound_type_streams: Array[AudioStream]
 @export var sound_static: AudioStreamPlayer
 
 var _current_msg: Dialog
@@ -73,10 +74,11 @@ func _process(delta: float):
 		dialog_node.text += c
 		_timer = pause_delay
 	else:
+		if c != " ":
+			sound_type_node.stream = sound_type_streams.pick_random()
+			sound_type_node.play()
 		dialog_node.text += c
 		_timer = char_delay
-	if not sound_type_node.playing:
-		sound_type_node.play()
 
 
 func play_dialog(msg: Dialog):

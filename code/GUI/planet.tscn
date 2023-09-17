@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c0b0sqv3v3p2q"]
+[gd_scene load_steps=35 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_0233i"]
@@ -19,7 +19,6 @@
 [ext_resource type="Resource" uid="uid://bin86k5c0of3f" path="res://resources/dialog/news/news_7.tres" id="8_fmjxl"]
 [ext_resource type="AudioStream" uid="uid://tcs7h7gtdsb0" path="res://assets/sound/SFX/Pariah-Radio-Static-5.ogg" id="9_2w7yu"]
 [ext_resource type="Resource" uid="uid://1g3w8g3objnf" path="res://resources/dialog/news/news_8.tres" id="9_h3apt"]
-[ext_resource type="AudioStream" uid="uid://cve5gjwipff6r" path="res://assets/sound/SFX/radio-transmission.ogg" id="10_457os"]
 [ext_resource type="Resource" uid="uid://blu6qyi5mm55f" path="res://resources/dialog/news/news_9.tres" id="10_rqnfi"]
 [ext_resource type="Resource" uid="uid://tcexq3m2yn0l" path="res://resources/dialog/news/news_10.tres" id="11_0kbuq"]
 [ext_resource type="AudioStream" uid="uid://dcf5dd1mheced" path="res://assets/sound/SFX/Pariah-Light-static-for-transmisssions.ogg" id="11_cos1j"]
@@ -27,6 +26,8 @@
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="13_xflk0"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="14_bwyh8"]
 [ext_resource type="Script" path="res://code/GUI/Map.gd" id="23_mayg5"]
+[ext_resource type="AudioStream" uid="uid://c2jk7ayil8mc8" path="res://assets/sound/typing/Typing-1-_Sep-17_.ogg" id="26_kc2a6"]
+[ext_resource type="AudioStream" uid="uid://bbgen5pxmg56u" path="res://assets/sound/typing/Typing-2-_Sep-17_.ogg" id="26_waddx"]
 [ext_resource type="Texture2D" uid="uid://dut540hkbrtys" path="res://assets/artwork/overlaylines.png" id="28_rf00x"]
 [ext_resource type="Texture2D" uid="uid://hhcyoo77deja" path="res://assets/artwork/gameui.png" id="29_we6hp"]
 
@@ -172,6 +173,7 @@ character_label_node = NodePath("../CanvasLayer/Portrait/CharacterLabel")
 sound_msg_start_node = NodePath("msg_start")
 sound_msg_end_node = NodePath("msg_end")
 sound_type_node = NodePath("msg_type")
+sound_type_streams = Array[AudioStream]([ExtResource("26_kc2a6"), ExtResource("26_waddx")])
 sound_static = NodePath("static")
 
 [node name="msg_start" type="AudioStreamPlayer" parent="DialogSystem"]
@@ -183,7 +185,7 @@ stream = ExtResource("9_2w7yu")
 volume_db = -10.0
 
 [node name="msg_type" type="AudioStreamPlayer" parent="DialogSystem"]
-stream = ExtResource("10_457os")
+stream = ExtResource("26_kc2a6")
 volume_db = -18.0
 
 [node name="static" type="AudioStreamPlayer" parent="DialogSystem"]
