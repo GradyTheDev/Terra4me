@@ -17,6 +17,8 @@ func _init():
 	extinciton_timer.timeout.connect(_on_extinction_timer_timeout)
 
 func _ready():
+	if not nature_terra_pack:
+		return
 	self.add_child(extinciton_timer)
 	emit_signal("button_up_with_stats", nature_terra_pack)
 	existing_species = 0

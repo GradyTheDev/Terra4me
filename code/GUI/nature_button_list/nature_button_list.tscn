@@ -37,7 +37,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "Template"
 script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("4_qt2r3")
+nature_terra_pack = null
 
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
