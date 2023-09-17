@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bsq78wqqfns3d"]
+[gd_scene load_steps=10 format=3 uid="uid://bsq78wqqfns3d"]
 
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_70tus"]
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_ss33w"]
 [ext_resource type="AudioStream" uid="uid://dtq0wkmfy7ovm" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 3 Ambience (Sep 13 OGG).ogg" id="2_4ijod"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_gknhm"]
 [ext_resource type="AudioStream" uid="uid://vtvvs1l51j7h" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 3 idea (Sep 13 OGG).ogg" id="3_ha62o"]
+[ext_resource type="Script" path="res://code/menus/main/loop.gd" id="6_b2du3"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("2_gknhm")
@@ -39,5 +40,9 @@ job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_lds18")])
 oxygen_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_j6eld")])
 heat_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_i78hm")])
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4ijod")
+script = ExtResource("6_b2du3")
 
 [connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
