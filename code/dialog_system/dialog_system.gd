@@ -26,6 +26,8 @@ var _clear_next: bool
 
 var _pause_chars := ".,!?".split()
 
+
+
 func _process(delta: float):
 	if process_mode == PROCESS_MODE_DISABLED:
 		return
@@ -75,9 +77,6 @@ func _process(delta: float):
 		_timer = char_delay
 	if not sound_type_node.playing:
 		sound_type_node.play()
-	
-	if len(dialog_node.text) > max_chars and max_chars > 0:
-		dialog_node.text = dialog_node.text.erase(0, 1)
 
 
 func play_dialog(msg: Dialog):

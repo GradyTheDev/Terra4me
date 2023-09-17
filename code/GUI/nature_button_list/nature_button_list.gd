@@ -18,7 +18,7 @@ func _ready():
 
 	for x in nature_actions:
 		var c = b.duplicate()
-		c.nature_terra_pack = x
+		c.nature_terra_pack = x.duplicate(true)
 		c.text = x.name
 		c.process_mode = Node.PROCESS_MODE_INHERIT
 		$VBoxContainer.add_child(c)

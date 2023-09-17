@@ -163,7 +163,7 @@ script = ExtResource("8_cfkd0")
 char_delay = 0.05
 pause_delay = 0.4
 new_line_delay = 0.8
-msg_end_wait_to_clear = 0.8
+msg_end_wait_to_clear = 5.0
 max_chars = 50
 portrait_node = NodePath("../CanvasLayer/Portrait")
 dialog_node = NodePath("../CanvasLayer/DialogBox/Dialog")
@@ -207,11 +207,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 7.0
 offset_top = 21.0
-offset_right = -3.0
-offset_bottom = -5.0
+offset_right = 73.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 bbcode_enabled = true
+scroll_following = true
 
 [node name="Portrait" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
@@ -238,7 +240,7 @@ theme = SubResource("Theme_d0mfn")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
-scroll_active = false
+scroll_following = true
 
 [node name="UI" type="TextureRect" parent="CanvasLayer"]
 z_index = 5

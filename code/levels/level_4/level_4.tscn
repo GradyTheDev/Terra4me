@@ -89,7 +89,7 @@ oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([])
 
-[node name="CanvasLayer" parent="Planet2" index="12"]
+[node name="CanvasLayer" parent="Planet2" index="11"]
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
