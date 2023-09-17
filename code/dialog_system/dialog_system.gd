@@ -85,12 +85,14 @@ func play_dialog(msg: Dialog):
 		return
 	
 	if msg == null:
-		if _current_msg != null:
-			message_over.emit(_current_msg)
+		var old = _current_msg
 		_current_msg = null
 		character_label_node.text = ""
 		dialog_node.text = ""
 		portrait_node.texture = Dialog.static_get_portrait_image(Dialog.PortraitsEnum.blank)
+		
+		if old != null:
+			message_over.emit(_current_msg)
 		return
 	
 	_current_msg = msg
