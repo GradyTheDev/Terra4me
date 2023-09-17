@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqt262e23yjbe"
-path="res://.godot/imported/diplomatic_card.png-3133966b4930952aa1ace6b16be227bb.ctex"
+uid="uid://bl33wsble1uoy"
+path="res://.godot/imported/diplomatic.png-a0afd3de58328b0a3344b017afaa320b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/artwork/jam/diplomatic_card.png"
-dest_files=["res://.godot/imported/diplomatic_card.png-3133966b4930952aa1ace6b16be227bb.ctex"]
+source_file="res://assets/artwork/jam/diplomatic.png"
+dest_files=["res://.godot/imported/diplomatic.png-a0afd3de58328b0a3344b017afaa320b.ctex"]
 
 [params]
 

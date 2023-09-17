@@ -1,26 +1,89 @@
-[gd_scene load_steps=6 format=3 uid="uid://8sdpivu3e1ap"]
+[gd_scene load_steps=13 format=3 uid="uid://8sdpivu3e1ap"]
 
 [ext_resource type="Script" path="res://code/launcher.gd" id="1_654an"]
-[ext_resource type="Texture2D" uid="uid://csbpxtwuq54iq" path="res://assets/artwork/main_menu.png" id="2_vwv3r"]
-[ext_resource type="Texture2D" uid="uid://dqt262e23yjbe" path="res://assets/artwork/jam/diplomatic_card.png" id="3_1ykku"]
-[ext_resource type="Texture2D" uid="uid://dm6ksj5wwdell" path="res://assets/artwork/jam/naturalist_card.png" id="4_781ox"]
-[ext_resource type="Texture2D" uid="uid://dfknqbhohpfk0" path="res://assets/artwork/texts/game title.png" id="5_8bcse"]
+[ext_resource type="Texture2D" uid="uid://bftfggkhtaagu" path="res://assets/artwork/layered main menu/background.png" id="2_3nax8"]
+[ext_resource type="Texture2D" uid="uid://f8nhoil8afrb" path="res://assets/artwork/layered main menu/stars.png" id="3_0i15c"]
+[ext_resource type="Texture2D" uid="uid://bl33wsble1uoy" path="res://assets/artwork/jam/diplomatic.png" id="3_1ykku"]
+[ext_resource type="Texture2D" uid="uid://dm6ksj5wwdell" path="res://assets/artwork/jam/naturalist.png" id="4_781ox"]
+[ext_resource type="Texture2D" uid="uid://pp11e1lk2516" path="res://assets/artwork/jam/ascension.png" id="4_xntl1"]
+[ext_resource type="Texture2D" uid="uid://d1nq5gngth336" path="res://assets/artwork/layered main menu/decoration.png" id="4_y7gxj"]
+[ext_resource type="Texture2D" uid="uid://ci0dvsd81n7e2" path="res://assets/artwork/jam/csharp.png" id="5_cxddl"]
+[ext_resource type="Texture2D" uid="uid://rpmeo0ynec2o" path="res://assets/artwork/jam/GWJ-logo.png" id="7_ijmaw"]
+[ext_resource type="Texture2D" uid="uid://hg1bsa7y2kpy" path="res://assets/artwork/crew/boss.png" id="9_6a15k"]
+[ext_resource type="Texture2D" uid="uid://dp7yv6wgkjglf" path="res://assets/artwork/crew/captain.png" id="9_xkwfo"]
+[ext_resource type="Texture2D" uid="uid://cm4wyl8b3yyvu" path="res://assets/artwork/crew/news_anchor.png" id="10_8wkx2"]
 
 [node name="Launcher" type="CanvasLayer"]
 script = ExtResource("1_654an")
 
-[node name="MainMenu" type="Sprite2D" parent="."]
-position = Vector2(240, 135)
-texture = ExtResource("2_vwv3r")
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3nax8")
 
-[node name="DiplomaticCard" type="Sprite2D" parent="."]
-position = Vector2(269, 202)
+[node name="Background2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0i15c")
+
+[node name="Background3" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_y7gxj")
+flip_h = true
+flip_v = true
+
+[node name="Ascension" type="Sprite2D" parent="."]
+position = Vector2(240, 108)
+scale = Vector2(0.042, 0.042)
+texture = ExtResource("4_xntl1")
+
+[node name="Csharp" type="Sprite2D" parent="."]
+position = Vector2(310, 150)
+scale = Vector2(0.042, 0.042)
+texture = ExtResource("5_cxddl")
+
+[node name="Diplomatic" type="Sprite2D" parent="."]
+position = Vector2(240, 150)
+scale = Vector2(0.0416818, 0.0425)
 texture = ExtResource("3_1ykku")
 
-[node name="NaturalistCard" type="Sprite2D" parent="."]
-position = Vector2(164, 203)
+[node name="Gwj-logo" type="Sprite2D" parent="."]
+position = Vector2(240.02, 44.96)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("7_ijmaw")
+
+[node name="Naturalist" type="Sprite2D" parent="."]
+position = Vector2(170, 150)
+scale = Vector2(0.0416818, 0.0425)
 texture = ExtResource("4_781ox")
 
-[node name="GameTitle" type="Sprite2D" parent="."]
-position = Vector2(222, 64)
-texture = ExtResource("5_8bcse")
+[node name="Label" type="Label" parent="."]
+self_modulate = Color(0.945098, 0.388235, 0.298039, 1)
+texture_filter = 1
+offset_left = 299.57
+offset_top = 68.0
+offset_right = 318.57
+offset_bottom = 94.0
+text = "61"
+
+[node name="Captain" type="Sprite2D" parent="."]
+position = Vector2(53, 225)
+texture = ExtResource("9_xkwfo")
+
+[node name="Boss" type="Sprite2D" parent="."]
+position = Vector2(235, 224)
+texture = ExtResource("9_6a15k")
+
+[node name="NewsAnchor" type="Sprite2D" parent="."]
+position = Vector2(427, 225)
+texture = ExtResource("10_8wkx2")

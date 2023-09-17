@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm6ksj5wwdell"
-path="res://.godot/imported/naturalist_card.png-e00f7d51f00031a074aa5aec538fd620.ctex"
+uid="uid://ci0dvsd81n7e2"
+path="res://.godot/imported/csharp.png-a48352b322bcfd89406bbf8c42c91db6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/artwork/jam/naturalist_card.png"
-dest_files=["res://.godot/imported/naturalist_card.png-e00f7d51f00031a074aa5aec538fd620.ctex"]
+source_file="res://assets/artwork/jam/csharp.png"
+dest_files=["res://.godot/imported/csharp.png-a48352b322bcfd89406bbf8c42c91db6.ctex"]
 
 [params]
 
