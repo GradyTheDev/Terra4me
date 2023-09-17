@@ -16,6 +16,8 @@
 [node name="Launcher" type="CanvasLayer"]
 script = ExtResource("1_654an")
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -87,3 +89,5 @@ texture = ExtResource("9_6a15k")
 [node name="NewsAnchor" type="Sprite2D" parent="."]
 position = Vector2(427, 225)
 texture = ExtResource("10_8wkx2")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
