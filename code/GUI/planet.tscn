@@ -116,8 +116,8 @@ script = ExtResource("5_gn5i8")
 layout_mode = 2
 anchors_preset = 0
 offset_left = 327.0
-offset_right = 480.0
-offset_bottom = 158.0
+offset_right = -153.0
+offset_bottom = -270.0
 
 [node name="Map" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(120, 120)
