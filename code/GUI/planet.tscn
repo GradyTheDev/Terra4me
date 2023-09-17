@@ -28,7 +28,7 @@
 [ext_resource type="Script" path="res://code/GUI/Map.gd" id="23_mayg5"]
 [ext_resource type="AudioStream" uid="uid://c2jk7ayil8mc8" path="res://assets/sound/typing/Typing-1-_Sep-17_.ogg" id="26_kc2a6"]
 [ext_resource type="AudioStream" uid="uid://bbgen5pxmg56u" path="res://assets/sound/typing/Typing-2-_Sep-17_.ogg" id="26_waddx"]
-[ext_resource type="Texture2D" uid="uid://6sg262sw7hmq" path="res://assets/artwork/overlaylines.png" id="28_rf00x"]
+[ext_resource type="Texture2D" uid="uid://dut540hkbrtys" path="res://assets/artwork/overlaylines.png" id="28_rf00x"]
 [ext_resource type="Texture2D" uid="uid://dbdc67sivvsnw" path="res://assets/artwork/buttons/textBackground.png" id="29_pvd5a"]
 [ext_resource type="Texture2D" uid="uid://3bgsqqyoi2n2" path="res://assets/artwork/gameui_v2.png" id="29_rfhsc"]
 
@@ -119,6 +119,16 @@ tooltip_text = "Victory Bar"
 show_percentage = false
 script = ExtResource("5_gn5i8")
 
+[node name="ButtonListBackground" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(72.335, 30.165)
+offset_left = 344.0
+offset_top = 12.0
+offset_right = 470.0
+offset_bottom = 145.0
+mouse_default_cursor_shape = 2
+texture = ExtResource("29_pvd5a")
+expand_mode = 1
+
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
 anchors_preset = 0
@@ -160,7 +170,7 @@ char_delay = 0.05
 pause_delay = 0.4
 new_line_delay = 0.8
 msg_end_wait_to_clear = 5.0
-max_chars = 50
+max_chars = 20
 portrait_node = NodePath("../CanvasLayer/Portrait")
 dialog_node = NodePath("../CanvasLayer/DialogBox/Dialog")
 character_label_node = NodePath("../CanvasLayer/Portrait/CharacterLabel")
