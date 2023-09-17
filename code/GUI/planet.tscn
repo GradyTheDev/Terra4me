@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c0b0sqv3v3p2q"]
+[gd_scene load_steps=31 format=3 uid="uid://c0b0sqv3v3p2q"]
 
 [ext_resource type="Script" path="res://code/GUI/planet.gd" id="1_qdf4b"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="2_0233i"]
@@ -26,6 +26,7 @@
 [ext_resource type="Resource" uid="uid://dpyjnjwejttnl" path="res://resources/dialog/news/news_11.tres" id="12_gy0sx"]
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="13_xflk0"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="14_bwyh8"]
+[ext_resource type="Script" path="res://code/GUI/Map.gd" id="23_mayg5"]
 
 [sub_resource type="Gradient" id="Gradient_s52t5"]
 offsets = PackedFloat32Array(0)
@@ -132,17 +133,26 @@ offset_right = -7.0
 offset_bottom = -146.853
 
 [node name="Map" type="TextureRect" parent="."]
+texture_filter = 1
 custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
-offset_left = 180.0
-offset_top = 75.0
-offset_right = 300.0
-offset_bottom = 195.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 60.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(60, 60)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-tooltip_text = "Planet"
 texture = ExtResource("6_8ys2q")
 expand_mode = 1
+script = ExtResource("23_mayg5")
 
 [node name="WinTimer" type="Timer" parent="."]
 one_shot = true

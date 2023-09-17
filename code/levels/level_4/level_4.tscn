@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c0k0c51g2ushw"]
+[gd_scene load_steps=32 format=3 uid="uid://c0k0c51g2ushw"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_bru5o"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_fprcg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_ckuxu"]
 [ext_resource type="AudioStream" uid="uid://doi5qdjdye2q8" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 4 idea (Sep 13 OGG).ogg" id="3_i31hf"]
 [ext_resource type="Script" path="res://code/levels/level_4/Camera2D.gd" id="5_rbb28"]
+[ext_resource type="Texture2D" uid="uid://broie5t8xka8a" path="res://assets/artwork/layered main menu/planet4_1_centered.png" id="5_xjao1"]
 [ext_resource type="Resource" uid="uid://bysuf6gnoul7d" path="res://resources/dialog/intros/dialog_level_4_intro.tres" id="6_lj0j3"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_cyj0m"]
 [ext_resource type="Script" path="res://code/levels/level_4/explain.gd" id="7_xwd5q"]
@@ -23,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_tk707"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_0h6vr"]
 [ext_resource type="Resource" uid="uid://3fbotwofn3o" path="res://resources/dialog/interupts/interupt_level_4.tres" id="20_t5fqu"]
+[ext_resource type="Texture2D" uid="uid://bas27gx6fu3qx" path="res://assets/artwork/layered main menu/planet4_2_centered.png" id="22_uth32"]
 
 [sub_resource type="Resource" id="Resource_6c0da"]
 script = ExtResource("2_ckuxu")
@@ -70,6 +72,7 @@ win_sound = ExtResource("3_i31hf")
 layout_mode = 1
 planet_name = "Castor"
 job_text = "Terraform"
+map = ExtResource("5_xjao1")
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
@@ -82,6 +85,7 @@ offset_left = 480.0
 offset_right = 480.0
 planet_name = "Pollux"
 job_text = "Terraform"
+map = ExtResource("22_uth32")
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_4ionb")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])

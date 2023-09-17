@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq2ru6c7ppj8y"]
+[gd_scene load_steps=28 format=3 uid="uid://bq2ru6c7ppj8y"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_iu5hk"]
 [ext_resource type="AudioStream" uid="uid://c58pjp1q6ueve" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 Ambience (Sep 13 OGG).ogg" id="2_cwahv"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_sarro"]
 [ext_resource type="AudioStream" uid="uid://mr4r7nlswqa" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 2 idea (Sep 13 OGG).ogg" id="3_1h4t6"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="3_p7wkb"]
+[ext_resource type="Texture2D" uid="uid://yghdmql8ncd8" path="res://assets/artwork/layered main menu/planet2_centered.png" id="4_vxt71"]
 [ext_resource type="Resource" uid="uid://cdte4nvfdtnni" path="res://resources/dialog/intros/dialog_level_2_intro.tres" id="6_0fhsx"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_ucesk"]
 [ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_xcdu2"]
@@ -49,6 +50,7 @@ win_sound = ExtResource("3_1h4t6")
 layout_mode = 1
 planet_name = "Heracles"
 job_text = "Terraform"
+map = ExtResource("4_vxt71")
 atmosphere_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_lds18")])
 heat_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_derel")])
 dialog_intro = ExtResource("6_0fhsx")

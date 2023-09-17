@@ -5,6 +5,7 @@ signal planet_compleated()
 
 @export var planet_name: String
 @export var job_text: String
+@export var map: Texture
 
 @export_group('victory conditions')
 @export var atmosphere_ranges: Array[RangeResource]
@@ -56,6 +57,8 @@ func _ready():
 	$Indicators/Heat.ranges = heat_ranges
 	$ButtonList.terra_variables_res = terra_varible_res
 	add_ranges_to_win_ranges()
+	if map:
+		$Map.texture = map
 
 	dialog_system.play_dialog(dialog_intro)
 

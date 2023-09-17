@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b853fcpfq0l4"]
+[gd_scene load_steps=25 format=3 uid="uid://b853fcpfq0l4"]
 
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_b1xxe"]
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="2_co3ya"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_3dd6g"]
 [ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/a.tres" id="21_jsb42"]
 [ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/b.tres" id="22_nsb07"]
+[ext_resource type="Texture2D" uid="uid://7r8ma51oepu7" path="res://assets/artwork/layered main menu/planet1_centered.png" id="23_s83k5"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("3_ipvg4")
@@ -44,6 +45,7 @@ layout_mode = 1
 planet_name = "Annex I"
 job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("3_ipvg4")]([SubResource("Resource_lds18")])
+map = ExtResource("23_s83k5")
 dialog_intro = ExtResource("6_yctvv")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_65xg5"), ExtResource("8_s171v"), ExtResource("9_gc6mf"), ExtResource("10_in4su"), ExtResource("11_uvs3n"), ExtResource("12_dyc5h"), ExtResource("13_b6q75"), ExtResource("14_x7aqs"), ExtResource("15_e58bq"), ExtResource("16_6wogr"), ExtResource("17_a8r2d"), ExtResource("18_k04ef"), ExtResource("19_3dd6g"), ExtResource("9_uh4gr")])
 
