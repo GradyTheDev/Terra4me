@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://c3da1n8itbrqk" path="res://code/menus/main/main_menu_background.tscn" id="2_gr7oh"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="3_js0nh"]
 [ext_resource type="AudioStream" uid="uid://bvyshpqxrppdw" path="res://assets/sound/Music/menu_music.ogg" id="4_17mex"]
-[ext_resource type="Theme" uid="uid://cvpmb0we0j7v8" path="res://resources/themes/main_menu_buttons_theme.tres" id="4_ae3bs"]
-[ext_resource type="Texture2D" uid="uid://c76f5ihm18hi5" path="res://assets/artwork/game title.png" id="5_linn1"]
+[ext_resource type="Theme" uid="uid://n5wq18hxxlug" path="res://resources/themes/main_menu_buttons_theme.tres" id="4_ae3bs"]
 [ext_resource type="Texture2D" uid="uid://dabka5mpkhlp8" path="res://assets/artwork/texts/credits_text.png" id="5_u0h5g"]
 [ext_resource type="Texture2D" uid="uid://n8eul3g7f3x5" path="res://assets/artwork/texts/settings_text.png" id="6_175q5"]
 [ext_resource type="Texture2D" uid="uid://dbf6yv2rgtv4u" path="res://assets/artwork/texts/quit_text.png" id="7_nut37"]
+[ext_resource type="Texture2D" uid="uid://di8gi1k7mqh22" path="res://assets/artwork/texts/title.png" id="10_01ay2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id5h0"]
 
@@ -24,6 +24,18 @@
 script = ExtResource("2_3lfwf")
 
 [node name="MainMenuBackground" parent="." instance=ExtResource("2_gr7oh")]
+
+[node name="Title" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_top = 9.0
+offset_right = 92.0
+offset_bottom = 94.0
+grow_horizontal = 2
+texture = ExtResource("10_01ay2")
 
 [node name="Level_1" parent="." instance=ExtResource("3_js0nh")]
 offset_left = 139.0
@@ -136,18 +148,6 @@ stream = ExtResource("4_17mex")
 volume_db = -12.0
 autoplay = true
 bus = &"Music"
-
-[node name="TextureRect" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -92.0
-offset_top = 9.0
-offset_right = 92.0
-offset_bottom = 94.0
-grow_horizontal = 2
-texture = ExtResource("5_linn1")
 
 [connection signal="button_up" from="Level_1" to="." method="_on_level_1_button_up"]
 [connection signal="hover_changed" from="Level_1" to="MainMenuBackground" method="_on_select_animation" binds= [0]]
