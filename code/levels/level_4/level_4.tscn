@@ -75,6 +75,13 @@ heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
 anchor_mode = 0
 script = ExtResource("5_rbb28")
 
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = 113.0
+offset_top = 198.0
+offset_right = 344.0
+offset_bottom = 224.0
+text = "Pres left/right arrow to switch"
+
 [node name="explain" type="Node" parent="."]
 script = ExtResource("7_xwd5q")
 dialog_explain = ExtResource("8_cj5o4")
