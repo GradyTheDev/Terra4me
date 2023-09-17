@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NatureTerraPack" load_steps=2 format=3 uid="uid://ch1umujallf6t"]
+
+[ext_resource type="Script" path="res://code/code_resources/nature_terra_pack.gd" id="1_k1msc"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_k1msc")
+name = "Capybara"
+atmosphere_per_sec = 0.0
+oxygen_per_sec = 1.0
+heat_per_sec = 0.0
+extinction_sec = 0.0
+atmosphere_condition = Vector2(0, 100)
+oxygen_condition = Vector2(0, 100)
+heat_condition = Vector2(0, 100)

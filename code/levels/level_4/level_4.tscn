@@ -59,7 +59,6 @@ job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_6c0da")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_e5dmm")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_ahdhf")])
-sec_to_win = 30.0
 dialog_intro = ExtResource("6_lj0j3")
 
 [node name="Planet2" parent="." instance=ExtResource("1_fprcg")]
@@ -71,7 +70,6 @@ job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_4ionb")])
 oxygen_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_wu2av")])
 heat_ranges = Array[ExtResource("2_ckuxu")]([SubResource("Resource_1ipjl")])
-sec_to_win = 30.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -80,3 +78,6 @@ script = ExtResource("5_rbb28")
 [node name="explain" type="Node" parent="."]
 script = ExtResource("7_xwd5q")
 dialog_explain = ExtResource("8_cj5o4")
+
+[connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]
+[connection signal="planet_compleated" from="Planet2" to="." method="_on_planet_planet_compleated"]

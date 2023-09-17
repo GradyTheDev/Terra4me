@@ -1,6 +1,7 @@
 class_name NatureTerraPack
 extends Resource
 
+@export var name: String
 @export var atmosphere_per_sec: float
 @export var oxygen_per_sec: float
 @export var heat_per_sec: float

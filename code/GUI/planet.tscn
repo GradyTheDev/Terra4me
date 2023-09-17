@@ -114,6 +114,7 @@ script = ExtResource("5_gn5i8")
 
 [node name="ButtonList" parent="." instance=ExtResource("6_841jt")]
 layout_mode = 2
+anchors_preset = 0
 offset_left = 327.0
 offset_right = 480.0
 offset_bottom = 158.0

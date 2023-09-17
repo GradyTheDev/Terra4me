@@ -3,72 +3,43 @@
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button_list.gd" id="1_8jm8o"]
 [ext_resource type="PackedScene" uid="uid://bixuvnj0ukhsj" path="res://code/code_resources/buttons/button_sound.tscn" id="2_t42bp"]
 [ext_resource type="Script" path="res://code/GUI/nature_button_list/nature_button.gd" id="3_l4sol"]
-[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/bacteria.tres" id="4_truoj"]
-[ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/algea.tres" id="5_p7ehf"]
-[ext_resource type="Resource" uid="uid://juqk768d1sr" path="res://resources/nature_stats/small_plants.tres" id="6_042uv"]
-[ext_resource type="Resource" uid="uid://cx2vdannmixaw" path="res://resources/nature_stats/plant_trees.tres" id="7_057c3"]
-[ext_resource type="Resource" uid="uid://7qvodomdobqb" path="res://resources/nature_stats/land_animals.tres" id="8_l43ct"]
-[ext_resource type="Resource" uid="uid://ch1umujallf6t" path="res://resources/nature_stats/goop.tres" id="9_q4loo"]
+[ext_resource type="Resource" uid="uid://jaejalpclhid" path="res://resources/nature_stats/b.tres" id="3_xpqf5"]
+[ext_resource type="Resource" uid="uid://ch1umujallf6t" path="res://resources/nature_stats/c.tres" id="4_8aox1"]
+[ext_resource type="Resource" uid="uid://bgpby6lthbpn1" path="res://resources/nature_stats/a.tres" id="4_qt2r3"]
+[ext_resource type="Resource" uid="uid://7qvodomdobqb" path="res://resources/nature_stats/d.tres" id="5_frdae"]
+[ext_resource type="Resource" uid="uid://cx2vdannmixaw" path="res://resources/nature_stats/e.tres" id="6_whomw"]
+[ext_resource type="Resource" uid="uid://juqk768d1sr" path="res://resources/nature_stats/f.tres" id="7_l17pj"]
 
-[node name="NatureButtonList" type="PanelContainer"]
-size_flags_horizontal = 8
+[node name="NatureButtonList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -339.0
+offset_bottom = -234.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 10
 size_flags_vertical = 0
 tooltip_text = "Nature Actions
-Slow, no cooldowns, and don't stop."
+"
 script = ExtResource("1_8jm8o")
+nature_actions = Array[Resource("res://code/code_resources/nature_terra_pack.gd")]([ExtResource("4_qt2r3"), ExtResource("3_xpqf5"), ExtResource("4_8aox1"), ExtResource("5_frdae"), ExtResource("6_whomw"), ExtResource("7_l17pj")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+offset_right = 79.0
+offset_bottom = 122.0
 
-[node name="BacteriaButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
+[node name="tmp" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
+process_mode = 4
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "Bacteria"
+text = "Template"
 script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("4_truoj")
-
-[node name="GoopButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Goop"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("9_q4loo")
-
-[node name="AlgaeButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Algea"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("5_p7ehf")
-
-[node name="SmallPlantsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Small Plants"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("6_042uv")
-
-[node name="PlantTreesButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Plant Tree"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("7_057c3")
-
-[node name="LandAnimalsButton" parent="VBoxContainer" instance=ExtResource("2_t42bp")]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Land Animals
-"
-script = ExtResource("3_l4sol")
-nature_terra_pack = ExtResource("8_l43ct")
+nature_terra_pack = ExtResource("4_qt2r3")
 
 [node name="Cooldown" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="button_up_with_stats" from="VBoxContainer/BacteriaButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/GoopButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/AlgaeButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/SmallPlantsButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/PlantTreesButton" to="." method="_on_button_up_with_stats"]
-[connection signal="button_up_with_stats" from="VBoxContainer/LandAnimalsButton" to="." method="_on_button_up_with_stats"]
+[connection signal="button_up_with_stats" from="VBoxContainer/tmp" to="." method="_on_button_up_with_stats"]

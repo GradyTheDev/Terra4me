@@ -33,4 +33,5 @@ planet_name = "Heracles"
 job_text = "Terraform"
 atmosphere_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_lds18")])
 heat_ranges = Array[ExtResource("3_p7wkb")]([SubResource("Resource_derel")])
-sec_to_win = 30.0
+
+[connection signal="planet_compleated" from="Planet" to="." method="_on_planet_planet_compleated"]

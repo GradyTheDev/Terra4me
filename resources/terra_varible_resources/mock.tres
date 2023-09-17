@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="PlanetMechanic" load_steps=2 format=3 uid="uid://8qaq73y35tt5"]
+[gd_resource type="Resource" script_class="TerraVaribleRes" load_steps=2 format=3 uid="uid://8qaq73y35tt5"]
 
 [ext_resource type="Script" path="res://code/code_resources/terra_varible_res.gd" id="1_21xst"]
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_21xst")
-display_name = "Mechanic's Name"
-max_value = 100.0
+type = 0
 min_value = 0.0
-value = 10.0
+max_value = 100.0
+value = 0.0

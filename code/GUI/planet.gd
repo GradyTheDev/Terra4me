@@ -10,7 +10,7 @@ signal planet_compleated()
 @export var atmosphere_ranges: Array[RangeResource]
 @export var oxygen_ranges: Array[RangeResource]
 @export var heat_ranges: Array[RangeResource]
-@export var sec_to_win: float = 10
+@export var sec_to_win: float = 5
 
 @export_group("nodes")
 @export var dialog_system: DialogSystem
@@ -90,13 +90,16 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().get_root().set_input_as_handled()
 		GlobalPopupSpace.call_scene(GlobalEnums.POP_UP.PAUSE)
-
+	if OS.is_debug_build():
+		if event is InputEventKey:
+			if event.keycode == KEY_F4:
+				_on_win_timer_timeout()
 
 func do_constant_processes(delta):
-	heat.value += remap(atmosphere.value, 0, 100, -10, 10) * delta
-	if atmosphere.value < 10:
-		oxygen.value -= 5 * delta
-	atmosphere.value -= 3 * delta
+	# heat.value += remap(atmosphere.value, 0, 100, -10, 10) * delta
+	# if atmosphere.value < 10:
+	# 	oxygen.value -= 5 * delta
+	# atmosphere.value -= 3 * delta
 	if pack_of_nature:
 		for nature_terra_pack in pack_of_nature:
 			var nature_per_sec_dict = nature_terra_pack.get_nature_pack()
@@ -147,6 +150,6 @@ func _on_natural_action_made(nature_terra_pack: NatureTerraPack):
 
 
 func _on_win_timer_timeout():
-	dialog_system.play_dialog(dialog_lose)
+	dialog_system.play_dialog(dialog_win)
 	emit_signal("planet_compleated")
 	self.process_mode = Node.PROCESS_MODE_DISABLED

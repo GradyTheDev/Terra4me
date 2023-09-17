@@ -1,13 +1,14 @@
 [gd_resource type="Resource" script_class="NatureTerraPack" load_steps=2 format=3 uid="uid://jaejalpclhid"]
 
-[ext_resource type="Script" path="res://code/code_resources/nature_terra_pack.gd" id="1_ycs3h"]
+[ext_resource type="Script" path="res://code/code_resources/nature_terra_pack.gd" id="1_ctyl6"]
 
 [resource]
 resource_local_to_scene = true
-script = ExtResource("1_ycs3h")
-atmosphere_per_sec = 0.5
-oxygen_per_sec = 0.5
-heat_per_sec = 0.5
+script = ExtResource("1_ctyl6")
+name = "Bacteria"
+atmosphere_per_sec = -2.0
+oxygen_per_sec = 0.0
+heat_per_sec = 0.0
 extinction_sec = 0.0
 atmosphere_condition = Vector2(0, 100)
 oxygen_condition = Vector2(0, 100)

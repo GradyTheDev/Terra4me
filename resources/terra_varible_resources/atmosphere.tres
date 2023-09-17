@@ -8,4 +8,4 @@ script = ExtResource("1_3aj3n")
 type = 0
 min_value = 0.0
 max_value = 100.0
-value = 100.0
+value = 0.0

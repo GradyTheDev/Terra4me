@@ -22,6 +22,8 @@ func _ready():
 	existing_species = 0
 
 func _process(_delta):
+	if owner == null:
+		return
 	var terra_variables_res = owner.terra_variables_res
 	if terra_variables_res and nature_terra_pack:
 		check_conditions(terra_variables_res)
@@ -42,12 +44,14 @@ func check_conditions(terra_variables_res):
 		extinciton_timer.stop()
 	if not extinciton_timer.is_stopped() and are_conditions_fulfilled:
 		extinciton_timer.stop()
-	
+
 
 func _on_button_up():
 	existing_species += 1
+
 
 func _on_extinction_timer_timeout():
 	existing_species -= 1
 	if existing_species < 0:
 		existing_species = 0
+	self.text = default_text + str("[x%d]" % existing_species)
