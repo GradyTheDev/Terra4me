@@ -2,10 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://c0b0sqv3v3p2q" path="res://code/GUI/planet.tscn" id="1_70tus"]
 [ext_resource type="Script" path="res://code/levels/level_logick.gd" id="1_ss33w"]
-[ext_resource type="AudioStream" uid="uid://dtq0wkmfy7ovm" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 3 Ambience (Sep 13 OGG).ogg" id="2_4ijod"]
 [ext_resource type="Script" path="res://code/code_resources/range_resource.gd" id="2_gknhm"]
 [ext_resource type="AudioStream" uid="uid://vtvvs1l51j7h" path="res://assets/sound/Music/OGG/PARIAH - Music - Level 3 idea (Sep 13 OGG).ogg" id="3_ha62o"]
-[ext_resource type="Texture2D" uid="uid://t74hnt70ob8o" path="res://assets/artwork/layered main menu/planet3_centered.png" id="5_1feho"]
+[ext_resource type="Texture2D" uid="uid://cl0ubxcesjrp1" path="res://assets/artwork/planets_map/planet_3.png" id="5_eva4q"]
 [ext_resource type="Resource" uid="uid://chbpu0eeup6uw" path="res://resources/dialog/intros/dialog_level_3_intro.tres" id="6_0lgsm"]
 [ext_resource type="Resource" uid="uid://ujhhqgqqrfix" path="res://resources/dialog/news/news_1.tres" id="7_mk30t"]
 [ext_resource type="Resource" uid="uid://noxbvx7v0nim" path="res://resources/dialog/news/news_2.tres" id="8_3n14w"]
@@ -21,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://bfabi7d1u47vs" path="res://resources/dialog/news/news_12.tres" id="18_hqcf2"]
 [ext_resource type="Resource" uid="uid://bqwiq2cu4h8sc" path="res://resources/dialog/news/news_13.tres" id="19_s5qom"]
 [ext_resource type="Resource" uid="uid://ddixu35jnceh5" path="res://resources/dialog/interupts/interupt_level_3.tres" id="20_xj4rq"]
+[ext_resource type="AudioStream" uid="uid://qrjtnypdpyn4" path="res://assets/sound/Music/OGG/Level-3-Ambience-_Sep-17_.ogg" id="21_3jdkq"]
 
 [sub_resource type="Resource" id="Resource_lds18"]
 script = ExtResource("2_gknhm")
@@ -45,14 +45,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ss33w")
-ambient_music = ExtResource("2_4ijod")
 win_sound = ExtResource("3_ha62o")
 
 [node name="Planet" parent="." instance=ExtResource("1_70tus")]
 layout_mode = 1
 planet_name = "Daedalus"
-job_text = "Terraform"
-map = ExtResource("5_1feho")
+map = ExtResource("5_eva4q")
 atmosphere_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_lds18")])
 oxygen_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_j6eld")])
 heat_ranges = Array[ExtResource("2_gknhm")]([SubResource("Resource_i78hm")])
@@ -60,7 +58,7 @@ dialog_intro = ExtResource("6_0lgsm")
 dialog_random = Array[Resource("res://code/dialog_system/dialog.gd")]([ExtResource("7_mk30t"), ExtResource("8_3n14w"), ExtResource("9_uk1a0"), ExtResource("10_71ata"), ExtResource("11_upy6m"), ExtResource("12_vifgt"), ExtResource("13_08hy6"), ExtResource("14_3lgck"), ExtResource("15_sevhs"), ExtResource("16_v65ih"), ExtResource("17_c8r2w"), ExtResource("18_hqcf2"), ExtResource("19_s5qom"), ExtResource("20_xj4rq")])
 
 [node name="music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_4ijod")
+stream = ExtResource("21_3jdkq")
 volume_db = -10.0
 autoplay = true
 bus = &"Music"

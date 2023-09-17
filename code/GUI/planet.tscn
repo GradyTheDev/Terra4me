@@ -147,6 +147,7 @@ offset_right = 60.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -0.0872665
 pivot_offset = Vector2(60, 60)
 size_flags_horizontal = 4
 size_flags_vertical = 4
